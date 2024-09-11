@@ -1,1 +1,2136 @@
-[]
+[
+    {
+        "id": "a2725fd03b335afd",
+        "type": "tab",
+        "label": "Processo",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3ed13a0582858ba0",
+        "type": "subflow",
+        "name": "loop",
+        "info": "",
+        "category": "customizados",
+        "in": [
+            {
+                "x": 100,
+                "y": 20,
+                "wires": [
+                    {
+                        "id": "a9af9b3101702ddf"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 360,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "a9af9b3101702ddf",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {
+            "module": "loop",
+            "version": "1.0",
+            "license": "MIT"
+        },
+        "color": "#87A980",
+        "icon": "font-awesome/fa-repeat"
+    },
+    {
+        "id": "87e8abe0d5a373ba",
+        "type": "subflow",
+        "name": "enviarWhats",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 50,
+                "y": 30,
+                "wires": [
+                    {
+                        "id": "752027b4fbcffc2f"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 700,
+                "y": 20,
+                "wires": [
+                    {
+                        "id": "383ca12f70d2c318",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "802fbef1732e8f2c",
+        "type": "subflow",
+        "name": "WhatsApp Z",
+        "info": "{\r\n    telefone:telefone\r\n    mensagem:mensagem\r\n}\r\n",
+        "category": "customizados",
+        "in": [
+            {
+                "x": 100,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "336d3e6747a82479"
+                    }
+                ]
+            }
+        ],
+        "out": [],
+        "env": [],
+        "meta": {
+            "license": "MIT"
+        },
+        "color": "#87A980",
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "283d7f5c308d86ef",
+        "type": "group",
+        "z": "a2725fd03b335afd",
+        "name": "Notificação WhatsApp",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "84ee735e126a15b9",
+            "609bbe51d5263aa0",
+            "f41171488d199103",
+            "edc847f87c02b0a1",
+            "e4c8b1d736e80953",
+            "2de92045b6dc13c0",
+            "6fdc385bcae0116a",
+            "28c1b6278e80ee24",
+            "ab1ca7a7e59a3ae8",
+            "59a3d318fda6095f",
+            "fd56f08f88fb2cd5",
+            "a247af8d2be0a7b9",
+            "0c33db4cf3a06fca",
+            "fe4f1d0d50dcf189",
+            "010065b6aef1be57",
+            "dcba2c9f2a19bac5",
+            "a57f3511a3fc40dd",
+            "5f723825dbdd467b",
+            "096b67e27a724b5b",
+            "2f14492f53a2bafd",
+            "c05c78a0251faa5e",
+            "93eb87001adad7ff",
+            "12e305fed0d4d28b",
+            "9750b60d1044d9eb",
+            "58a2871758d29cab",
+            "5b4ea606cc34214e",
+            "b7be0a53b155c67b",
+            "10893b64fd9f90c5",
+            "384a4eb87cfbb6b0",
+            "474b3540e2a34ab0",
+            "6a80b67fa93f0fac",
+            "b1db0fc5a416b1c2",
+            "1c14750d45bcc151",
+            "8af7751466cc28b2",
+            "4a210937782ddb50",
+            "4f801b76368e751d",
+            "88de4b120624e756",
+            "d4e14fe2f0eec73e",
+            "eeff24287b765ed5",
+            "f2daecf12dc2cac9",
+            "7bb2025d05e0f3d3"
+        ],
+        "x": 14,
+        "y": 499,
+        "w": 2612,
+        "h": 682
+    },
+    {
+        "id": "64cee126698f8cf4",
+        "type": "group",
+        "z": "a2725fd03b335afd",
+        "name": "Maratona Bíblica Porções Diárias",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "aa8237bacc96aeec",
+            "cce4a8c95574209a",
+            "dcaf222c2b24a800",
+            "87c3b2917a6f5a44",
+            "5af0171631043e30"
+        ],
+        "x": 14,
+        "y": 299,
+        "w": 772,
+        "h": 182
+    },
+    {
+        "id": "92223985e4aa415a",
+        "type": "group",
+        "z": "a2725fd03b335afd",
+        "name": "Maratona Bíblica IBLN",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "d50afac01bf81d2e",
+            "d03439f5d92c41c9",
+            "d782800fb918595b",
+            "021a7561faa8d26c",
+            "9f91fe9edf0c6adf"
+        ],
+        "x": 834,
+        "y": 299,
+        "w": 892,
+        "h": 182
+    },
+    {
+        "id": "7725df2066a0d1ef",
+        "type": "group",
+        "z": "a2725fd03b335afd",
+        "name": "Envio de notificação de  aniversariantes para lideres",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "dad2ce5b68fdd41f",
+            "18964c677841c0b8",
+            "185b52f54c48fe96",
+            "33ce778f5149cc1e",
+            "c1595118259cef0d",
+            "d893e85f6cd1effb",
+            "726574f781a9702b",
+            "7acd237d61d2264b",
+            "ddfb99eb2ce7642a",
+            "1cdd8bbf0474a000",
+            "9fba03029854fc51"
+        ],
+        "x": 14,
+        "y": 39,
+        "w": 1652,
+        "h": 182
+    },
+    {
+        "id": "679beb5b15e32c6d",
+        "type": "group",
+        "z": "a2725fd03b335afd",
+        "name": "Envio de mensagens Ana",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "6598ca5232de0946",
+            "26450c8e92ee13c7",
+            "e7fbde499c85c6ee",
+            "e7af54e39c93e04a",
+            "1596b145857284d1",
+            "25fca76f9d8ced9a"
+        ],
+        "x": 14,
+        "y": 1199,
+        "w": 1052,
+        "h": 242
+    },
+    {
+        "id": "7ba9954bb2613bfd",
+        "type": "group",
+        "z": "a2725fd03b335afd",
+        "name": "Envio de mensagens Graça",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "ada0b16cfcf8946d",
+            "ff6eadb839a4c0f8",
+            "4263315fc498c4f2",
+            "6cdefd3f476c4311",
+            "a0381c43221746df",
+            "8fcc4dc6fbe2967e",
+            "f71255e6b633f830",
+            "ea4b916f5ea969a6",
+            "27c79243dc95f0b7"
+        ],
+        "x": 14,
+        "y": 1459,
+        "w": 1032,
+        "h": 302
+    },
+    {
+        "id": "36dbdd52d4fc31f0",
+        "type": "MySQLdatabase",
+        "name": "ananotification",
+        "host": "${NHOST}",
+        "port": "${NPORT}",
+        "db": "${NDB}",
+        "tz": "America/Sao_Paulo",
+        "charset": "UTF8"
+    },
+    {
+        "id": "1ffe3ac668eeca60",
+        "type": "MySQLdatabase",
+        "name": "iblnnotification",
+        "host": "${NHOST}",
+        "port": "${NPORT}",
+        "db": "iblnnotification",
+        "tz": "America/Sao_Paulo",
+        "charset": "UTF8"
+    },
+    {
+        "id": "a9af9b3101702ddf",
+        "type": "function",
+        "z": "3ed13a0582858ba0",
+        "name": "function 1",
+        "func": "\nvar item = msg.payload.pop();\n\nif (item) {\n    return [{\n        payload: item\n    }, msg];\n\n} else {\n    return [null, null];\n\n}\n",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 200,
+        "y": 100,
+        "wires": [
+            [],
+            [
+                "89990390c0af528b"
+            ]
+        ]
+    },
+    {
+        "id": "89990390c0af528b",
+        "type": "delay",
+        "z": "3ed13a0582858ba0",
+        "name": "",
+        "pauseType": "delayv",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 200,
+        "y": 200,
+        "wires": [
+            [
+                "a9af9b3101702ddf"
+            ]
+        ]
+    },
+    {
+        "id": "9e10a0a7daa0f613",
+        "type": "function",
+        "z": "87e8abe0d5a373ba",
+        "name": "preparacao",
+        "func": "\n\nreturn {\n    url: \"https://api.z-api.io/instances/\" + env.get(\"WHATSINSTACE\") + \"/token/\" + env.get(\"WHATSTOKEN\") +\"/send-text\",\n    method:\"POST\",\n    headers : {\n        \"Client-Token\": env.get(\"WHATSHTOKEN\")\n    },\n    payload:{\n        \"phone\": msg.telefone,\n        \"message\": msg.mensagem,\n    }\n};\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 60,
+        "wires": [
+            [
+                "383ca12f70d2c318"
+            ]
+        ]
+    },
+    {
+        "id": "d875546f8ad266a2",
+        "type": "debug",
+        "z": "87e8abe0d5a373ba",
+        "name": "saida",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "752027b4fbcffc2f",
+        "type": "switch",
+        "z": "87e8abe0d5a373ba",
+        "name": "",
+        "property": "tipo",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "texto",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 190,
+        "y": 120,
+        "wires": [
+            [
+                "9e10a0a7daa0f613"
+            ]
+        ]
+    },
+    {
+        "id": "383ca12f70d2c318",
+        "type": "www-request",
+        "z": "87e8abe0d5a373ba",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "url": "",
+        "follow-redirects": true,
+        "persistent-http": true,
+        "tls": "",
+        "x": 550,
+        "y": 60,
+        "wires": [
+            [
+                "d875546f8ad266a2"
+            ]
+        ]
+    },
+    {
+        "id": "336d3e6747a82479",
+        "type": "function",
+        "z": "802fbef1732e8f2c",
+        "name": "preparacao",
+        "func": "\n\nreturn {\n    url: \"https://api.z-api.io/instances/\" + env.get(\"WHATSINSTACE\") + \"/token/\" + env.get(\"WHATSTOKEN\") +\"/send-text\",\n    method:\"POST\",\n    headers : {\n        \"Client-Token\": env.get(\"WHATSHTOKEN\")\n    },\n    enviado: {\n        \"phone\": msg.payload.telefone,\n        \"message\": msg.payload.mensagem,\n    },\n    payload: msg.payload\n     \n};\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 100,
+        "wires": [
+            [
+                "d8c591d2054b794d"
+            ]
+        ]
+    },
+    {
+        "id": "ab9e21716593ffb1",
+        "type": "function",
+        "z": "802fbef1732e8f2c",
+        "name": "Gravar",
+        "func": "msg.topic=`\nINSERT INTO mensagem (\n    sessao, \n    destino, \n    mensagem, \n    status, \n    time, \n    identificacao) \nVALUES (\n    :sessao,\n    :destino, \n    :mensagem, \n    :status, \n     current_timestamp(), \n    :identificacao);\n`;\n\n\nmsg.payload= {\n        \"sessao\": JSON.parse(global.get('sessao'))[0].identificacao,\n        \"destino\": JSON.parse(global.get('entrada')).connectedPhone,\n        \"mensagem\": msg.enviado.message,\n        \"status\": \"ENVIADO\",\n       \"identificacao\": msg.payload.messageId\n    }\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9886a7e01e2303c2",
+        "type": "json",
+        "z": "802fbef1732e8f2c",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 530,
+        "y": 100,
+        "wires": [
+            [
+                "ab9e21716593ffb1"
+            ]
+        ]
+    },
+    {
+        "id": "7f67b1c9ff88c5df",
+        "type": "debug",
+        "z": "802fbef1732e8f2c",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "d8c591d2054b794d",
+        "type": "www-request",
+        "z": "802fbef1732e8f2c",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "url": "",
+        "follow-redirects": true,
+        "persistent-http": true,
+        "tls": "",
+        "x": 430,
+        "y": 40,
+        "wires": [
+            [
+                "9886a7e01e2303c2",
+                "7f67b1c9ff88c5df"
+            ]
+        ]
+    },
+    {
+        "id": "605a1aa848cb6044",
+        "type": "function",
+        "z": "a2725fd03b335afd",
+        "name": "loop",
+        "func": "\nvar item = msg.payload.pop();\n\nif (item) {\n    return [{\n        payload: item,\n        mensagem: msg.mensagem,\n        relogio:msg.relogio\n    }, msg];\n    \n }else{   \n        return [null, null];   \n    \n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1690,
+        "y": 840,
+        "wires": [
+            [
+                "4f801b76368e751d"
+            ],
+            [
+                "b1db0fc5a416b1c2"
+            ]
+        ]
+    },
+    {
+        "id": "331f1b3f878315c0",
+        "type": "inject",
+        "z": "a2725fd03b335afd",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 960,
+        "y": 260,
+        "wires": [
+            [
+                "d50afac01bf81d2e"
+            ]
+        ]
+    },
+    {
+        "id": "09e02c28c9859c99",
+        "type": "inject",
+        "z": "a2725fd03b335afd",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 260,
+        "wires": [
+            [
+                "aa8237bacc96aeec"
+            ]
+        ]
+    },
+    {
+        "id": "84ee735e126a15b9",
+        "type": "function",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "Pesquisa mensagem do dia",
+        "func": "msg.topic=`\nSET time_zone='America/Sao_Paulo';\nSELECT * FROM mensagens\nwhere DATE(data) =DATE(NOW()) `;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 540,
+        "wires": [
+            [
+                "609bbe51d5263aa0"
+            ]
+        ]
+    },
+    {
+        "id": "609bbe51d5263aa0",
+        "type": "mysql",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "mydb": "36dbdd52d4fc31f0",
+        "name": "",
+        "x": 520,
+        "y": 620,
+        "wires": [
+            [
+                "7bb2025d05e0f3d3"
+            ]
+        ]
+    },
+    {
+        "id": "f41171488d199103",
+        "type": "function",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "Pesquisa pessoas",
+        "func": "// Preparação da menssagem\n\nif (msg.payload.length==0){\n    msg.mensagem =[];\n  msg.mensagem.texto=`\n  Oi Sou a Ana.\n  Estou aqui para te lembrar do propósito de oração.\n  `;\n}else{\n    msg.mensagem= msg.payload;\n}\n//preparação para identificação de pessoas\n\nmsg.topic=`\nSET time_zone='America/Sao_Paulo';\nselect p.nome,p.email,p.telefone, concat(\ncase \n\twhen hour(now())<10 then concat('0',hour(now()))\n    when hour(now())>10 then hour(now())\nend\n,\ncase \n\twhen minute(now())>30 then \"30\"\n    when minute(now())=30 then \"30\"\n    when minute(now())<30 then \"00\"\nend\n) as agora from horarios as h \ninner join pessoas p on h.id_pessoa = p.id\ninner join relogios r on r.id = h.id_relogio\nwhere h.notifica =1 and \n\nconcat(\ncase \n\twhen hour(now())<10 then concat('0',hour(now()))\n    when hour(now())>10 then hour(now())\nend\n,\ncase \n\twhen minute(now())>30 then \"30\"\n    when minute(now())=30 then \"30\"\n    when minute(now())<30 then \"00\"\nend\n) = h.horario\nand date(r.data_fim)>=date(now())\nand date(r.data_inicio)<= date(now())\nand r.status = 1\nand r.id =`+ msg.payload.id_relogio\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 540,
+        "wires": [
+            [
+                "edc847f87c02b0a1"
+            ]
+        ]
+    },
+    {
+        "id": "edc847f87c02b0a1",
+        "type": "mysql",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "mydb": "36dbdd52d4fc31f0",
+        "name": "",
+        "x": 980,
+        "y": 620,
+        "wires": [
+            [
+                "d4e14fe2f0eec73e"
+            ]
+        ]
+    },
+    {
+        "id": "e4c8b1d736e80953",
+        "type": "function",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "PreparaPessoas",
+        "func": "msg.headers = {\n    \"Client-Token\": \"Faa0e9483d732404fb38ebe88909bd19cS\"\n}\nmsg.payload={\n   \"phone\":\"61992998663\",\n // \"phone\": msg.payload.telefone.replace(\"(\",\"\").replace(\")\",\"\").replace(\"-\",\"\").replace(/\\ /gi,\"\"),\n   \"message\": global.get(\"mensagem\").texto.replace(/{pessoa}/gi, msg.payload.nome.split(\" \")[0])\n}\n\n\n\nreturn msg;\n \n\n\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1310,
+        "y": 540,
+        "wires": [
+            [
+                "2de92045b6dc13c0"
+            ]
+        ]
+    },
+    {
+        "id": "2de92045b6dc13c0",
+        "type": "www-request",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "url": "https://api.z-api.io/instances/3C12BCB7DE734032C8B47A066F793C1C/token/67C02D759DF9DEF2A2C7FAAD/send-text",
+        "follow-redirects": true,
+        "persistent-http": true,
+        "tls": "",
+        "x": 1430,
+        "y": 620,
+        "wires": [
+            [
+                "6fdc385bcae0116a"
+            ]
+        ]
+    },
+    {
+        "id": "6fdc385bcae0116a",
+        "type": "debug",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1540,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "28c1b6278e80ee24",
+        "type": "delay",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 220,
+        "y": 620,
+        "wires": [
+            [
+                "84ee735e126a15b9"
+            ]
+        ]
+    },
+    {
+        "id": "ab1ca7a7e59a3ae8",
+        "type": "cron",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "",
+        "crontab": "*/30 * * * *",
+        "x": 110,
+        "y": 540,
+        "wires": [
+            [
+                "28c1b6278e80ee24"
+            ]
+        ]
+    },
+    {
+        "id": "59a3d318fda6095f",
+        "type": "function",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "Pesquisa relogios ativos",
+        "func": "msg.topic=`\nSELECT * FROM relogios\nwhere status = 1`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 820,
+        "wires": [
+            [
+                "fd56f08f88fb2cd5"
+            ]
+        ]
+    },
+    {
+        "id": "fd56f08f88fb2cd5",
+        "type": "mysql",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "mydb": "36dbdd52d4fc31f0",
+        "name": "",
+        "x": 280,
+        "y": 1000,
+        "wires": [
+            [
+                "0c33db4cf3a06fca"
+            ]
+        ]
+    },
+    {
+        "id": "a247af8d2be0a7b9",
+        "type": "inject",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 720,
+        "wires": [
+            [
+                "28c1b6278e80ee24"
+            ]
+        ]
+    },
+    {
+        "id": "0c33db4cf3a06fca",
+        "type": "function",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "repeat",
+        "func": "\nvar item = msg.payload.pop();\n\nif (item) {\n    return [{\n        payload: item,\n    }, msg];\n    \n }else{   \n        return [null, null];   \n    \n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 900,
+        "wires": [
+            [
+                "12e305fed0d4d28b"
+            ],
+            [
+                "fe4f1d0d50dcf189"
+            ]
+        ]
+    },
+    {
+        "id": "fe4f1d0d50dcf189",
+        "type": "delay",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "20",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 420,
+        "y": 1080,
+        "wires": [
+            [
+                "0c33db4cf3a06fca"
+            ]
+        ]
+    },
+    {
+        "id": "010065b6aef1be57",
+        "type": "function",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "1- meia hora",
+        "func": "msg.topic=`\n\nselect h.*,p.*, concat(\ncase \n\twhen hour(now())<10 then concat('0',hour(now()))\n    when hour(now())>10 then hour(now())\nend\n,\ncase \n\twhen minute(now())>30 then \"30\"\n    when minute(now())=30 then \"30\"\n    when minute(now())<30 then \"00\"\nend\n) as agora from horarios as h \ninner join pessoas p on h.id_pessoa = p.id\ninner join relogios r on r.id = h.id_relogio\nwhere h.notifica =1 and \n\nconcat(\ncase \n\twhen hour(now())<10 then concat('0',hour(now()))\n    when hour(now())>10 then hour(now())\nend\n,\ncase \n\twhen minute(now())>30 then \"30\"\n    when minute(now())=30 then \"30\"\n    when minute(now())<30 then \"00\"\nend\n) = h.horario\nand date(r.data_fim)>=date(now())\nand date(r.data_inicio)<= date(now())\nand r.id = :id`;\n\nmsg.payload={\n    id:msg.relogio.id\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 880,
+        "wires": [
+            [
+                "4a210937782ddb50"
+            ]
+        ]
+    },
+    {
+        "id": "dcba2c9f2a19bac5",
+        "type": "switch",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "",
+        "property": "relogio.tipo",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 4,
+        "x": 970,
+        "y": 920,
+        "wires": [
+            [
+                "010065b6aef1be57"
+            ],
+            [
+                "a57f3511a3fc40dd"
+            ],
+            [
+                "5f723825dbdd467b"
+            ],
+            [
+                "5b4ea606cc34214e"
+            ]
+        ]
+    },
+    {
+        "id": "a57f3511a3fc40dd",
+        "type": "function",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "2 - hora",
+        "func": "msg.topic=`\n\nselect h.*,p.*, concat(\ncase \n\twhen hour(now())<10 then concat('0',hour(now()))\n    when hour(now())>10 then hour(now())\nend\n,\ncase \n\twhen minute(now())>30 then \"30\"\n    when minute(now())=30 then \"30\"\n    when minute(now())<30 then \"00\"\nend\n) as agora from horarios as h \ninner join pessoas p on h.id_pessoa = p.id\ninner join relogios r on r.id = h.id_relogio\nwhere h.notifica =1 and \n\nconcat(\ncase \n\twhen hour(now())<10 then concat('0',hour(now()))\n    when hour(now())>10 then hour(now())\nend\n,\ncase \n\twhen minute(now())>30 then \"30\"\n    when minute(now())=30 then \"30\"\n    when minute(now())<30 then \"00\"\nend\n) = h.horario\nand date(r.data_fim)>=date(now())\nand date(r.data_inicio)<= date(now())\nand r.id = :id`;\n\nmsg.payload={\n    id:msg.relogio.id\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1160,
+        "y": 920,
+        "wires": [
+            [
+                "8af7751466cc28b2"
+            ]
+        ]
+    },
+    {
+        "id": "5f723825dbdd467b",
+        "type": "function",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "3 - diário",
+        "func": "msg.topic=`\nselect h.*,p.*, concat(\ncase \n\twhen hour(now())<10 then concat('0',hour(now()))\n    when hour(now())>10 then hour(now())\nend\n,\ncase \n\twhen minute(now())>30 then \"30\"\n    when minute(now())=30 then \"30\"\n    when minute(now())<30 then \"00\"\nend\n) as agora\n\n from horarios as h \ninner join pessoas p on h.id_pessoa = p.id\ninner join relogios r on r.id = h.id_relogio\nwhere h.notifica =1 \nand DATE_FORMAT(now(),'%d-%m-%Y') = DATE_FORMAT(str_to_date(horario,'%d-%m-%YYYY'),'%d-%m-%Y') \nand r.id = :id`;\n\nlet d = new Date();\nlet hour = d.getHours();\nlet minutes = d.getMinutes();\n\n\nmsg.payload={\n    id:msg.relogio.id\n}\n\nif(hour==6){\n  if(minutes<30){\n     return msg; \n  }  \n}\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1160,
+        "y": 960,
+        "wires": [
+            [
+                "384a4eb87cfbb6b0"
+            ]
+        ]
+    },
+    {
+        "id": "096b67e27a724b5b",
+        "type": "mysql",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "mydb": "36dbdd52d4fc31f0",
+        "name": "",
+        "x": 1480,
+        "y": 1100,
+        "wires": [
+            [
+                "b7be0a53b155c67b"
+            ]
+        ]
+    },
+    {
+        "id": "2f14492f53a2bafd",
+        "type": "function",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "Aluno",
+        "func": "msg.headers = {\n    \"Client-Token\": \"Faa0e9483d732404fb38ebe88909bd19cS\"\n}\n\nif(msg.mensagem==\"\"){\n   msg.mensagem =msg.payload.nome.split(\" \")[0]+ `, mensagem para você`;\n}\n\nmsg.payload={\n  \"phone\": msg.payload.telefone.replace(\"(\",\"\").replace(\")\",\"\").replace(\"-\",\"\").replace(/\\ /gi,\"\"),\n  \"message\": msg.mensagem.replace(\"{pessoa}\",msg.payload.nome.split(\" \")[0] )\n}\n\n\n\nreturn msg;\n \n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2150,
+        "y": 820,
+        "wires": [
+            [
+                "c05c78a0251faa5e"
+            ]
+        ]
+    },
+    {
+        "id": "c05c78a0251faa5e",
+        "type": "www-request",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "url": "https://api.z-api.io/instances/3C12BCB7DE734032C8B47A066F793C1C/token/67C02D759DF9DEF2A2C7FAAD/send-text",
+        "follow-redirects": true,
+        "persistent-http": true,
+        "tls": "",
+        "x": 2330,
+        "y": 820,
+        "wires": [
+            [
+                "93eb87001adad7ff"
+            ]
+        ]
+    },
+    {
+        "id": "93eb87001adad7ff",
+        "type": "debug",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2520,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "12e305fed0d4d28b",
+        "type": "function",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "Pesquisa mensagens dos relógios",
+        "func": "msg.relogio=msg.payload;\n\nmsg.topic=`\nSELECT *  FROM mensagens\nwhere  DATE_FORMAT(data,'%d-%m-%Y') =  DATE_FORMAT(now(),'%d-%m-%Y')\nand id_relogio = :id `;\n\nmsg.payload={\n  id:msg.payload.id  \n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 780,
+        "wires": [
+            [
+                "9750b60d1044d9eb"
+            ]
+        ]
+    },
+    {
+        "id": "9750b60d1044d9eb",
+        "type": "mysql",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "mydb": "36dbdd52d4fc31f0",
+        "name": "",
+        "x": 680,
+        "y": 940,
+        "wires": [
+            [
+                "58a2871758d29cab"
+            ]
+        ]
+    },
+    {
+        "id": "58a2871758d29cab",
+        "type": "function",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "preparacao",
+        "func": "if(msg.payload[0]){\n   msg.mensagem=msg.payload[0].texto; \n}else{\n   msg.mensagem='';\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 860,
+        "wires": [
+            [
+                "dcba2c9f2a19bac5"
+            ]
+        ]
+    },
+    {
+        "id": "5b4ea606cc34214e",
+        "type": "function",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "4 - leitura biblica",
+        "func": "msg.topic=`\nselect h.*,p.*, concat(\ncase \n\twhen hour(now())<10 then concat('0',hour(now()))\n    when hour(now())>10 then hour(now())\nend\n,\ncase \n\twhen minute(now())>30 then \"30\"\n    when minute(now())=30 then \"30\"\n    when minute(now())<30 then \"00\"\nend\n) as agora\n\n from horarios as h \ninner join pessoas p on h.id_pessoa = p.id\ninner join relogios r on r.id = h.id_relogio\nwhere h.notifica =1 \nand r.id = :id`;\n\nlet d = new Date();\nlet hour = d.getHours();\nlet minutes = d.getMinutes();\n\n\nmsg.payload={\n    id:msg.relogio.id\n}\n\nif(hour==23){\n  if(minutes<30){\n     return msg; \n  }  \n}\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 1000,
+        "wires": [
+            [
+                "096b67e27a724b5b"
+            ]
+        ]
+    },
+    {
+        "id": "b7be0a53b155c67b",
+        "type": "function",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "loop",
+        "func": "\nvar item = msg.payload.pop();\n\nif (item) {\n    return [{\n        payload: item,\n        mensagem: msg.mensagem,\n        relogio:msg.relogio\n    }, msg];\n    \n }else{   \n        return [null, null];   \n    \n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1690,
+        "y": 1080,
+        "wires": [
+            [
+                "4f801b76368e751d"
+            ],
+            [
+                "10893b64fd9f90c5"
+            ]
+        ]
+    },
+    {
+        "id": "10893b64fd9f90c5",
+        "type": "delay",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "daley",
+        "pauseType": "random",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "100",
+        "randomLast": "1000",
+        "randomUnits": "milliseconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1690,
+        "y": 1140,
+        "wires": [
+            [
+                "b7be0a53b155c67b"
+            ]
+        ]
+    },
+    {
+        "id": "384a4eb87cfbb6b0",
+        "type": "mysql",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "mydb": "36dbdd52d4fc31f0",
+        "name": "",
+        "x": 1480,
+        "y": 1000,
+        "wires": [
+            [
+                "6a80b67fa93f0fac"
+            ]
+        ]
+    },
+    {
+        "id": "474b3540e2a34ab0",
+        "type": "delay",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "delay",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "20",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1690,
+        "y": 1040,
+        "wires": [
+            [
+                "6a80b67fa93f0fac"
+            ]
+        ]
+    },
+    {
+        "id": "6a80b67fa93f0fac",
+        "type": "function",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "loop",
+        "func": "\nvar item = msg.payload.pop();\n\nif (item) {\n    return [{\n        payload: item,\n        mensagem: msg.mensagem,\n        relogio:msg.relogio\n    }, msg];\n    \n }else{   \n        return [null, null];   \n    \n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1690,
+        "y": 1000,
+        "wires": [
+            [
+                "4f801b76368e751d"
+            ],
+            [
+                "474b3540e2a34ab0"
+            ]
+        ]
+    },
+    {
+        "id": "b1db0fc5a416b1c2",
+        "type": "delay",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "delay",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "20",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1690,
+        "y": 780,
+        "wires": [
+            [
+                "605a1aa848cb6044"
+            ]
+        ]
+    },
+    {
+        "id": "1c14750d45bcc151",
+        "type": "delay",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "delay",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "20",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1690,
+        "y": 900,
+        "wires": [
+            [
+                "88de4b120624e756"
+            ]
+        ]
+    },
+    {
+        "id": "8af7751466cc28b2",
+        "type": "mysql",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "mydb": "36dbdd52d4fc31f0",
+        "name": "",
+        "x": 1480,
+        "y": 880,
+        "wires": [
+            [
+                "88de4b120624e756"
+            ]
+        ]
+    },
+    {
+        "id": "4a210937782ddb50",
+        "type": "mysql",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "mydb": "36dbdd52d4fc31f0",
+        "name": "",
+        "x": 1480,
+        "y": 780,
+        "wires": [
+            [
+                "605a1aa848cb6044"
+            ]
+        ]
+    },
+    {
+        "id": "4f801b76368e751d",
+        "type": "switch",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "Notifica?",
+        "property": "payload.notifica",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "neq",
+                "v": "1",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1980,
+        "y": 940,
+        "wires": [
+            [
+                "2f14492f53a2bafd"
+            ],
+            [
+                "93eb87001adad7ff"
+            ]
+        ]
+    },
+    {
+        "id": "88de4b120624e756",
+        "type": "function",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "loop",
+        "func": "\nvar item = msg.payload.pop();\n\nif (item) {\n    return [{\n        payload: item,\n        mensagem: msg.mensagem,\n        relogio:msg.relogio\n    }, msg];\n    \n }else{   \n        return [null, null];   \n    \n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1690,
+        "y": 940,
+        "wires": [
+            [
+                "4f801b76368e751d"
+            ],
+            [
+                "1c14750d45bcc151"
+            ]
+        ]
+    },
+    {
+        "id": "d4e14fe2f0eec73e",
+        "type": "function",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "Prepara",
+        "func": "\nmsg.payload = msg.payload[1];\nglobal.set(\"mensagem\", msg.mensagem);\nmsg.delay=500;\nreturn msg;\n \n\n\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 540,
+        "wires": [
+            [
+                "eeff24287b765ed5"
+            ]
+        ]
+    },
+    {
+        "id": "eeff24287b765ed5",
+        "type": "subflow:3ed13a0582858ba0",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "",
+        "x": 1190,
+        "y": 620,
+        "wires": [
+            [
+                "e4c8b1d736e80953"
+            ]
+        ]
+    },
+    {
+        "id": "f2daecf12dc2cac9",
+        "type": "subflow:3ed13a0582858ba0",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "",
+        "x": 730,
+        "y": 620,
+        "wires": [
+            [
+                "f41171488d199103"
+            ]
+        ]
+    },
+    {
+        "id": "7bb2025d05e0f3d3",
+        "type": "function",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "Prepara",
+        "func": "\nmsg.payload = msg.payload[1];\nmsg.delay=500;\nreturn msg;\n \n\n\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 540,
+        "wires": [
+            [
+                "f2daecf12dc2cac9"
+            ]
+        ]
+    },
+    {
+        "id": "aa8237bacc96aeec",
+        "type": "function",
+        "z": "a2725fd03b335afd",
+        "g": "64cee126698f8cf4",
+        "name": "Pesquisa relogios ativos",
+        "func": "msg.topic=`\nSELECT *,DATE_FORMAT(data, \"%d/%m\")as data from maratona \nwhere DATE_FORMAT(data, \"%d/%m\")=DATE_FORMAT(now(), \"%d/%m\") ;`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 440,
+        "wires": [
+            [
+                "cce4a8c95574209a"
+            ]
+        ]
+    },
+    {
+        "id": "cce4a8c95574209a",
+        "type": "mysql",
+        "z": "a2725fd03b335afd",
+        "g": "64cee126698f8cf4",
+        "mydb": "36dbdd52d4fc31f0",
+        "name": "",
+        "x": 400,
+        "y": 360,
+        "wires": [
+            [
+                "dcaf222c2b24a800"
+            ]
+        ]
+    },
+    {
+        "id": "dcaf222c2b24a800",
+        "type": "function",
+        "z": "a2725fd03b335afd",
+        "g": "64cee126698f8cf4",
+        "name": "Prepara Mensagem",
+        "func": "msg.mensagem=`*Porção Bíblica*\nEssa é a porção diária de hoje `+msg.payload[0].data+`:\n`;\nmsg.payload.forEach(function(item){\nmsg.mensagem=msg.mensagem+`\n`+item.descricao+`\n`+item.link+`\n`\n});\n\nmsg.mensagem=msg.mensagem+`\n\nTenha um dia abençoado!!`;\n\n\nmsg.tipo=\"texto\";\nmsg.telefone = \"120363212065169966@newsletter\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 440,
+        "wires": [
+            [
+                "5af0171631043e30"
+            ]
+        ]
+    },
+    {
+        "id": "87c3b2917a6f5a44",
+        "type": "cron",
+        "z": "a2725fd03b335afd",
+        "g": "64cee126698f8cf4",
+        "name": "",
+        "crontab": "0 6 * * *",
+        "x": 90,
+        "y": 340,
+        "wires": [
+            [
+                "aa8237bacc96aeec"
+            ]
+        ]
+    },
+    {
+        "id": "5af0171631043e30",
+        "type": "subflow:87e8abe0d5a373ba",
+        "z": "a2725fd03b335afd",
+        "g": "64cee126698f8cf4",
+        "name": "",
+        "x": 690,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d50afac01bf81d2e",
+        "type": "function",
+        "z": "a2725fd03b335afd",
+        "g": "92223985e4aa415a",
+        "name": "Pesquisa relogios ativos",
+        "func": "msg.topic=`\nSELECT *,DATE_FORMAT(data, \"%d/%m\")as data from maratona \nwhere DATE_FORMAT(data, \"%d/%m\")=DATE_FORMAT(now(), \"%d/%m\") ;`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 440,
+        "wires": [
+            [
+                "d03439f5d92c41c9"
+            ]
+        ]
+    },
+    {
+        "id": "d03439f5d92c41c9",
+        "type": "mysql",
+        "z": "a2725fd03b335afd",
+        "g": "92223985e4aa415a",
+        "mydb": "1ffe3ac668eeca60",
+        "name": "",
+        "x": 1180,
+        "y": 360,
+        "wires": [
+            [
+                "021a7561faa8d26c"
+            ]
+        ]
+    },
+    {
+        "id": "d782800fb918595b",
+        "type": "subflow:87e8abe0d5a373ba",
+        "z": "a2725fd03b335afd",
+        "g": "92223985e4aa415a",
+        "name": "",
+        "x": 1630,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "021a7561faa8d26c",
+        "type": "function",
+        "z": "a2725fd03b335afd",
+        "g": "92223985e4aa415a",
+        "name": "Maratona Bíblica IBLN",
+        "func": "msg.mensagem=`*Maratona Bíblica*\nReferência Bíblica:\n`+msg.payload[0].descricao+`\n\nLinks de acesso:\n`+ msg.payload[0].link ;\nmsg.mensagem=msg.mensagem+`\n\nTenha um dia abençoado!!`;\n\nmsg.tipo=\"texto\";\nmsg.telefone = \"120363207135681659@newsletter\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1400,
+        "y": 400,
+        "wires": [
+            [
+                "d782800fb918595b"
+            ]
+        ]
+    },
+    {
+        "id": "9f91fe9edf0c6adf",
+        "type": "cron",
+        "z": "a2725fd03b335afd",
+        "g": "92223985e4aa415a",
+        "name": "",
+        "crontab": "0 6 * * *",
+        "x": 910,
+        "y": 340,
+        "wires": [
+            [
+                "d50afac01bf81d2e"
+            ]
+        ]
+    },
+    {
+        "id": "dad2ce5b68fdd41f",
+        "type": "subflow:802fbef1732e8f2c",
+        "z": "a2725fd03b335afd",
+        "g": "7725df2066a0d1ef",
+        "name": "",
+        "x": 1450,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "18964c677841c0b8",
+        "type": "function",
+        "z": "a2725fd03b335afd",
+        "g": "7725df2066a0d1ef",
+        "name": "function 3",
+        "func": "msg.payload={\n  \"phone\": \"120363255890061494-group\",\n  \"image\": msg.payload.data[0].attributes.avatar,\n  \"caption\": `*`+msg.payload.data[0].attributes.first_name+ `*\n\ntelefone:  `+msg.payload.included[1].attributes.number+`\nemail:  `+msg.payload.included[0].attributes.address+`\n  `\n}  \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1260,
+        "y": 80,
+        "wires": [
+            [
+                "dad2ce5b68fdd41f"
+            ]
+        ]
+    },
+    {
+        "id": "185b52f54c48fe96",
+        "type": "json",
+        "z": "a2725fd03b335afd",
+        "g": "7725df2066a0d1ef",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1130,
+        "y": 120,
+        "wires": [
+            [
+                "18964c677841c0b8"
+            ]
+        ]
+    },
+    {
+        "id": "33ce778f5149cc1e",
+        "type": "http request",
+        "z": "a2725fd03b335afd",
+        "g": "7725df2066a0d1ef",
+        "name": "Recupera Aniversantes",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "basic",
+        "senderr": false,
+        "headers": [],
+        "x": 950,
+        "y": 80,
+        "wires": [
+            [
+                "185b52f54c48fe96"
+            ]
+        ]
+    },
+    {
+        "id": "c1595118259cef0d",
+        "type": "function",
+        "z": "a2725fd03b335afd",
+        "g": "7725df2066a0d1ef",
+        "name": "prepara chamada ",
+        "func": "msg.url=\"https://api.planningcenteronline.com/people/v2/people?where[id]=\"+msg.payload.id+\"&include=emails,phone_numbers,primary_campus\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 140,
+        "wires": [
+            [
+                "33ce778f5149cc1e"
+            ]
+        ]
+    },
+    {
+        "id": "d893e85f6cd1effb",
+        "type": "subflow:3ed13a0582858ba0",
+        "z": "a2725fd03b335afd",
+        "g": "7725df2066a0d1ef",
+        "name": "",
+        "x": 610,
+        "y": 80,
+        "wires": [
+            [
+                "c1595118259cef0d"
+            ]
+        ]
+    },
+    {
+        "id": "726574f781a9702b",
+        "type": "function",
+        "z": "a2725fd03b335afd",
+        "g": "7725df2066a0d1ef",
+        "name": "Prepara loop",
+        "func": "msg.payload = JSON.parse(msg.payload);\nmsg.payload=msg.payload.included;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 180,
+        "wires": [
+            [
+                "d893e85f6cd1effb",
+                "ddfb99eb2ce7642a"
+            ]
+        ]
+    },
+    {
+        "id": "7acd237d61d2264b",
+        "type": "http request",
+        "z": "a2725fd03b335afd",
+        "g": "7725df2066a0d1ef",
+        "name": "Recupera Aniversantes",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://api.planningcenteronline.com/people/v2/lists/2495295?include=people",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "basic",
+        "senderr": false,
+        "headers": [],
+        "x": 330,
+        "y": 100,
+        "wires": [
+            [
+                "726574f781a9702b"
+            ]
+        ]
+    },
+    {
+        "id": "ddfb99eb2ce7642a",
+        "type": "function",
+        "z": "a2725fd03b335afd",
+        "g": "7725df2066a0d1ef",
+        "name": "Introdução da mensagem",
+        "func": "if(msg.payload.length==1){\n  msg.payload={\n    \"phone\": \"120363255890061494-group\",\n    \"message\": `Bom dia!!!, hoje temos apenas ` + msg.payload.length +` aniversariante!`\n  }  \n}else if(msg.payload.length>1){\nmsg.payload={\n  \"phone\": \"120363255890061494-group\",\n    \"message\": `Bom dia!!!, hoje temos  ` + msg.payload.length +` aniversariantes!`\n  }  \n}else{\nmsg.payload={\n  \"phone\": \"120363255890061494-group\",\n  \"message\": `Bom dia!!!, hoje não temos aniversariantes!`\n} \n}\n\n \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 180,
+        "wires": [
+            [
+                "dad2ce5b68fdd41f"
+            ]
+        ]
+    },
+    {
+        "id": "1cdd8bbf0474a000",
+        "type": "comment",
+        "z": "a2725fd03b335afd",
+        "g": "7725df2066a0d1ef",
+        "name": "120363255890061494-group",
+        "info": "",
+        "x": 1520,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "9fba03029854fc51",
+        "type": "cron",
+        "z": "a2725fd03b335afd",
+        "g": "7725df2066a0d1ef",
+        "name": "",
+        "crontab": "0 6 * * * ",
+        "x": 90,
+        "y": 100,
+        "wires": [
+            [
+                "7acd237d61d2264b"
+            ]
+        ]
+    },
+    {
+        "id": "6598ca5232de0946",
+        "type": "inject",
+        "z": "a2725fd03b335afd",
+        "g": "679beb5b15e32c6d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 1240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "26450c8e92ee13c7",
+        "type": "GSheet",
+        "z": "a2725fd03b335afd",
+        "g": "679beb5b15e32c6d",
+        "creds": "21f81eb7097c4b1d",
+        "method": "get",
+        "action": "",
+        "sheet": "1grviqe_duhHNC3LV7bCTf0794zasCoiyo0aWihUevXw",
+        "cells": "Coordenadores",
+        "flatten": false,
+        "name": "",
+        "x": 350,
+        "y": 1320,
+        "wires": [
+            [
+                "e7fbde499c85c6ee"
+            ]
+        ]
+    },
+    {
+        "id": "e7fbde499c85c6ee",
+        "type": "subflow:3ed13a0582858ba0",
+        "z": "a2725fd03b335afd",
+        "g": "679beb5b15e32c6d",
+        "name": "",
+        "x": 530,
+        "y": 1360,
+        "wires": [
+            [
+                "e7af54e39c93e04a"
+            ]
+        ]
+    },
+    {
+        "id": "e7af54e39c93e04a",
+        "type": "function",
+        "z": "a2725fd03b335afd",
+        "g": "679beb5b15e32c6d",
+        "name": "PreparaPessoas",
+        "func": "msg.headers = {\n    \"Client-Token\": \"Faa0e9483d732404fb38ebe88909bd19cS\"\n}\nmsg.payload={\n  //\"phone\":\"61992998663\",\n  \"phone\": msg.payload[2].replace(\"(\",\"\").replace(\")\",\"\").replace(\"-\",\"\").replace(/\\ /gi,\"\"),\n  \"message\": `*AVISO | Artigos online*,\n\nOlá `+ msg.payload[0].split(\" \")[0] +`, tudo bem?\n\nBoa tarde, querido coordenador! \nEsperamos que esteja bem. \n\nRespondendo às dúvidas de alguns alunos sobre o download dos artigos online, informamos a todos os coordenadores que consta no Termo de Compromisso respondido pelo aluno a seguinte informação: “Respeitar a Lei de Direitos Autorais (cf. Art. 46, VIII, da Lei nº 9.610/98) e usar de forma responsável o material didático. Ou seja, não tirar fotocópias, não escanear, baixar ou reproduzir o material que exceda a proporcionalidade de pequenos trechos permitida em lei.”\nDevido a Lei de Direitos Autorais, especificamente, os artigos online (de leitura da plataforma) não podem ser baixados. \nVale ressaltar que o acesso ao conteúdo/plataforma é de exclusividade dos alunos matriculados em Perspectivas Brasil. Não poderá ser compartilhado nem com pessoas da mesma casa. É imprescindível que cada um acesse com seu respectivo login/senha.\n\nQualquer dúvida, entre em contato com a equipe do Atendimento Perspectivas Brasil através dos canais:\n✉ atendimento@perspectivasbrasil.com\n📱 WhatsApp:(41)3289-0262 \n⚠️Se for urgente, ligue. As mensagens no WhatsApp serão respondidas em até 48 horas. \nO atendimento funciona de segunda à sexta entre 13h30 e 18h30. \n\nReceba nosso cordial abraço!\n\nJuntos, \npara que todos os povos O adorem! 🌏\n\nMarisa Magalhães\nTime de Comunicação`\n}\n\n\n\nreturn msg;\n \n\n\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 1320,
+        "wires": [
+            [
+                "1596b145857284d1"
+            ]
+        ]
+    },
+    {
+        "id": "1596b145857284d1",
+        "type": "www-request",
+        "z": "a2725fd03b335afd",
+        "g": "679beb5b15e32c6d",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "url": "https://api.z-api.io/instances/3C12BCB7DE734032C8B47A066F793C1C/token/67C02D759DF9DEF2A2C7FAAD/send-text",
+        "follow-redirects": true,
+        "persistent-http": true,
+        "tls": "",
+        "x": 810,
+        "y": 1400,
+        "wires": [
+            [
+                "25fca76f9d8ced9a"
+            ]
+        ]
+    },
+    {
+        "id": "25fca76f9d8ced9a",
+        "type": "debug",
+        "z": "a2725fd03b335afd",
+        "g": "679beb5b15e32c6d",
+        "name": "debug 20",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "ada0b16cfcf8946d",
+        "type": "inject",
+        "z": "a2725fd03b335afd",
+        "g": "7ba9954bb2613bfd",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 1620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ff6eadb839a4c0f8",
+        "type": "GSheet",
+        "z": "a2725fd03b335afd",
+        "g": "7ba9954bb2613bfd",
+        "creds": "21f81eb7097c4b1d",
+        "method": "get",
+        "action": "",
+        "sheet": "1ccfBaQuy3VNoYaUSDkzlQgQ3_-QusrGgofEwSVYESS8",
+        "cells": "Plan1",
+        "flatten": false,
+        "name": "",
+        "x": 310,
+        "y": 1540,
+        "wires": [
+            [
+                "4263315fc498c4f2"
+            ]
+        ]
+    },
+    {
+        "id": "4263315fc498c4f2",
+        "type": "subflow:3ed13a0582858ba0",
+        "z": "a2725fd03b335afd",
+        "g": "7ba9954bb2613bfd",
+        "name": "",
+        "x": 490,
+        "y": 1560,
+        "wires": [
+            [
+                "27c79243dc95f0b7",
+                "6cdefd3f476c4311"
+            ]
+        ]
+    },
+    {
+        "id": "6cdefd3f476c4311",
+        "type": "function",
+        "z": "a2725fd03b335afd",
+        "g": "7ba9954bb2613bfd",
+        "name": "PreparaPessoas",
+        "func": "msg.headers = {\n    \"Client-Token\": \"Faa0e9483d732404fb38ebe88909bd19cS\"\n}\nmsg.payload={\n  //\"phone\":\"61992998663\",\n  \"phone\": msg.payload[1],\n   \"message\": `🎉 *Festa das Regiões 2024* 🎉\n\nOlá, *`+ msg.payload[0].split(\" \")[0] +`*, nós da Igreja Batista do Lago ficamos muito felizes em te receber na nossa *Festa das Regiões* e aqui vai uma mensagem especial de agradecimento do nosso pastor:`\n}\n\n\n\nreturn msg;\n \n\n\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 1520,
+        "wires": [
+            [
+                "a0381c43221746df"
+            ]
+        ]
+    },
+    {
+        "id": "a0381c43221746df",
+        "type": "www-request",
+        "z": "a2725fd03b335afd",
+        "g": "7ba9954bb2613bfd",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "url": "https://api.z-api.io/instances/3CC085CFD2EE505D7A4C8ABF5D20188A/token/CE0B50743BD6CEA17C77CCC8/send-text",
+        "follow-redirects": true,
+        "persistent-http": true,
+        "tls": "",
+        "x": 830,
+        "y": 1580,
+        "wires": [
+            [
+                "8fcc4dc6fbe2967e"
+            ]
+        ]
+    },
+    {
+        "id": "8fcc4dc6fbe2967e",
+        "type": "debug",
+        "z": "a2725fd03b335afd",
+        "g": "7ba9954bb2613bfd",
+        "name": "debug 22",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "f71255e6b633f830",
+        "type": "function",
+        "z": "a2725fd03b335afd",
+        "g": "7ba9954bb2613bfd",
+        "name": "PreparaPessoas",
+        "func": "msg.headers = {\n    \"Client-Token\": \"Faa0e9483d732404fb38ebe88909bd19cS\"\n}\nmsg.payload={\n \n  \"video\":\"https://relogio.fe.digital/video/agradecimentos.mp4\",\n\"phone\": msg.payload[1],\n  \"caption\": \"Agradecimento Pastor Hércio\",\n \n\n}\n\n\nreturn msg;\n \n\n\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 1660,
+        "wires": [
+            [
+                "ea4b916f5ea969a6"
+            ]
+        ]
+    },
+    {
+        "id": "ea4b916f5ea969a6",
+        "type": "www-request",
+        "z": "a2725fd03b335afd",
+        "g": "7ba9954bb2613bfd",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "url": "https://api.z-api.io/instances/3CC085CFD2EE505D7A4C8ABF5D20188A/token/CE0B50743BD6CEA17C77CCC8/send-text",
+        "follow-redirects": true,
+        "persistent-http": true,
+        "tls": "",
+        "x": 850,
+        "y": 1720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "27c79243dc95f0b7",
+        "type": "delay",
+        "z": "a2725fd03b335afd",
+        "g": "7ba9954bb2613bfd",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 640,
+        "y": 1600,
+        "wires": [
+            [
+                "f71255e6b633f830"
+            ]
+        ]
+    }
+]
