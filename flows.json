@@ -291,6 +291,11 @@
         "charset": "UTF8"
     },
     {
+        "id": "93afee9722a74757",
+        "type": "gauth",
+        "name": "Unknown"
+    },
+    {
         "id": "a9af9b3101702ddf",
         "type": "function",
         "z": "3ed13a0582858ba0",
@@ -1858,7 +1863,7 @@
         "type": "GSheet",
         "z": "a2725fd03b335afd",
         "g": "679beb5b15e32c6d",
-        "creds": "21f81eb7097c4b1d",
+        "creds": "93afee9722a74757",
         "method": "get",
         "action": "",
         "sheet": "1grviqe_duhHNC3LV7bCTf0794zasCoiyo0aWihUevXw",
