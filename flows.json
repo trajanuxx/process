@@ -296,6 +296,63 @@
         "name": "742665231803-compute@developer.gserviceaccount.com"
     },
     {
+        "id": "5d22c29d083b65f0",
+        "type": "global-config",
+        "name": "global-config",
+        "env": [
+            {
+                "name": "dbhost",
+                "value": "ana-prod.chxiodtgwmob.us-east-1.rds.amazonaws.com",
+                "type": "str"
+            },
+            {
+                "name": "NHOST",
+                "value": "ana-prod.chxiodtgwmob.us-east-1.rds.amazonaws.com",
+                "type": "str"
+            },
+            {
+                "name": "NPORT",
+                "value": "3306",
+                "type": "str"
+            },
+            {
+                "name": "NPASSWDB",
+                "value": "bCqqq6KNcjIgDkGF8GT0",
+                "type": "str"
+            },
+            {
+                "name": "NDB",
+                "value": "ananotification",
+                "type": "str"
+            },
+            {
+                "name": "NPROJECTID",
+                "value": "graca-producao-kqqw",
+                "type": "str"
+            },
+            {
+                "name": "NUSERDB",
+                "value": "anaprod",
+                "type": "str"
+            },
+            {
+                "name": "WHATSHTOKEN",
+                "value": "Faa0e9483d732404fb38ebe88909bd19cS",
+                "type": "str"
+            },
+            {
+                "name": "WHATSTOKEN",
+                "value": "67C02D759DF9DEF2A2C7FAAD",
+                "type": "str"
+            },
+            {
+                "name": "WHATSINSTACE",
+                "value": "3C12BCB7DE734032C8B47A066F793C1C",
+                "type": "str"
+            }
+        ]
+    },
+    {
         "id": "a9af9b3101702ddf",
         "type": "function",
         "z": "3ed13a0582858ba0",
