@@ -2,7 +2,15 @@
     {
         "id": "a2725fd03b335afd",
         "type": "tab",
-        "label": "Processo",
+        "label": "Relogio",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e7f7c24acc134af9",
+        "type": "tab",
+        "label": "Ana e Graça",
         "disabled": false,
         "info": "",
         "env": []
@@ -218,38 +226,18 @@
             "7acd237d61d2264b",
             "ddfb99eb2ce7642a",
             "1cdd8bbf0474a000",
-            "9fba03029854fc51"
+            "9fba03029854fc51",
+            "bb2a4bf339e17251"
         ],
         "x": 14,
-        "y": 39,
+        "y": -1,
         "w": 1652,
-        "h": 182
-    },
-    {
-        "id": "679beb5b15e32c6d",
-        "type": "group",
-        "z": "a2725fd03b335afd",
-        "name": "Envio de mensagens Ana",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "6598ca5232de0946",
-            "26450c8e92ee13c7",
-            "e7fbde499c85c6ee",
-            "e7af54e39c93e04a",
-            "1596b145857284d1",
-            "25fca76f9d8ced9a"
-        ],
-        "x": 14,
-        "y": 1199,
-        "w": 1052,
-        "h": 242
+        "h": 222
     },
     {
         "id": "7ba9954bb2613bfd",
         "type": "group",
-        "z": "a2725fd03b335afd",
+        "z": "e7f7c24acc134af9",
         "name": "Envio de mensagens Graça",
         "style": {
             "label": true
@@ -265,35 +253,55 @@
             "ea4b916f5ea969a6",
             "27c79243dc95f0b7"
         ],
-        "x": 14,
-        "y": 1459,
+        "x": 34,
+        "y": 299,
         "w": 1052,
         "h": 302
     },
     {
-        "id": "36dbdd52d4fc31f0",
-        "type": "MySQLdatabase",
-        "name": "ananotification",
-        "host": "${NHOST}",
-        "port": "${NPORT}",
-        "db": "${NDB}",
-        "tz": "America/Sao_Paulo",
-        "charset": "UTF8"
+        "id": "679beb5b15e32c6d",
+        "type": "group",
+        "z": "e7f7c24acc134af9",
+        "name": "Envio de mensagens Ana",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "6598ca5232de0946",
+            "26450c8e92ee13c7",
+            "e7fbde499c85c6ee",
+            "e7af54e39c93e04a",
+            "1596b145857284d1",
+            "25fca76f9d8ced9a",
+            "8f0e73398b7ec74d"
+        ],
+        "x": 34,
+        "y": 39,
+        "w": 1052,
+        "h": 242
     },
     {
-        "id": "1ffe3ac668eeca60",
-        "type": "MySQLdatabase",
-        "name": "iblnnotification",
-        "host": "${NHOST}",
-        "port": "${NPORT}",
-        "db": "iblnnotification",
-        "tz": "America/Sao_Paulo",
-        "charset": "UTF8"
-    },
-    {
-        "id": "93afee9722a74757",
-        "type": "gauth",
-        "name": "742665231803-compute@developer.gserviceaccount.com"
+        "id": "97f8239b7286eadd",
+        "type": "group",
+        "z": "e7f7c24acc134af9",
+        "name": "Processa Mensagens",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "b12177c2449e1f67",
+            "21fbd382026ea493",
+            "8932555c42bf0a74",
+            "2fc732e0bcb95261",
+            "4c564be095b9f8d1",
+            "6e05fee6e03bf17f",
+            "61ea0c8d26819b56",
+            "228f009ad39858d8"
+        ],
+        "x": 34,
+        "y": 639,
+        "w": 1092,
+        "h": 142
     },
     {
         "id": "5d22c29d083b65f0",
@@ -342,15 +350,40 @@
             },
             {
                 "name": "WHATSTOKEN",
-                "value": "67C02D759DF9DEF2A2C7FAAD",
+                "value": "CE0B50743BD6CEA17C77CCC8",
                 "type": "str"
             },
             {
                 "name": "WHATSINSTACE",
-                "value": "3C12BCB7DE734032C8B47A066F793C1C",
+                "value": "3CC085CFD2EE505D7A4C8ABF5D20188A",
                 "type": "str"
             }
         ]
+    },
+    {
+        "id": "36dbdd52d4fc31f0",
+        "type": "MySQLdatabase",
+        "name": "ananotification",
+        "host": "${NHOST}",
+        "port": "${NPORT}",
+        "db": "${NDB}",
+        "tz": "America/Sao_Paulo",
+        "charset": "UTF8"
+    },
+    {
+        "id": "1ffe3ac668eeca60",
+        "type": "MySQLdatabase",
+        "name": "iblnnotification",
+        "host": "${NHOST}",
+        "port": "${NPORT}",
+        "db": "iblnnotification",
+        "tz": "America/Sao_Paulo",
+        "charset": "UTF8"
+    },
+    {
+        "id": "93afee9722a74757",
+        "type": "gauth",
+        "name": "742665231803-compute@developer.gserviceaccount.com"
     },
     {
         "id": "a9af9b3101702ddf",
@@ -655,7 +688,7 @@
         "z": "a2725fd03b335afd",
         "g": "283d7f5c308d86ef",
         "name": "Pesquisa mensagem do dia",
-        "func": "msg.topic=`\nSET time_zone='America/Sao_Paulo';\nSELECT * FROM mensagens\nwhere DATE(data) =DATE(NOW()) `;\nreturn msg;",
+        "func": "msg.topic=`\nSET time_zone='America/Sao_Paulo';\nSELECT * FROM mensagens\nwhere DATE(data) =DATE(NOW()) \nand HOUR(data) =HOUR(NOW())`;\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -667,21 +700,6 @@
         "wires": [
             [
                 "609bbe51d5263aa0"
-            ]
-        ]
-    },
-    {
-        "id": "609bbe51d5263aa0",
-        "type": "mysql",
-        "z": "a2725fd03b335afd",
-        "g": "283d7f5c308d86ef",
-        "mydb": "36dbdd52d4fc31f0",
-        "name": "",
-        "x": 520,
-        "y": 620,
-        "wires": [
-            [
-                "7bb2025d05e0f3d3"
             ]
         ]
     },
@@ -707,27 +725,12 @@
         ]
     },
     {
-        "id": "edc847f87c02b0a1",
-        "type": "mysql",
-        "z": "a2725fd03b335afd",
-        "g": "283d7f5c308d86ef",
-        "mydb": "36dbdd52d4fc31f0",
-        "name": "",
-        "x": 980,
-        "y": 620,
-        "wires": [
-            [
-                "d4e14fe2f0eec73e"
-            ]
-        ]
-    },
-    {
         "id": "e4c8b1d736e80953",
         "type": "function",
         "z": "a2725fd03b335afd",
         "g": "283d7f5c308d86ef",
         "name": "PreparaPessoas",
-        "func": "msg.headers = {\n    \"Client-Token\": \"Faa0e9483d732404fb38ebe88909bd19cS\"\n}\nmsg.payload={\n   \"phone\":\"61992998663\",\n // \"phone\": msg.payload.telefone.replace(\"(\",\"\").replace(\")\",\"\").replace(\"-\",\"\").replace(/\\ /gi,\"\"),\n   \"message\": global.get(\"mensagem\").texto.replace(/{pessoa}/gi, msg.payload.nome.split(\" \")[0])\n}\n\n\n\nreturn msg;\n \n\n\n",
+        "func": "msg.headers = {\n    \"Client-Token\": \"Faa0e9483d732404fb38ebe88909bd19cS\"\n}\nmsg.payload={\n  // \"phone\":\"61992998663\",\n   \"phone\": msg.payload.telefone.replace(\"(\",\"\").replace(\")\",\"\").replace(\"-\",\"\").replace(/\\ /gi,\"\"),\n   \"message\": global.get(\"mensagem\").texto.replace(/{pessoa}/gi, msg.payload.nome.split(\" \")[0])\n}\n\n\n\nreturn msg;\n \n\n\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -739,26 +742,6 @@
         "wires": [
             [
                 "2de92045b6dc13c0"
-            ]
-        ]
-    },
-    {
-        "id": "2de92045b6dc13c0",
-        "type": "www-request",
-        "z": "a2725fd03b335afd",
-        "g": "283d7f5c308d86ef",
-        "name": "",
-        "method": "POST",
-        "ret": "obj",
-        "url": "https://api.z-api.io/instances/3C12BCB7DE734032C8B47A066F793C1C/token/67C02D759DF9DEF2A2C7FAAD/send-text",
-        "follow-redirects": true,
-        "persistent-http": true,
-        "tls": "",
-        "x": 1430,
-        "y": 620,
-        "wires": [
-            [
-                "6fdc385bcae0116a"
             ]
         ]
     },
@@ -807,21 +790,6 @@
         ]
     },
     {
-        "id": "ab1ca7a7e59a3ae8",
-        "type": "cron",
-        "z": "a2725fd03b335afd",
-        "g": "283d7f5c308d86ef",
-        "name": "",
-        "crontab": "*/30 * * * *",
-        "x": 110,
-        "y": 540,
-        "wires": [
-            [
-                "28c1b6278e80ee24"
-            ]
-        ]
-    },
-    {
         "id": "59a3d318fda6095f",
         "type": "function",
         "z": "a2725fd03b335afd",
@@ -838,21 +806,6 @@
         "wires": [
             [
                 "fd56f08f88fb2cd5"
-            ]
-        ]
-    },
-    {
-        "id": "fd56f08f88fb2cd5",
-        "type": "mysql",
-        "z": "a2725fd03b335afd",
-        "g": "283d7f5c308d86ef",
-        "mydb": "36dbdd52d4fc31f0",
-        "name": "",
-        "x": 280,
-        "y": 1000,
-        "wires": [
-            [
-                "0c33db4cf3a06fca"
             ]
         ]
     },
@@ -1048,21 +1001,6 @@
         ]
     },
     {
-        "id": "096b67e27a724b5b",
-        "type": "mysql",
-        "z": "a2725fd03b335afd",
-        "g": "283d7f5c308d86ef",
-        "mydb": "36dbdd52d4fc31f0",
-        "name": "",
-        "x": 1480,
-        "y": 1100,
-        "wires": [
-            [
-                "b7be0a53b155c67b"
-            ]
-        ]
-    },
-    {
         "id": "2f14492f53a2bafd",
         "type": "function",
         "z": "a2725fd03b335afd",
@@ -1079,26 +1017,6 @@
         "wires": [
             [
                 "c05c78a0251faa5e"
-            ]
-        ]
-    },
-    {
-        "id": "c05c78a0251faa5e",
-        "type": "www-request",
-        "z": "a2725fd03b335afd",
-        "g": "283d7f5c308d86ef",
-        "name": "",
-        "method": "POST",
-        "ret": "obj",
-        "url": "https://api.z-api.io/instances/3C12BCB7DE734032C8B47A066F793C1C/token/67C02D759DF9DEF2A2C7FAAD/send-text",
-        "follow-redirects": true,
-        "persistent-http": true,
-        "tls": "",
-        "x": 2330,
-        "y": 820,
-        "wires": [
-            [
-                "93eb87001adad7ff"
             ]
         ]
     },
@@ -1132,26 +1050,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 660,
-        "y": 740,
+        "x": 680,
+        "y": 760,
         "wires": [
             [
                 "9750b60d1044d9eb"
-            ]
-        ]
-    },
-    {
-        "id": "9750b60d1044d9eb",
-        "type": "mysql",
-        "z": "a2725fd03b335afd",
-        "g": "283d7f5c308d86ef",
-        "mydb": "36dbdd52d4fc31f0",
-        "name": "",
-        "x": 680,
-        "y": 940,
-        "wires": [
-            [
-                "58a2871758d29cab"
             ]
         ]
     },
@@ -1241,21 +1144,6 @@
         "wires": [
             [
                 "b7be0a53b155c67b"
-            ]
-        ]
-    },
-    {
-        "id": "384a4eb87cfbb6b0",
-        "type": "mysql",
-        "z": "a2725fd03b335afd",
-        "g": "283d7f5c308d86ef",
-        "mydb": "36dbdd52d4fc31f0",
-        "name": "",
-        "x": 1480,
-        "y": 1000,
-        "wires": [
-            [
-                "6a80b67fa93f0fac"
             ]
         ]
     },
@@ -1357,36 +1245,6 @@
         "wires": [
             [
                 "88de4b120624e756"
-            ]
-        ]
-    },
-    {
-        "id": "8af7751466cc28b2",
-        "type": "mysql",
-        "z": "a2725fd03b335afd",
-        "g": "283d7f5c308d86ef",
-        "mydb": "36dbdd52d4fc31f0",
-        "name": "",
-        "x": 1480,
-        "y": 880,
-        "wires": [
-            [
-                "88de4b120624e756"
-            ]
-        ]
-    },
-    {
-        "id": "4a210937782ddb50",
-        "type": "mysql",
-        "z": "a2725fd03b335afd",
-        "g": "283d7f5c308d86ef",
-        "mydb": "36dbdd52d4fc31f0",
-        "name": "",
-        "x": 1480,
-        "y": 780,
-        "wires": [
-            [
-                "605a1aa848cb6044"
             ]
         ]
     },
@@ -1539,21 +1397,6 @@
         ]
     },
     {
-        "id": "cce4a8c95574209a",
-        "type": "mysql",
-        "z": "a2725fd03b335afd",
-        "g": "64cee126698f8cf4",
-        "mydb": "36dbdd52d4fc31f0",
-        "name": "",
-        "x": 400,
-        "y": 360,
-        "wires": [
-            [
-                "dcaf222c2b24a800"
-            ]
-        ]
-    },
-    {
         "id": "dcaf222c2b24a800",
         "type": "function",
         "z": "a2725fd03b335afd",
@@ -1571,21 +1414,6 @@
         "wires": [
             [
                 "5af0171631043e30"
-            ]
-        ]
-    },
-    {
-        "id": "87c3b2917a6f5a44",
-        "type": "cron",
-        "z": "a2725fd03b335afd",
-        "g": "64cee126698f8cf4",
-        "name": "",
-        "crontab": "0 6 * * *",
-        "x": 90,
-        "y": 340,
-        "wires": [
-            [
-                "aa8237bacc96aeec"
             ]
         ]
     },
@@ -1623,21 +1451,6 @@
         ]
     },
     {
-        "id": "d03439f5d92c41c9",
-        "type": "mysql",
-        "z": "a2725fd03b335afd",
-        "g": "92223985e4aa415a",
-        "mydb": "1ffe3ac668eeca60",
-        "name": "",
-        "x": 1180,
-        "y": 360,
-        "wires": [
-            [
-                "021a7561faa8d26c"
-            ]
-        ]
-    },
-    {
         "id": "d782800fb918595b",
         "type": "subflow:87e8abe0d5a373ba",
         "z": "a2725fd03b335afd",
@@ -1671,21 +1484,6 @@
         ]
     },
     {
-        "id": "9f91fe9edf0c6adf",
-        "type": "cron",
-        "z": "a2725fd03b335afd",
-        "g": "92223985e4aa415a",
-        "name": "",
-        "crontab": "0 6 * * *",
-        "x": 910,
-        "y": 340,
-        "wires": [
-            [
-                "d50afac01bf81d2e"
-            ]
-        ]
-    },
-    {
         "id": "dad2ce5b68fdd41f",
         "type": "subflow:802fbef1732e8f2c",
         "z": "a2725fd03b335afd",
@@ -1712,7 +1510,8 @@
         "y": 80,
         "wires": [
             [
-                "dad2ce5b68fdd41f"
+                "dad2ce5b68fdd41f",
+                "bb2a4bf339e17251"
             ]
         ]
     },
@@ -1873,6 +1672,51 @@
         "wires": []
     },
     {
+        "id": "ab1ca7a7e59a3ae8",
+        "type": "cron",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "",
+        "crontab": "1 * * * *",
+        "x": 110,
+        "y": 540,
+        "wires": [
+            [
+                "28c1b6278e80ee24"
+            ]
+        ]
+    },
+    {
+        "id": "87c3b2917a6f5a44",
+        "type": "cron",
+        "z": "a2725fd03b335afd",
+        "g": "64cee126698f8cf4",
+        "name": "",
+        "crontab": "0 6 * * *",
+        "x": 90,
+        "y": 340,
+        "wires": [
+            [
+                "aa8237bacc96aeec"
+            ]
+        ]
+    },
+    {
+        "id": "9f91fe9edf0c6adf",
+        "type": "cron",
+        "z": "a2725fd03b335afd",
+        "g": "92223985e4aa415a",
+        "name": "",
+        "crontab": "0 6 * * *",
+        "x": 910,
+        "y": 340,
+        "wires": [
+            [
+                "d50afac01bf81d2e"
+            ]
+        ]
+    },
+    {
         "id": "9fba03029854fc51",
         "type": "cron",
         "z": "a2725fd03b335afd",
@@ -1888,93 +1732,160 @@
         ]
     },
     {
-        "id": "6598ca5232de0946",
-        "type": "inject",
+        "id": "609bbe51d5263aa0",
+        "type": "mysql",
         "z": "a2725fd03b335afd",
-        "g": "679beb5b15e32c6d",
+        "g": "283d7f5c308d86ef",
+        "mydb": "36dbdd52d4fc31f0",
         "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 160,
-        "y": 1240,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "26450c8e92ee13c7",
-        "type": "GSheet",
-        "z": "a2725fd03b335afd",
-        "g": "679beb5b15e32c6d",
-        "creds": "93afee9722a74757",
-        "method": "get",
-        "action": "",
-        "sheet": "1grviqe_duhHNC3LV7bCTf0794zasCoiyo0aWihUevXw",
-        "cells": "Coordenadores",
-        "flatten": false,
-        "name": "",
-        "x": 350,
-        "y": 1320,
+        "x": 520,
+        "y": 620,
         "wires": [
             [
-                "e7fbde499c85c6ee"
+                "7bb2025d05e0f3d3"
             ]
         ]
     },
     {
-        "id": "e7fbde499c85c6ee",
-        "type": "subflow:3ed13a0582858ba0",
+        "id": "edc847f87c02b0a1",
+        "type": "mysql",
         "z": "a2725fd03b335afd",
-        "g": "679beb5b15e32c6d",
+        "g": "283d7f5c308d86ef",
+        "mydb": "36dbdd52d4fc31f0",
         "name": "",
-        "x": 530,
-        "y": 1360,
+        "x": 980,
+        "y": 620,
         "wires": [
             [
-                "e7af54e39c93e04a"
+                "d4e14fe2f0eec73e"
             ]
         ]
     },
     {
-        "id": "e7af54e39c93e04a",
-        "type": "function",
+        "id": "fd56f08f88fb2cd5",
+        "type": "mysql",
         "z": "a2725fd03b335afd",
-        "g": "679beb5b15e32c6d",
-        "name": "PreparaPessoas",
-        "func": "msg.headers = {\n    \"Client-Token\": \"Faa0e9483d732404fb38ebe88909bd19cS\"\n}\nmsg.payload={\n  //\"phone\":\"61992998663\",\n  \"phone\": msg.payload[2].replace(\"(\",\"\").replace(\")\",\"\").replace(\"-\",\"\").replace(/\\ /gi,\"\"),\n  \"message\": `*AVISO | Artigos online*,\n\nOlá `+ msg.payload[0].split(\" \")[0] +`, tudo bem?\n\nBoa tarde, querido coordenador! \nEsperamos que esteja bem. \n\nRespondendo às dúvidas de alguns alunos sobre o download dos artigos online, informamos a todos os coordenadores que consta no Termo de Compromisso respondido pelo aluno a seguinte informação: “Respeitar a Lei de Direitos Autorais (cf. Art. 46, VIII, da Lei nº 9.610/98) e usar de forma responsável o material didático. Ou seja, não tirar fotocópias, não escanear, baixar ou reproduzir o material que exceda a proporcionalidade de pequenos trechos permitida em lei.”\nDevido a Lei de Direitos Autorais, especificamente, os artigos online (de leitura da plataforma) não podem ser baixados. \nVale ressaltar que o acesso ao conteúdo/plataforma é de exclusividade dos alunos matriculados em Perspectivas Brasil. Não poderá ser compartilhado nem com pessoas da mesma casa. É imprescindível que cada um acesse com seu respectivo login/senha.\n\nQualquer dúvida, entre em contato com a equipe do Atendimento Perspectivas Brasil através dos canais:\n✉ atendimento@perspectivasbrasil.com\n📱 WhatsApp:(41)3289-0262 \n⚠️Se for urgente, ligue. As mensagens no WhatsApp serão respondidas em até 48 horas. \nO atendimento funciona de segunda à sexta entre 13h30 e 18h30. \n\nReceba nosso cordial abraço!\n\nJuntos, \npara que todos os povos O adorem! 🌏\n\nMarisa Magalhães\nTime de Comunicação`\n}\n\n\n\nreturn msg;\n \n\n\n",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 710,
-        "y": 1320,
+        "g": "283d7f5c308d86ef",
+        "mydb": "36dbdd52d4fc31f0",
+        "name": "",
+        "x": 280,
+        "y": 1000,
         "wires": [
             [
-                "1596b145857284d1"
+                "0c33db4cf3a06fca"
             ]
         ]
     },
     {
-        "id": "1596b145857284d1",
+        "id": "096b67e27a724b5b",
+        "type": "mysql",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "mydb": "36dbdd52d4fc31f0",
+        "name": "",
+        "x": 1480,
+        "y": 1100,
+        "wires": [
+            [
+                "b7be0a53b155c67b"
+            ]
+        ]
+    },
+    {
+        "id": "9750b60d1044d9eb",
+        "type": "mysql",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "mydb": "36dbdd52d4fc31f0",
+        "name": "",
+        "x": 680,
+        "y": 940,
+        "wires": [
+            [
+                "58a2871758d29cab"
+            ]
+        ]
+    },
+    {
+        "id": "384a4eb87cfbb6b0",
+        "type": "mysql",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "mydb": "36dbdd52d4fc31f0",
+        "name": "",
+        "x": 1480,
+        "y": 1000,
+        "wires": [
+            [
+                "6a80b67fa93f0fac"
+            ]
+        ]
+    },
+    {
+        "id": "8af7751466cc28b2",
+        "type": "mysql",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "mydb": "36dbdd52d4fc31f0",
+        "name": "",
+        "x": 1480,
+        "y": 880,
+        "wires": [
+            [
+                "88de4b120624e756"
+            ]
+        ]
+    },
+    {
+        "id": "4a210937782ddb50",
+        "type": "mysql",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "mydb": "36dbdd52d4fc31f0",
+        "name": "",
+        "x": 1480,
+        "y": 780,
+        "wires": [
+            [
+                "605a1aa848cb6044"
+            ]
+        ]
+    },
+    {
+        "id": "cce4a8c95574209a",
+        "type": "mysql",
+        "z": "a2725fd03b335afd",
+        "g": "64cee126698f8cf4",
+        "mydb": "36dbdd52d4fc31f0",
+        "name": "",
+        "x": 400,
+        "y": 360,
+        "wires": [
+            [
+                "dcaf222c2b24a800"
+            ]
+        ]
+    },
+    {
+        "id": "d03439f5d92c41c9",
+        "type": "mysql",
+        "z": "a2725fd03b335afd",
+        "g": "92223985e4aa415a",
+        "mydb": "1ffe3ac668eeca60",
+        "name": "",
+        "x": 1180,
+        "y": 360,
+        "wires": [
+            [
+                "021a7561faa8d26c"
+            ]
+        ]
+    },
+    {
+        "id": "2de92045b6dc13c0",
         "type": "www-request",
         "z": "a2725fd03b335afd",
-        "g": "679beb5b15e32c6d",
+        "g": "283d7f5c308d86ef",
         "name": "",
         "method": "POST",
         "ret": "obj",
@@ -1982,36 +1893,55 @@
         "follow-redirects": true,
         "persistent-http": true,
         "tls": "",
-        "x": 810,
-        "y": 1400,
+        "x": 1430,
+        "y": 620,
         "wires": [
             [
-                "25fca76f9d8ced9a"
+                "6fdc385bcae0116a"
             ]
         ]
     },
     {
-        "id": "25fca76f9d8ced9a",
+        "id": "c05c78a0251faa5e",
+        "type": "www-request",
+        "z": "a2725fd03b335afd",
+        "g": "283d7f5c308d86ef",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "url": "https://api.z-api.io/instances/3C12BCB7DE734032C8B47A066F793C1C/token/67C02D759DF9DEF2A2C7FAAD/send-text",
+        "follow-redirects": true,
+        "persistent-http": true,
+        "tls": "",
+        "x": 2330,
+        "y": 820,
+        "wires": [
+            [
+                "93eb87001adad7ff"
+            ]
+        ]
+    },
+    {
+        "id": "bb2a4bf339e17251",
         "type": "debug",
         "z": "a2725fd03b335afd",
-        "g": "679beb5b15e32c6d",
-        "name": "debug 20",
+        "g": "7725df2066a0d1ef",
+        "name": "debug 24",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
+        "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 960,
-        "y": 1320,
+        "x": 1200,
+        "y": 40,
         "wires": []
     },
     {
         "id": "ada0b16cfcf8946d",
         "type": "inject",
-        "z": "a2725fd03b335afd",
+        "z": "e7f7c24acc134af9",
         "g": "7ba9954bb2613bfd",
         "name": "",
         "props": [
@@ -2030,8 +1960,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 160,
-        "y": 1620,
+        "x": 180,
+        "y": 460,
         "wires": [
             []
         ]
@@ -2039,7 +1969,7 @@
     {
         "id": "ff6eadb839a4c0f8",
         "type": "GSheet",
-        "z": "a2725fd03b335afd",
+        "z": "e7f7c24acc134af9",
         "g": "7ba9954bb2613bfd",
         "creds": "93afee9722a74757",
         "method": "get",
@@ -2048,8 +1978,8 @@
         "cells": "Plan1",
         "flatten": false,
         "name": "",
-        "x": 330,
-        "y": 1540,
+        "x": 350,
+        "y": 380,
         "wires": [
             [
                 "4263315fc498c4f2"
@@ -2059,11 +1989,11 @@
     {
         "id": "4263315fc498c4f2",
         "type": "subflow:3ed13a0582858ba0",
-        "z": "a2725fd03b335afd",
+        "z": "e7f7c24acc134af9",
         "g": "7ba9954bb2613bfd",
         "name": "",
-        "x": 510,
-        "y": 1560,
+        "x": 530,
+        "y": 400,
         "wires": [
             [
                 "27c79243dc95f0b7",
@@ -2074,7 +2004,7 @@
     {
         "id": "6cdefd3f476c4311",
         "type": "function",
-        "z": "a2725fd03b335afd",
+        "z": "e7f7c24acc134af9",
         "g": "7ba9954bb2613bfd",
         "name": "PreparaPessoas",
         "func": "msg.headers = {\n    \"Client-Token\": \"Faa0e9483d732404fb38ebe88909bd19cS\"\n}\nmsg.payload={\n  //\"phone\":\"61992998663\",\n  \"phone\": msg.payload[1],\n   \"message\": `🎉 *Festa das Regiões 2024* 🎉\n\nOlá, *`+ msg.payload[0].split(\" \")[0] +`*, nós da Igreja Batista do Lago ficamos muito felizes em te receber na nossa *Festa das Regiões* e aqui vai uma mensagem especial de agradecimento do nosso pastor:`\n}\n\n\n\nreturn msg;\n \n\n\n",
@@ -2084,8 +2014,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 710,
-        "y": 1520,
+        "x": 730,
+        "y": 360,
         "wires": [
             [
                 "a0381c43221746df"
@@ -2095,7 +2025,7 @@
     {
         "id": "a0381c43221746df",
         "type": "www-request",
-        "z": "a2725fd03b335afd",
+        "z": "e7f7c24acc134af9",
         "g": "7ba9954bb2613bfd",
         "name": "",
         "method": "POST",
@@ -2104,8 +2034,8 @@
         "follow-redirects": true,
         "persistent-http": true,
         "tls": "",
-        "x": 850,
-        "y": 1580,
+        "x": 870,
+        "y": 420,
         "wires": [
             [
                 "8fcc4dc6fbe2967e"
@@ -2115,7 +2045,7 @@
     {
         "id": "8fcc4dc6fbe2967e",
         "type": "debug",
-        "z": "a2725fd03b335afd",
+        "z": "e7f7c24acc134af9",
         "g": "7ba9954bb2613bfd",
         "name": "debug 22",
         "active": true,
@@ -2126,14 +2056,14 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 960,
-        "y": 1500,
+        "x": 980,
+        "y": 340,
         "wires": []
     },
     {
         "id": "f71255e6b633f830",
         "type": "function",
-        "z": "a2725fd03b335afd",
+        "z": "e7f7c24acc134af9",
         "g": "7ba9954bb2613bfd",
         "name": "PreparaPessoas",
         "func": "msg.headers = {\n    \"Client-Token\": \"Faa0e9483d732404fb38ebe88909bd19cS\"\n}\nmsg.payload={\n \n  \"video\":\"https://relogio.fe.digital/video/agradecimentos.mp4\",\n\"phone\": msg.payload[1],\n  \"caption\": \"Agradecimento Pastor Hércio\",\n \n\n}\n\n\nreturn msg;\n \n\n\n",
@@ -2143,8 +2073,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 750,
-        "y": 1660,
+        "x": 770,
+        "y": 500,
         "wires": [
             [
                 "ea4b916f5ea969a6"
@@ -2154,7 +2084,7 @@
     {
         "id": "ea4b916f5ea969a6",
         "type": "www-request",
-        "z": "a2725fd03b335afd",
+        "z": "e7f7c24acc134af9",
         "g": "7ba9954bb2613bfd",
         "name": "",
         "method": "POST",
@@ -2163,8 +2093,8 @@
         "follow-redirects": true,
         "persistent-http": true,
         "tls": "",
-        "x": 870,
-        "y": 1720,
+        "x": 890,
+        "y": 560,
         "wires": [
             []
         ]
@@ -2172,7 +2102,7 @@
     {
         "id": "27c79243dc95f0b7",
         "type": "delay",
-        "z": "a2725fd03b335afd",
+        "z": "e7f7c24acc134af9",
         "g": "7ba9954bb2613bfd",
         "name": "",
         "pauseType": "delay",
@@ -2187,11 +2117,304 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 660,
-        "y": 1600,
+        "x": 680,
+        "y": 440,
         "wires": [
             [
                 "f71255e6b633f830"
+            ]
+        ]
+    },
+    {
+        "id": "6598ca5232de0946",
+        "type": "inject",
+        "z": "e7f7c24acc134af9",
+        "g": "679beb5b15e32c6d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "26450c8e92ee13c7",
+        "type": "GSheet",
+        "z": "e7f7c24acc134af9",
+        "g": "679beb5b15e32c6d",
+        "creds": "93afee9722a74757",
+        "method": "get",
+        "action": "",
+        "sheet": "1grviqe_duhHNC3LV7bCTf0794zasCoiyo0aWihUevXw",
+        "cells": "Coordenadores",
+        "flatten": false,
+        "name": "",
+        "x": 370,
+        "y": 160,
+        "wires": [
+            [
+                "e7fbde499c85c6ee"
+            ]
+        ]
+    },
+    {
+        "id": "e7fbde499c85c6ee",
+        "type": "subflow:3ed13a0582858ba0",
+        "z": "e7f7c24acc134af9",
+        "g": "679beb5b15e32c6d",
+        "name": "",
+        "x": 550,
+        "y": 200,
+        "wires": [
+            [
+                "e7af54e39c93e04a",
+                "8f0e73398b7ec74d"
+            ]
+        ]
+    },
+    {
+        "id": "e7af54e39c93e04a",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "679beb5b15e32c6d",
+        "name": "PreparaPessoas",
+        "func": "msg.headers = {\n    \"Client-Token\": \"Faa0e9483d732404fb38ebe88909bd19cS\"\n}\n\nmsg.payload={\n // \"phone\":\"61992998663\",\n  \"phone\": msg.payload[2].replace(/\\ /gi,\"\"),\n  \"message\": `\n*Boa tarde, `+ msg.payload[0].split(\" \")[0] +`!*\nEsperamos que esteja bem! \n\nCompartilham abaixo um link de uma pasta para que você coloque fotos da sua turma. Você deve procurar a pasta específica da sua turma e colocar as fotos e vídeos: \n\nhttps://drive.google.com/drive/folders/1flGbsR5TQKJDH7b2eDraCNXwbS2WYtkJ?usp=drive_link \n\nOrientações importantes:\n- Escolha as 15 melhores fotos de cada aula. Não exceda este número. \n- As fotos devem estar com uma boa resolução e iluminação. \n* Faça uma foto oficial dos equipantes e coloque neste mesma pasta.\n* Faça fotos de toda turma junto com o instrutor ao final de cada aula. \n- Coloque vídeos das aulas: se possível faça pequenos vídeos (até 10 segundos) de partes de cada aula, os vídeos, preferencialmente devem ser gravados com câmera e no formato horizontal. Caso não tenha esta equipamento, faça alguns vídeos com o celular no formato horizontal e vertical.\n\nMarisa Magalhães \nTime de Comunicação \n\nJuntos, \nPor uma década missionária! 🌏\n`\n}\n/*\nmsg.payload= {\n  \"phone\": msg.payload[2].replace(\"(\",\"\").replace(\")\",\"\").replace(\"-\",\"\").replace(/\\ /gi,\"\"),\n  \"image\": \"https://relogio.fe.digital/img/8fc16657-8e6e-4c7b-885a-0a4ae9b9ccd3\",\n  \"caption\": \"Imagem descritiva\"\n}\n*/\n/*\nmsg.payload = {\n // \"phone\": \"5561992998663\",\n  \"phone\": msg.payload[2].replace(\"(\", \"\").replace(\")\", \"\").replace(\"-\", \"\").replace(/\\ /gi, \"\"),\n  \"image\": \"https://relogio.fe.digital/img/oreconosco\",\n  \"caption\": `\n  *Por Um Movimento de Brasileiro Entre os Povos*\n\n*`+ msg.payload[0].split(\" \")[0] +`*, queremos te convocar para uma jornada de oração com um ousado alvo: Ver 30% dos alunos de Perspectivas indo aos campos sem acesso ao evangelho.\n\nNa próxima *segunda-feira dia 30/09* será o nosso *1° dia Jejum e Oração*. Iniciaremos 00:00 e iremos até 15h. \n\nQueremos te encorajar a dedicar um tempo de jejum e oração, para que o Espírito Santo desperte, mobilize e envie alunos de Perspectivas para povos não alcançados.\n\nEsta será apenas a primeira fase de oração, em breve iremos compartilhar os primeiros passos.\n\nVamos juntos!\nCom Ele, por Ele! \n*Para que todos os povos O adorem* 🌎\n  \n  \n  `\n}\n\n\n*/\nreturn msg;\n \n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 160,
+        "wires": [
+            [
+                "1596b145857284d1"
+            ]
+        ]
+    },
+    {
+        "id": "1596b145857284d1",
+        "type": "www-request",
+        "z": "e7f7c24acc134af9",
+        "g": "679beb5b15e32c6d",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "url": "https://api.z-api.io/instances/3C12BCB7DE734032C8B47A066F793C1C/token/67C02D759DF9DEF2A2C7FAAD/send-text",
+        "follow-redirects": true,
+        "persistent-http": true,
+        "tls": "",
+        "x": 830,
+        "y": 240,
+        "wires": [
+            [
+                "25fca76f9d8ced9a"
+            ]
+        ]
+    },
+    {
+        "id": "25fca76f9d8ced9a",
+        "type": "debug",
+        "z": "e7f7c24acc134af9",
+        "g": "679beb5b15e32c6d",
+        "name": "debug 20",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "8f0e73398b7ec74d",
+        "type": "debug",
+        "z": "e7f7c24acc134af9",
+        "g": "679beb5b15e32c6d",
+        "name": "debug 23",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "b12177c2449e1f67",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "97f8239b7286eadd",
+        "name": "recuperar Servicos",
+        "func": "msg.topic=`\nSELECT \n\tcc.valor, \n\tsc.nome\n    \nFROM fe_admin.clientes_campos cc\ninner join fe_admin.servicos_campos  sc on sc.id = cc.id_servicos_campos\ninner join fe_admin.servicos s on s.id = sc.id_servicos\ninner join fe_admin.cliente_servico cs on cs.id = cc.id_cliente_servico\ninner join fe_admin.clientes c on c.id = cs.id_cliente\nwhere s.id = 12 \nand s.status =1\nand c.id = :id\n`\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 680,
+        "wires": [
+            [
+                "6e05fee6e03bf17f"
+            ]
+        ]
+    },
+    {
+        "id": "21fbd382026ea493",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "97f8239b7286eadd",
+        "name": "recuperar Clientes",
+        "func": "msg.topic=`\nSELECT * FROM fe_admin.clientes;\n`\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 250,
+        "y": 740,
+        "wires": [
+            [
+                "8932555c42bf0a74"
+            ]
+        ]
+    },
+    {
+        "id": "8932555c42bf0a74",
+        "type": "mysql",
+        "z": "e7f7c24acc134af9",
+        "g": "97f8239b7286eadd",
+        "mydb": "36dbdd52d4fc31f0",
+        "name": "",
+        "x": 440,
+        "y": 680,
+        "wires": [
+            [
+                "2fc732e0bcb95261"
+            ]
+        ]
+    },
+    {
+        "id": "2fc732e0bcb95261",
+        "type": "subflow:3ed13a0582858ba0",
+        "z": "e7f7c24acc134af9",
+        "g": "97f8239b7286eadd",
+        "name": "",
+        "x": 550,
+        "y": 740,
+        "wires": [
+            [
+                "b12177c2449e1f67"
+            ]
+        ]
+    },
+    {
+        "id": "4c564be095b9f8d1",
+        "type": "inject",
+        "z": "e7f7c24acc134af9",
+        "g": "97f8239b7286eadd",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 680,
+        "wires": [
+            [
+                "21fbd382026ea493"
+            ]
+        ]
+    },
+    {
+        "id": "6e05fee6e03bf17f",
+        "type": "mysql",
+        "z": "e7f7c24acc134af9",
+        "g": "97f8239b7286eadd",
+        "mydb": "36dbdd52d4fc31f0",
+        "name": "",
+        "x": 780,
+        "y": 740,
+        "wires": [
+            [
+                "228f009ad39858d8"
+            ]
+        ]
+    },
+    {
+        "id": "61ea0c8d26819b56",
+        "type": "debug",
+        "z": "e7f7c24acc134af9",
+        "g": "97f8239b7286eadd",
+        "name": "debug 25",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "228f009ad39858d8",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "97f8239b7286eadd",
+        "name": "Trasnformacao",
+        "func": " const resultado = {};\n  msg.payload.forEach(item => {\n    resultado[item.nome] = item.valor;\n  });\nmsg.payload = resultado;\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 680,
+        "wires": [
+            [
+                "61ea0c8d26819b56"
             ]
         ]
     }
