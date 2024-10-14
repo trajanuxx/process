@@ -316,13 +316,12 @@
             "82633872ed93dd42",
             "fa74f2a8c990cc62",
             "2878954757031c1c",
-            "2d98935c9f756526",
             "cfcf04d6d23f64c4"
         ],
         "x": 34,
         "y": 639,
         "w": 1692,
-        "h": 322
+        "h": 282
     },
     {
         "id": "ccdf4d4c7440eb32",
@@ -378,7 +377,7 @@
             "57862754534776a2"
         ],
         "x": 34,
-        "y": 1179,
+        "y": 1399,
         "w": 2152,
         "h": 122
     },
@@ -396,20 +395,18 @@
             "fd638fed21a6254d",
             "7a1780cf828a692b",
             "b5a63e9b92d848b3",
-            "63829c3b9d72a3fd",
-            "ba131fd9af4a788f",
-            "6ce13b14c673a02c",
-            "2763a6ec0c58083f",
             "a79058958c47e415",
             "060a86600ac02e9d",
-            "cbd8b70db1febf0d",
-            "39b0dda943dabfed",
-            "fdacac31e2576f4c"
+            "fdacac31e2576f4c",
+            "94220772492cb06b",
+            "0bcdab4428f6b7a0",
+            "b2a3f97473cea794",
+            "da249b81427a2dee"
         ],
         "x": 34,
-        "y": 1319,
-        "w": 2152,
-        "h": 122
+        "y": 1539,
+        "w": 1752,
+        "h": 142
     },
     {
         "id": "258b7a9d543e1f84",
@@ -427,9 +424,39 @@
             "c529d35885b3c64e"
         ],
         "x": 34,
-        "y": 1479,
+        "y": 1739,
         "w": 1032,
         "h": 142
+    },
+    {
+        "id": "d3573b12d22be78e",
+        "type": "group",
+        "z": "e7f7c24acc134af9",
+        "name": "Serviço Aniversariantes Grupo",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "0298a6d8adb497ba",
+            "ae16e7847e9a7467",
+            "3c9ed41de1afa35b",
+            "093a185b300d6337",
+            "7054600e9aca379a",
+            "d99e835fa25e9332",
+            "e6b31a325124d52d",
+            "e720e3a966fcbda9",
+            "bb4253d2f35c93a7",
+            "6b9374a52cc8fbd8",
+            "482b8163d0a0130f",
+            "5605f0d59ee7d6f7",
+            "db150f5ea512a519",
+            "9f18b852c9cdc1b9",
+            "94883a50c74925c8"
+        ],
+        "x": 34,
+        "y": 1159,
+        "w": 1812,
+        "h": 202
     },
     {
         "id": "5d22c29d083b65f0",
@@ -2559,18 +2586,13 @@
             },
             {
                 "t": "eq",
-                "v": "10",
-                "vt": "num"
-            },
-            {
-                "t": "eq",
                 "v": "12",
                 "vt": "num"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 7,
+        "outputs": 6,
         "x": 1240,
         "y": 800,
         "wires": [
@@ -2588,9 +2610,6 @@
             ],
             [
                 "cb4f8595e3642cc2"
-            ],
-            [
-                "2d98935c9f756526"
             ],
             [
                 "cfcf04d6d23f64c4"
@@ -2925,7 +2944,9 @@
         "g": "1bc08ef901d52d8f",
         "name": "Notificação Grupo Aniversariantes",
         "mode": "link",
-        "links": [],
+        "links": [
+            "0298a6d8adb497ba"
+        ],
         "x": 1560,
         "y": 720,
         "wires": [],
@@ -2960,19 +2981,6 @@
         "l": true
     },
     {
-        "id": "2d98935c9f756526",
-        "type": "link out",
-        "z": "e7f7c24acc134af9",
-        "g": "1bc08ef901d52d8f",
-        "name": "Mensagens WhasApp Planejadas",
-        "mode": "link",
-        "links": [],
-        "x": 1560,
-        "y": 880,
-        "wires": [],
-        "l": true
-    },
-    {
         "id": "cfcf04d6d23f64c4",
         "type": "link out",
         "z": "e7f7c24acc134af9",
@@ -2983,7 +2991,7 @@
             "57862754534776a2"
         ],
         "x": 1540,
-        "y": 920,
+        "y": 880,
         "wires": [],
         "l": true
     },
@@ -3001,7 +3009,7 @@
         "finalize": "",
         "libs": [],
         "x": 210,
-        "y": 1220,
+        "y": 1440,
         "wires": [
             [
                 "74e4c7d4744a515c"
@@ -3016,7 +3024,7 @@
         "mydb": "36dbdd52d4fc31f0",
         "name": "",
         "x": 400,
-        "y": 1260,
+        "y": 1480,
         "wires": [
             [
                 "125e9f102a57eead"
@@ -3029,7 +3037,7 @@
         "z": "e7f7c24acc134af9",
         "g": "807c7f127df3e5d0",
         "name": "Trasnformacao",
-        "func": " const resultado = {};\n  msg.payload.forEach(item => {\n    resultado[item.nome] = item.valor;\n  });\nmsg.payload = resultado;\n\n\nmsg.registros = {\n  resultado: resultado\n}\nmsg.payload=resultado;\nmsg.sheet = resultado.url_google_mensagens.split(\":\")[0];\nmsg.cells = resultado.url_google_mensagens.split(\":\")[1];\n \nif (msg.payload && msg.payload.length !== 0) {\n\n   return msg;\n\n}",
+        "func": " const resultado = {};\n  msg.payload.forEach(item => {\n    resultado[item.nome] = item.valor;\n  });\nmsg.payload = resultado;\n\n\nmsg.registros.resultado = resultado\nmsg.payload=resultado;\nmsg.sheet = resultado.url_google_mensagens.split(\":\")[0];\nmsg.cells = resultado.url_google_mensagens.split(\":\")[1];\n \nif (msg.payload && msg.payload.length !== 0) {\n\n   return msg;\n\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3037,7 +3045,7 @@
         "finalize": "",
         "libs": [],
         "x": 700,
-        "y": 1260,
+        "y": 1480,
         "wires": [
             [
                 "187968243dbd8153"
@@ -3057,7 +3065,7 @@
         "flatten": false,
         "name": "",
         "x": 870,
-        "y": 1220,
+        "y": 1440,
         "wires": [
             [
                 "d939653c45ca1600"
@@ -3071,7 +3079,7 @@
         "g": "807c7f127df3e5d0",
         "name": "",
         "x": 990,
-        "y": 1260,
+        "y": 1480,
         "wires": [
             [
                 "226c61ad26e0fd4e"
@@ -3092,7 +3100,7 @@
         "finalize": "",
         "libs": [],
         "x": 1310,
-        "y": 1260,
+        "y": 1480,
         "wires": [
             [
                 "b98cc64c51868f63"
@@ -3112,7 +3120,7 @@
         "flatten": false,
         "name": "",
         "x": 1510,
-        "y": 1220,
+        "y": 1440,
         "wires": [
             [
                 "5b681e66b95ab316"
@@ -3126,7 +3134,7 @@
         "g": "807c7f127df3e5d0",
         "name": "",
         "x": 1650,
-        "y": 1260,
+        "y": 1480,
         "wires": [
             [
                 "6eb51119c3396d84"
@@ -3147,7 +3155,7 @@
         "finalize": "",
         "libs": [],
         "x": 1810,
-        "y": 1220,
+        "y": 1440,
         "wires": [
             [
                 "9e267a04767e77d5"
@@ -3171,7 +3179,7 @@
         "repair": false,
         "outputs": 1,
         "x": 550,
-        "y": 1220,
+        "y": 1440,
         "wires": [
             [
                 "e55dcd0dc546dac8"
@@ -3197,7 +3205,7 @@
         "repair": false,
         "outputs": 1,
         "x": 1150,
-        "y": 1220,
+        "y": 1440,
         "wires": [
             [
                 "ce4243baaf14e0cc"
@@ -3217,7 +3225,7 @@
         "persistent-http": true,
         "tls": "",
         "x": 1960,
-        "y": 1260,
+        "y": 1480,
         "wires": [
             [
                 "83794e76069eafe7"
@@ -3239,7 +3247,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 2080,
-        "y": 1220,
+        "y": 1440,
         "wires": []
     },
     {
@@ -3252,7 +3260,7 @@
             "cfcf04d6d23f64c4"
         ],
         "x": 75,
-        "y": 1220,
+        "y": 1440,
         "wires": [
             [
                 "4a1246542845e1f1"
@@ -3265,7 +3273,7 @@
         "z": "e7f7c24acc134af9",
         "g": "cd48d0c3ebd80200",
         "name": "recuperar Servicos",
-        "func": "msg.topic=`\nSELECT \n\tcc.valor, \n\tsc.nome\n    \nFROM fe_admin.clientes_campos cc\ninner join fe_admin.servicos_campos  sc on sc.id = cc.id_servicos_campos\ninner join fe_admin.servicos s on s.id = sc.id_servicos\ninner join fe_admin.cliente_servico cs on cs.id = cc.id_cliente_servico\ninner join fe_admin.clientes c on c.id = cs.id_cliente\nwhere s.id = 12 \nand s.status =1\nand cs.id=:id\nand c.id = `+msg.registros.cliente.id+`\n \n`\nreturn msg;",
+        "func": "var agora = new Date();\nmsg.topic=`\nSELECT \n\tcc.valor, \n\tsc.nome\n    \nFROM fe_admin.clientes_campos cc\ninner join fe_admin.servicos_campos  sc on sc.id = cc.id_servicos_campos\ninner join fe_admin.servicos s on s.id = sc.id_servicos\ninner join fe_admin.cliente_servico cs on cs.id = cc.id_cliente_servico\ninner join fe_admin.clientes c on c.id = cs.id_cliente\nwhere s.id = 7 \nand s.status =1\nand cs.id=:id\nand c.id = `+msg.registros.cliente.id+`\n \n`\nif (agora.getHours() == 6) {\n\treturn msg;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3273,7 +3281,7 @@
         "finalize": "",
         "libs": [],
         "x": 210,
-        "y": 1360,
+        "y": 1600,
         "wires": [
             [
                 "a49bdfcd167c069f"
@@ -3288,7 +3296,7 @@
         "mydb": "36dbdd52d4fc31f0",
         "name": "",
         "x": 400,
-        "y": 1400,
+        "y": 1640,
         "wires": [
             [
                 "a79058958c47e415"
@@ -3301,7 +3309,7 @@
         "z": "e7f7c24acc134af9",
         "g": "cd48d0c3ebd80200",
         "name": "Trasnformacao",
-        "func": " const resultado = {};\n  msg.payload.forEach(item => {\n    resultado[item.nome] = item.valor;\n  });\nmsg.payload = resultado;\n\n\nmsg.registros = {\n  resultado: resultado\n}\nmsg.payload=resultado;\nmsg.sheet = resultado.url_google_mensagens.split(\":\")[0];\nmsg.cells = resultado.url_google_mensagens.split(\":\")[1];\n \nif (msg.payload && msg.payload.length !== 0) {\n\n   return msg;\n\n}",
+        "func": " const resultado = {};\n  msg.payload.forEach(item => {\n    resultado[item.nome] = item.valor;\n  });\nmsg.payload = resultado;\n\n\nmsg.registros.resultado= resultado\nmsg.payload=resultado;\nmsg.sheet = resultado.url_google_mensagens.split(\":\")[0];\nmsg.cells = resultado.url_google_mensagens.split(\":\")[1];\n \nif (msg.payload && msg.payload.length !== 0) {\n\n   return msg;\n\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3309,7 +3317,7 @@
         "finalize": "",
         "libs": [],
         "x": 700,
-        "y": 1400,
+        "y": 1640,
         "wires": [
             [
                 "7a1780cf828a692b"
@@ -3329,7 +3337,7 @@
         "flatten": false,
         "name": "",
         "x": 870,
-        "y": 1360,
+        "y": 1600,
         "wires": [
             [
                 "b5a63e9b92d848b3"
@@ -3343,86 +3351,10 @@
         "g": "cd48d0c3ebd80200",
         "name": "",
         "x": 990,
-        "y": 1400,
+        "y": 1640,
         "wires": [
             [
                 "060a86600ac02e9d"
-            ]
-        ]
-    },
-    {
-        "id": "63829c3b9d72a3fd",
-        "type": "function",
-        "z": "e7f7c24acc134af9",
-        "g": "cd48d0c3ebd80200",
-        "name": "Verifica Data e hora",
-        "func": "var dataatual = new Date();\ndataatual.setMinutes(0, 0, 0);\nvar dataRecebida = new Date(msg.payload[0].split(\"/\")[1] + \"/\" + msg.payload[0].split(\"/\")[0] + \"/\" + msg.payload[0].split(\"/\")[2] + \" \" + msg.payload[1])\nmsg.registros.mensagem = msg.payload;\n\n\nmsg.sheet = msg.registros.resultado.url_google_contatos.split(\":\")[0];\nmsg.cells = msg.payload[2];\n\n\nif((dataatual.getTime() - dataRecebida.getTime())==0){\n  return msg; \n}   \n  \n \n   \n\n\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1310,
-        "y": 1400,
-        "wires": [
-            [
-                "ba131fd9af4a788f"
-            ]
-        ]
-    },
-    {
-        "id": "ba131fd9af4a788f",
-        "type": "GSheet",
-        "z": "e7f7c24acc134af9",
-        "g": "cd48d0c3ebd80200",
-        "creds": "93afee9722a74757",
-        "method": "get",
-        "action": "",
-        "sheet": "",
-        "cells": "",
-        "flatten": false,
-        "name": "",
-        "x": 1510,
-        "y": 1360,
-        "wires": [
-            [
-                "6ce13b14c673a02c"
-            ]
-        ]
-    },
-    {
-        "id": "6ce13b14c673a02c",
-        "type": "subflow:3ed13a0582858ba0",
-        "z": "e7f7c24acc134af9",
-        "g": "cd48d0c3ebd80200",
-        "name": "",
-        "x": 1650,
-        "y": 1400,
-        "wires": [
-            [
-                "2763a6ec0c58083f"
-            ]
-        ]
-    },
-    {
-        "id": "2763a6ec0c58083f",
-        "type": "function",
-        "z": "e7f7c24acc134af9",
-        "g": "cd48d0c3ebd80200",
-        "name": "PreparaPessoas",
-        "func": "msg.headers = {\n  \"Client-Token\": msg.registros.resultado.WHATSHTOKEN\n}\n\nmsg.url = \"https://api.z-api.io/instances/\" + msg.registros.resultado.WHATSINSTACE + \"/token/\" + msg.registros.resultado.WHATSTOKEN+\"/send-text\";\n\nmsg.payload={\n  \"phone\":\"61992998663\",\n//  \"phone\": msg.payload[2],\n    \"message\": msg.registros.mensagem[3].replace(/{pessoa}/gi,msg.payload[0]) \n  \n \n}\n\nreturn msg;\n \n",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1810,
-        "y": 1360,
-        "wires": [
-            [
-                "cbd8b70db1febf0d"
             ]
         ]
     },
@@ -3443,7 +3375,7 @@
         "repair": false,
         "outputs": 1,
         "x": 550,
-        "y": 1360,
+        "y": 1600,
         "wires": [
             [
                 "fd638fed21a6254d"
@@ -3468,51 +3400,13 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1150,
-        "y": 1360,
+        "x": 1130,
+        "y": 1600,
         "wires": [
             [
-                "63829c3b9d72a3fd"
+                "94220772492cb06b"
             ]
         ]
-    },
-    {
-        "id": "cbd8b70db1febf0d",
-        "type": "www-request",
-        "z": "e7f7c24acc134af9",
-        "g": "cd48d0c3ebd80200",
-        "name": "Envia WA",
-        "method": "POST",
-        "ret": "obj",
-        "url": "",
-        "follow-redirects": true,
-        "persistent-http": true,
-        "tls": "",
-        "x": 1960,
-        "y": 1400,
-        "wires": [
-            [
-                "39b0dda943dabfed"
-            ]
-        ]
-    },
-    {
-        "id": "39b0dda943dabfed",
-        "type": "debug",
-        "z": "e7f7c24acc134af9",
-        "g": "cd48d0c3ebd80200",
-        "name": "debug 29",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2080,
-        "y": 1360,
-        "wires": []
     },
     {
         "id": "fdacac31e2576f4c",
@@ -3524,7 +3418,7 @@
             "2878954757031c1c"
         ],
         "x": 75,
-        "y": 1360,
+        "y": 1600,
         "wires": [
             [
                 "9c5ed1e74182534b"
@@ -3544,7 +3438,7 @@
         "persistent-http": true,
         "tls": "",
         "x": 620,
-        "y": 1580,
+        "y": 1840,
         "wires": [
             [
                 "fb896aa9e8dc0367"
@@ -3565,7 +3459,7 @@
         "finalize": "",
         "libs": [],
         "x": 450,
-        "y": 1520,
+        "y": 1780,
         "wires": [
             [
                 "5e1ef3f0d44bc35b"
@@ -3586,7 +3480,7 @@
         "finalize": "",
         "libs": [],
         "x": 790,
-        "y": 1520,
+        "y": 1780,
         "wires": [
             [
                 "c529d35885b3c64e"
@@ -3604,7 +3498,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 170,
-        "y": 1580,
+        "y": 1840,
         "wires": [
             [
                 "8517fb01601eea67"
@@ -3620,7 +3514,394 @@
         "statusCode": "",
         "headers": {},
         "x": 990,
+        "y": 1840,
+        "wires": []
+    },
+    {
+        "id": "94220772492cb06b",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "cd48d0c3ebd80200",
+        "name": "Verifica Data e hora",
+        "func": "var dataatual = new Date();\ndataatual.setMinutes(0, 0, 0);\nvar dataRecebida = new Date(msg.payload[0].split(\"/\")[1] + \"/\" + msg.payload[0].split(\"/\")[0] + \"/\" + msg.payload[0].split(\"/\")[2] )\nmsg.registros.mensagem = msg.payload;\n\n\nvar dataatuali = dataatual.getDate() + \"/\" + dataatual.getMonth() ;\nvar datarecebidali = dataRecebida.getDate() + \"/\" + dataRecebida.getMonth() ;\n\n\nif (dataatuali == datarecebidali){\n    return msg;\n}   \n\n\n   \n\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1290,
+        "y": 1640,
+        "wires": [
+            [
+                "0bcdab4428f6b7a0"
+            ]
+        ]
+    },
+    {
+        "id": "0bcdab4428f6b7a0",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "cd48d0c3ebd80200",
+        "name": "PreparaPessoas",
+        "func": "msg.headers = {\n  \"Client-Token\": msg.registros.resultado.WHATSHTOKEN\n}\n\nmsg.url = \"https://api.z-api.io/instances/\" + msg.registros.resultado.WHATSINSTACE + \"/token/\" + msg.registros.resultado.WHATSTOKEN+\"/send-text\";\n\nmsg.payload={\n // \"phone\":\"61992998663\",\n  \"phone\": msg.registros.resultado.grupo_canal_wa,\n  \"message\": msg.payload[1] +`\n*_`+msg.registros.cliente.nome+`_*`\n  \n \n}\n\nreturn msg;\n \n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1450,
+        "y": 1580,
+        "wires": [
+            [
+                "b2a3f97473cea794"
+            ]
+        ]
+    },
+    {
+        "id": "b2a3f97473cea794",
+        "type": "www-request",
+        "z": "e7f7c24acc134af9",
+        "g": "cd48d0c3ebd80200",
+        "name": "Envia WA",
+        "method": "POST",
+        "ret": "obj",
+        "url": "",
+        "follow-redirects": true,
+        "persistent-http": true,
+        "tls": "",
+        "x": 1560,
+        "y": 1640,
+        "wires": [
+            [
+                "da249b81427a2dee"
+            ]
+        ]
+    },
+    {
+        "id": "da249b81427a2dee",
+        "type": "debug",
+        "z": "e7f7c24acc134af9",
+        "g": "cd48d0c3ebd80200",
+        "name": "debug 29",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1680,
         "y": 1580,
         "wires": []
+    },
+    {
+        "id": "0298a6d8adb497ba",
+        "type": "link in",
+        "z": "e7f7c24acc134af9",
+        "g": "d3573b12d22be78e",
+        "name": "Entrada Aniversariantes",
+        "links": [
+            "82633872ed93dd42"
+        ],
+        "x": 75,
+        "y": 1260,
+        "wires": [
+            [
+                "ae16e7847e9a7467"
+            ]
+        ]
+    },
+    {
+        "id": "ae16e7847e9a7467",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "d3573b12d22be78e",
+        "name": "Somente as 6h da manha",
+        "func": "var agora = new Date();\nmsg.topic=`\nSELECT \n\tcc.valor, \n\tsc.nome\n    \nFROM fe_admin.clientes_campos cc\ninner join fe_admin.servicos_campos  sc on sc.id = cc.id_servicos_campos\ninner join fe_admin.servicos s on s.id = sc.id_servicos\ninner join fe_admin.cliente_servico cs on cs.id = cc.id_cliente_servico\ninner join fe_admin.clientes c on c.id = cs.id_cliente\nwhere s.id = 4\nand s.status =1\nand cs.id=:id\nand c.id = `+msg.registros.cliente.id+`\n`\n// verifica se está no horario. Esse serviço roda todos os dias as 6h da manhã somente\n\nif(agora.getHours()==6){\n\treturn msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 1200,
+        "wires": [
+            [
+                "3c9ed41de1afa35b"
+            ]
+        ]
+    },
+    {
+        "id": "3c9ed41de1afa35b",
+        "type": "mysql",
+        "z": "e7f7c24acc134af9",
+        "g": "d3573b12d22be78e",
+        "mydb": "36dbdd52d4fc31f0",
+        "name": "",
+        "x": 380,
+        "y": 1260,
+        "wires": [
+            [
+                "093a185b300d6337"
+            ]
+        ]
+    },
+    {
+        "id": "093a185b300d6337",
+        "type": "switch",
+        "z": "e7f7c24acc134af9",
+        "g": "d3573b12d22be78e",
+        "name": "vazio?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 480,
+        "y": 1200,
+        "wires": [
+            [
+                "7054600e9aca379a"
+            ]
+        ]
+    },
+    {
+        "id": "7054600e9aca379a",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "d3573b12d22be78e",
+        "name": "Trasnformacao",
+        "func": " const resultado = {};\n  msg.payload.forEach(item => {\n    resultado[item.nome] = item.valor;\n  });\nmsg.payload = resultado;\nmsg.registros.resultado= resultado\n\ntry {\n  msg.payload=resultado;\nmsg.sheet = msg.registros.resultado.url_google_aniversariantes.split(\":\")[0];\nmsg.cells = msg.registros.resultado.url_google_aniversariantes.split(\":\")[1];\n \nif (msg.payload && msg.payload.length !== 0) {\n\n   return msg;\n\n}\n} catch (error) {\n  \n};\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 1260,
+        "wires": [
+            [
+                "d99e835fa25e9332"
+            ]
+        ]
+    },
+    {
+        "id": "d99e835fa25e9332",
+        "type": "GSheet",
+        "z": "e7f7c24acc134af9",
+        "g": "d3573b12d22be78e",
+        "creds": "93afee9722a74757",
+        "method": "get",
+        "action": "",
+        "sheet": "",
+        "cells": "",
+        "flatten": false,
+        "name": "",
+        "x": 770,
+        "y": 1200,
+        "wires": [
+            [
+                "9f18b852c9cdc1b9",
+                "94883a50c74925c8"
+            ]
+        ]
+    },
+    {
+        "id": "e6b31a325124d52d",
+        "type": "subflow:3ed13a0582858ba0",
+        "z": "e7f7c24acc134af9",
+        "g": "d3573b12d22be78e",
+        "name": "",
+        "x": 970,
+        "y": 1300,
+        "wires": [
+            [
+                "e720e3a966fcbda9"
+            ]
+        ]
+    },
+    {
+        "id": "e720e3a966fcbda9",
+        "type": "switch",
+        "z": "e7f7c24acc134af9",
+        "g": "d3573b12d22be78e",
+        "name": "removeTitulo",
+        "property": "payload[0]",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "Nome",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1070,
+        "y": 1240,
+        "wires": [
+            [
+                "bb4253d2f35c93a7"
+            ]
+        ]
+    },
+    {
+        "id": "bb4253d2f35c93a7",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "d3573b12d22be78e",
+        "name": "Verifica Data e hora",
+        "func": "var dataatual = new Date();\ndataatual.setMinutes(0, 0, 0);\n\ntry {\n    var dataRecebida = new Date(msg.payload[2].split(\"/\")[1] + \"/\" + msg.payload[2].split(\"/\")[0] + \"/\" + msg.payload[2].split(\"/\")[2] )\n\n} catch (error) {\n\n    var dataRecebida = new Date(\"0/0/0\")\n\n};\n\n\n\n\nvar dataatuali = dataatual.getDate() + \"/\" + dataatual.getMonth() ;\nvar datarecebidali = dataRecebida.getDate() + \"/\" + dataRecebida.getMonth() ;\n\n\nif (dataatuali == datarecebidali){\n    return msg;\n}   \n\n\n   \n\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1210,
+        "y": 1300,
+        "wires": [
+            [
+                "6b9374a52cc8fbd8"
+            ]
+        ]
+    },
+    {
+        "id": "6b9374a52cc8fbd8",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "d3573b12d22be78e",
+        "name": "PreparaPessoas",
+        "func": "msg.headers = {\n  \"Client-Token\": msg.registros.resultado.WHATSHTOKEN\n}\n\nmsg.url = \"https://api.z-api.io/instances/\" + msg.registros.resultado.WHATSINSTACE + \"/token/\" + msg.registros.resultado.WHATSTOKEN + \"/send-text\";\n\nmsg.payload = {\n  // \"phone\":\"61992998663\",\n  \"phone\": msg.registros.resultado.grupo_canal_wa,\n  \"message\": `*`+ msg.payload[0] + `*\ntelefone: `+msg.payload[1]+`\nemail:`+msg.payload[3]+`\n\n*_`+ msg.registros.cliente.nome + `_*`\n\n\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1370,
+        "y": 1240,
+        "wires": [
+            [
+                "482b8163d0a0130f"
+            ]
+        ]
+    },
+    {
+        "id": "482b8163d0a0130f",
+        "type": "www-request",
+        "z": "e7f7c24acc134af9",
+        "g": "d3573b12d22be78e",
+        "name": "Envia WA",
+        "method": "POST",
+        "ret": "obj",
+        "url": "",
+        "follow-redirects": true,
+        "persistent-http": true,
+        "tls": "",
+        "x": 1580,
+        "y": 1220,
+        "wires": [
+            [
+                "5605f0d59ee7d6f7"
+            ]
+        ]
+    },
+    {
+        "id": "5605f0d59ee7d6f7",
+        "type": "debug",
+        "z": "e7f7c24acc134af9",
+        "g": "d3573b12d22be78e",
+        "name": "debug 31",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1740,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "db150f5ea512a519",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "d3573b12d22be78e",
+        "name": "delay",
+        "func": "msg.delay=0;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 1320,
+        "wires": [
+            [
+                "e6b31a325124d52d"
+            ]
+        ]
+    },
+    {
+        "id": "9f18b852c9cdc1b9",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "d3573b12d22be78e",
+        "name": "PreparaInicio",
+        "func": "function countBirthdaysToday(payload) {\n    const today = new Date();\n    const todayDay = today.getDate();\n    const todayMonth = today.getMonth() + 1; // Months are zero-based in JavaScript\ntry {\n  return payload.reduce((count, record) => {\n        const [name, cpf, birthday, email] = record;\n        const [day, month, year] = birthday.split('/').map(Number);\n        if (day === todayDay && month === todayMonth) {\n            count++;\n        }\n        return count;\n    }, 0);\n} catch (error) {\n  return 0;\n};\n\n}\n\nconst result = countBirthdaysToday(msg.payload);\n\n\nmsg.headers = {\n  \"Client-Token\": msg.registros.resultado.WHATSHTOKEN\n}\n\nmsg.url = \"https://api.z-api.io/instances/\" + msg.registros.resultado.WHATSINSTACE + \"/token/\" + msg.registros.resultado.WHATSTOKEN + \"/send-text\";\n\nif(result>0){\nmsg.payload = {\n  // \"phone\":\"61992998663\",\n  \"phone\": msg.registros.resultado.grupo_canal_wa,\n  \"message\": `Bom dia, vamos começar o dia dando os parabéns?\nHoje temos ${result} aniversariantes.\n  \n*_`+ msg.registros.cliente.nome + `_*`\n\n\n}\n}else{\n\nmsg.payload = {\n  // \"phone\":\"61992998663\",\n  \"phone\": msg.registros.resultado.grupo_canal_wa,\n  \"message\": `Bom dia, Hoje não temos aniversariantes!\n  \n*_`+ msg.registros.cliente.nome + `_*`\n\n\n}\n\n}\n\n\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1350,
+        "y": 1200,
+        "wires": [
+            [
+                "482b8163d0a0130f"
+            ]
+        ]
+    },
+    {
+        "id": "94883a50c74925c8",
+        "type": "delay",
+        "z": "e7f7c24acc134af9",
+        "g": "d3573b12d22be78e",
+        "name": "1s",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 830,
+        "y": 1260,
+        "wires": [
+            [
+                "db150f5ea512a519"
+            ]
+        ]
     }
 ]
