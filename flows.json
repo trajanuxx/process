@@ -1,17 +1,25 @@
 [
     {
-        "id": "a2725fd03b335afd",
+        "id": "e7f7c24acc134af9",
         "type": "tab",
-        "label": "Relogio",
+        "label": "Processos Automaticos",
         "disabled": false,
         "info": "",
         "env": []
     },
     {
-        "id": "e7f7c24acc134af9",
+        "id": "a2725fd03b335afd",
         "type": "tab",
-        "label": "Ana e Graça",
+        "label": "Processos Privados",
         "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b1c0f3e5e3128179",
+        "type": "tab",
+        "label": "legado",
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -243,52 +251,6 @@
         "h": 222
     },
     {
-        "id": "7ba9954bb2613bfd",
-        "type": "group",
-        "z": "e7f7c24acc134af9",
-        "name": "Envio de mensagens Graça",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "ada0b16cfcf8946d",
-            "ff6eadb839a4c0f8",
-            "4263315fc498c4f2",
-            "6cdefd3f476c4311",
-            "a0381c43221746df",
-            "8fcc4dc6fbe2967e",
-            "f71255e6b633f830",
-            "ea4b916f5ea969a6",
-            "27c79243dc95f0b7"
-        ],
-        "x": 34,
-        "y": 299,
-        "w": 1052,
-        "h": 302
-    },
-    {
-        "id": "679beb5b15e32c6d",
-        "type": "group",
-        "z": "e7f7c24acc134af9",
-        "name": "Envio de mensagens Ana",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "6598ca5232de0946",
-            "26450c8e92ee13c7",
-            "e7fbde499c85c6ee",
-            "e7af54e39c93e04a",
-            "1596b145857284d1",
-            "25fca76f9d8ced9a",
-            "8f0e73398b7ec74d"
-        ],
-        "x": 34,
-        "y": 39,
-        "w": 1052,
-        "h": 242
-    },
-    {
         "id": "1bc08ef901d52d8f",
         "type": "group",
         "z": "e7f7c24acc134af9",
@@ -319,7 +281,7 @@
             "cfcf04d6d23f64c4"
         ],
         "x": 34,
-        "y": 639,
+        "y": 59,
         "w": 1692,
         "h": 282
     },
@@ -348,7 +310,7 @@
             "ddbe18a024c714bd"
         ],
         "x": 34,
-        "y": 999,
+        "y": 379,
         "w": 1952,
         "h": 142
     },
@@ -377,7 +339,7 @@
             "57862754534776a2"
         ],
         "x": 34,
-        "y": 1399,
+        "y": 779,
         "w": 2152,
         "h": 122
     },
@@ -404,7 +366,7 @@
             "da249b81427a2dee"
         ],
         "x": 34,
-        "y": 1539,
+        "y": 919,
         "w": 1752,
         "h": 142
     },
@@ -424,7 +386,7 @@
             "c529d35885b3c64e"
         ],
         "x": 34,
-        "y": 1739,
+        "y": 1119,
         "w": 1032,
         "h": 142
     },
@@ -454,9 +416,55 @@
             "94883a50c74925c8"
         ],
         "x": 34,
-        "y": 1159,
+        "y": 539,
         "w": 1812,
         "h": 202
+    },
+    {
+        "id": "679beb5b15e32c6d",
+        "type": "group",
+        "z": "b1c0f3e5e3128179",
+        "name": "Envio de mensagens Ana",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "6598ca5232de0946",
+            "26450c8e92ee13c7",
+            "e7fbde499c85c6ee",
+            "e7af54e39c93e04a",
+            "1596b145857284d1",
+            "25fca76f9d8ced9a",
+            "8f0e73398b7ec74d"
+        ],
+        "x": 34,
+        "y": 39,
+        "w": 1052,
+        "h": 242
+    },
+    {
+        "id": "7ba9954bb2613bfd",
+        "type": "group",
+        "z": "b1c0f3e5e3128179",
+        "name": "Envio de mensagens Graça",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "ada0b16cfcf8946d",
+            "ff6eadb839a4c0f8",
+            "4263315fc498c4f2",
+            "6cdefd3f476c4311",
+            "a0381c43221746df",
+            "8fcc4dc6fbe2967e",
+            "f71255e6b633f830",
+            "ea4b916f5ea969a6",
+            "27c79243dc95f0b7"
+        ],
+        "x": 34,
+        "y": 299,
+        "w": 1052,
+        "h": 302
     },
     {
         "id": "5d22c29d083b65f0",
@@ -754,6 +762,1491 @@
             [
                 "9886a7e01e2303c2",
                 "7f67b1c9ff88c5df"
+            ]
+        ]
+    },
+    {
+        "id": "5090ed6b299a994f",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "1bc08ef901d52d8f",
+        "name": "recuperar Clientes",
+        "func": "msg.topic=`\nSELECT * FROM fe_admin.clientes;\n`\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 260,
+        "wires": [
+            [
+                "efc77ba7e9089259"
+            ]
+        ]
+    },
+    {
+        "id": "efc77ba7e9089259",
+        "type": "mysql",
+        "z": "e7f7c24acc134af9",
+        "g": "1bc08ef901d52d8f",
+        "mydb": "36dbdd52d4fc31f0",
+        "name": "",
+        "x": 500,
+        "y": 200,
+        "wires": [
+            [
+                "6e595ca51016f170"
+            ]
+        ]
+    },
+    {
+        "id": "6e595ca51016f170",
+        "type": "subflow:3ed13a0582858ba0",
+        "z": "e7f7c24acc134af9",
+        "g": "1bc08ef901d52d8f",
+        "name": "",
+        "x": 590,
+        "y": 260,
+        "wires": [
+            [
+                "edf8b9cfa82a7d8a"
+            ]
+        ]
+    },
+    {
+        "id": "5372e1b75cbee5ce",
+        "type": "inject",
+        "z": "e7f7c24acc134af9",
+        "g": "1bc08ef901d52d8f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 200,
+        "wires": [
+            [
+                "5090ed6b299a994f"
+            ]
+        ]
+    },
+    {
+        "id": "6d8a269c6872083d",
+        "type": "cron",
+        "z": "e7f7c24acc134af9",
+        "g": "1bc08ef901d52d8f",
+        "name": "",
+        "crontab": "0 * * * *",
+        "x": 110,
+        "y": 260,
+        "wires": [
+            [
+                "5090ed6b299a994f"
+            ]
+        ]
+    },
+    {
+        "id": "edf8b9cfa82a7d8a",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "1bc08ef901d52d8f",
+        "name": "recuperar serviços do cliente",
+        "func": "msg.registros={\n    \"cliente\":msg.payload\n}\n\nmsg.topic=`\nselect cs.id,id_servico from  fe_admin.cliente_servico cs \ninner join fe_admin.clientes c on c.id = cs.id_cliente\nwhere  c.id = :id\nand cs.status =1\n`\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 200,
+        "wires": [
+            [
+                "03bda5979bfb2cb4"
+            ]
+        ]
+    },
+    {
+        "id": "03bda5979bfb2cb4",
+        "type": "mysql",
+        "z": "e7f7c24acc134af9",
+        "g": "1bc08ef901d52d8f",
+        "mydb": "36dbdd52d4fc31f0",
+        "name": "",
+        "x": 920,
+        "y": 260,
+        "wires": [
+            [
+                "a7645a82344f2091"
+            ]
+        ]
+    },
+    {
+        "id": "192e0c02f118696c",
+        "type": "switch",
+        "z": "e7f7c24acc134af9",
+        "g": "1bc08ef901d52d8f",
+        "name": "Distribui Serviço",
+        "property": "payload.id_servico",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "6",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "7",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "9",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "12",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 6,
+        "x": 1240,
+        "y": 220,
+        "wires": [
+            [
+                "1beea120f0be8047"
+            ],
+            [
+                "82633872ed93dd42"
+            ],
+            [
+                "fa74f2a8c990cc62"
+            ],
+            [
+                "2878954757031c1c"
+            ],
+            [
+                "cb4f8595e3642cc2"
+            ],
+            [
+                "cfcf04d6d23f64c4"
+            ]
+        ]
+    },
+    {
+        "id": "a7645a82344f2091",
+        "type": "subflow:3ed13a0582858ba0",
+        "z": "e7f7c24acc134af9",
+        "g": "1bc08ef901d52d8f",
+        "name": "",
+        "x": 1030,
+        "y": 200,
+        "wires": [
+            [
+                "192e0c02f118696c"
+            ]
+        ]
+    },
+    {
+        "id": "d05b69465135e287",
+        "type": "link in",
+        "z": "e7f7c24acc134af9",
+        "g": "ccdf4d4c7440eb32",
+        "name": "Entrada Aniversariantes",
+        "links": [
+            "cb4f8595e3642cc2"
+        ],
+        "x": 75,
+        "y": 480,
+        "wires": [
+            [
+                "a6636dba9c6c1ddc"
+            ]
+        ]
+    },
+    {
+        "id": "a6636dba9c6c1ddc",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "ccdf4d4c7440eb32",
+        "name": "Somente as 6h da manha",
+        "func": "var agora = new Date();\nmsg.topic=`\nSELECT \n\tcc.valor, \n\tsc.nome\n    \nFROM fe_admin.clientes_campos cc\ninner join fe_admin.servicos_campos  sc on sc.id = cc.id_servicos_campos\ninner join fe_admin.servicos s on s.id = sc.id_servicos\ninner join fe_admin.cliente_servico cs on cs.id = cc.id_cliente_servico\ninner join fe_admin.clientes c on c.id = cs.id_cliente\nwhere s.id = 9\nand s.status =1\nand cs.id=:id\nand c.id = `+msg.registros.cliente.id+`\n`\n// verifica se está no horario. Esse serviço roda todos os dias as 6h da manhã somente\n\nif(agora.getHours()==6){\n\treturn msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 420,
+        "wires": [
+            [
+                "5f37b0a6834626e6"
+            ]
+        ]
+    },
+    {
+        "id": "5f37b0a6834626e6",
+        "type": "mysql",
+        "z": "e7f7c24acc134af9",
+        "g": "ccdf4d4c7440eb32",
+        "mydb": "36dbdd52d4fc31f0",
+        "name": "",
+        "x": 380,
+        "y": 480,
+        "wires": [
+            [
+                "fe8fea93e2301462"
+            ]
+        ]
+    },
+    {
+        "id": "fe8fea93e2301462",
+        "type": "switch",
+        "z": "e7f7c24acc134af9",
+        "g": "ccdf4d4c7440eb32",
+        "name": "vazio?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 480,
+        "y": 420,
+        "wires": [
+            [
+                "5313f66be081a008"
+            ]
+        ]
+    },
+    {
+        "id": "5313f66be081a008",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "ccdf4d4c7440eb32",
+        "name": "Trasnformacao",
+        "func": " const resultado = {};\n  msg.payload.forEach(item => {\n    resultado[item.nome] = item.valor;\n  });\nmsg.payload = resultado;\nmsg.registros.resultado= resultado\n\n\nmsg.payload=resultado;\nmsg.sheet = resultado.url_google_mensagem.split(\":\")[0];\nmsg.cells = resultado.url_google_mensagem.split(\":\")[1];\n \nif (msg.payload && msg.payload.length !== 0) {\n\n   return msg;\n\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 480,
+        "wires": [
+            [
+                "e27fa3eee0c36b9f"
+            ]
+        ]
+    },
+    {
+        "id": "e27fa3eee0c36b9f",
+        "type": "GSheet",
+        "z": "e7f7c24acc134af9",
+        "g": "ccdf4d4c7440eb32",
+        "creds": "93afee9722a74757",
+        "method": "get",
+        "action": "",
+        "sheet": "",
+        "cells": "",
+        "flatten": false,
+        "name": "",
+        "x": 770,
+        "y": 420,
+        "wires": [
+            [
+                "7fbb421b60a6daca"
+            ]
+        ]
+    },
+    {
+        "id": "7fbb421b60a6daca",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "ccdf4d4c7440eb32",
+        "name": "Trasnformacao",
+        "func": " \nmsg.registros.mensagem = msg.payload[0][0];\nmsg.sheet = msg.registros.resultado.url_google_aniversariantes.split(\":\")[0];\nmsg.cells = msg.registros.resultado.url_google_aniversariantes.split(\":\")[1];\n\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 480,
+        "wires": [
+            [
+                "f159bd4fde5e33c3"
+            ]
+        ]
+    },
+    {
+        "id": "f159bd4fde5e33c3",
+        "type": "GSheet",
+        "z": "e7f7c24acc134af9",
+        "g": "ccdf4d4c7440eb32",
+        "creds": "93afee9722a74757",
+        "method": "get",
+        "action": "",
+        "sheet": "",
+        "cells": "",
+        "flatten": false,
+        "name": "",
+        "x": 1040,
+        "y": 420,
+        "wires": [
+            [
+                "1a37d8ee47b82649"
+            ]
+        ]
+    },
+    {
+        "id": "1a37d8ee47b82649",
+        "type": "subflow:3ed13a0582858ba0",
+        "z": "e7f7c24acc134af9",
+        "g": "ccdf4d4c7440eb32",
+        "name": "",
+        "x": 1150,
+        "y": 480,
+        "wires": [
+            [
+                "cf335837822b4a50"
+            ]
+        ]
+    },
+    {
+        "id": "cf335837822b4a50",
+        "type": "switch",
+        "z": "e7f7c24acc134af9",
+        "g": "ccdf4d4c7440eb32",
+        "name": "removeTitulo",
+        "property": "payload[0]",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "Nome",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1270,
+        "y": 420,
+        "wires": [
+            [
+                "f95905a8e4875d92"
+            ]
+        ]
+    },
+    {
+        "id": "f95905a8e4875d92",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "ccdf4d4c7440eb32",
+        "name": "Verifica Data e hora",
+        "func": "var dataatual = new Date();\ndataatual.setMinutes(0, 0, 0);\nvar dataRecebida = new Date(msg.payload[2].split(\"/\")[1] + \"/\" + msg.payload[2].split(\"/\")[0] + \"/\" + msg.payload[2].split(\"/\")[2] )\n\n\n\nvar dataatuali = dataatual.getDate() + \"/\" + dataatual.getMonth() ;\nvar datarecebidali = dataRecebida.getDate() + \"/\" + dataRecebida.getMonth() ;\n\n\nif (dataatuali == datarecebidali){\n    return msg;\n}   \n\n\n   \n\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1430,
+        "y": 480,
+        "wires": [
+            [
+                "6aeb4dd9764e4105"
+            ]
+        ]
+    },
+    {
+        "id": "6aeb4dd9764e4105",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "ccdf4d4c7440eb32",
+        "name": "PreparaPessoas",
+        "func": "msg.headers = {\n  \"Client-Token\": msg.registros.resultado.WHATSHTOKEN\n}\n\nmsg.url = \"https://api.z-api.io/instances/\" + msg.registros.resultado.WHATSINSTACE + \"/token/\" + msg.registros.resultado.WHATSTOKEN+\"/send-text\";\n\nmsg.payload={\n // \"phone\":\"61992998663\",\n  \"phone\": msg.payload[1],\n    \"message\": msg.registros.mensagem.replace(/{pessoa}/gi,msg.payload[0]) +`\n*_`+msg.registros.cliente.nome+`_*`\n  \n \n}\n\nreturn msg;\n \n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1610,
+        "y": 420,
+        "wires": [
+            [
+                "9187e01702cb8929"
+            ]
+        ]
+    },
+    {
+        "id": "9187e01702cb8929",
+        "type": "www-request",
+        "z": "e7f7c24acc134af9",
+        "g": "ccdf4d4c7440eb32",
+        "name": "Envia WA",
+        "method": "POST",
+        "ret": "obj",
+        "url": "",
+        "follow-redirects": true,
+        "persistent-http": true,
+        "tls": "",
+        "x": 1760,
+        "y": 480,
+        "wires": [
+            [
+                "ddbe18a024c714bd"
+            ]
+        ]
+    },
+    {
+        "id": "ddbe18a024c714bd",
+        "type": "debug",
+        "z": "e7f7c24acc134af9",
+        "g": "ccdf4d4c7440eb32",
+        "name": "debug 26",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1880,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "cb4f8595e3642cc2",
+        "type": "link out",
+        "z": "e7f7c24acc134af9",
+        "g": "1bc08ef901d52d8f",
+        "name": "Notificação Aniversariantes",
+        "mode": "link",
+        "links": [
+            "d05b69465135e287"
+        ],
+        "x": 1540,
+        "y": 260,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "1beea120f0be8047",
+        "type": "link out",
+        "z": "e7f7c24acc134af9",
+        "g": "1bc08ef901d52d8f",
+        "name": "Oracao Fe digital",
+        "mode": "link",
+        "links": [],
+        "x": 1510,
+        "y": 100,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "82633872ed93dd42",
+        "type": "link out",
+        "z": "e7f7c24acc134af9",
+        "g": "1bc08ef901d52d8f",
+        "name": "Notificação Grupo Aniversariantes",
+        "mode": "link",
+        "links": [
+            "0298a6d8adb497ba"
+        ],
+        "x": 1560,
+        "y": 140,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "fa74f2a8c990cc62",
+        "type": "link out",
+        "z": "e7f7c24acc134af9",
+        "g": "1bc08ef901d52d8f",
+        "name": "Relogio Personalizado",
+        "mode": "link",
+        "links": [],
+        "x": 1520,
+        "y": 180,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "2878954757031c1c",
+        "type": "link out",
+        "z": "e7f7c24acc134af9",
+        "g": "1bc08ef901d52d8f",
+        "name": "Devocionais Diarios",
+        "mode": "link",
+        "links": [
+            "fdacac31e2576f4c"
+        ],
+        "x": 1520,
+        "y": 220,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "cfcf04d6d23f64c4",
+        "type": "link out",
+        "z": "e7f7c24acc134af9",
+        "g": "1bc08ef901d52d8f",
+        "name": "Notificações Personalizada",
+        "mode": "link",
+        "links": [
+            "57862754534776a2"
+        ],
+        "x": 1540,
+        "y": 300,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "4a1246542845e1f1",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "807c7f127df3e5d0",
+        "name": "recuperar Servicos",
+        "func": "msg.topic=`\nSELECT \n\tcc.valor, \n\tsc.nome\n    \nFROM fe_admin.clientes_campos cc\ninner join fe_admin.servicos_campos  sc on sc.id = cc.id_servicos_campos\ninner join fe_admin.servicos s on s.id = sc.id_servicos\ninner join fe_admin.cliente_servico cs on cs.id = cc.id_cliente_servico\ninner join fe_admin.clientes c on c.id = cs.id_cliente\nwhere s.id = 12 \nand s.status =1\nand cs.id=:id\nand c.id = `+msg.registros.cliente.id+`\n \n`\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 820,
+        "wires": [
+            [
+                "74e4c7d4744a515c"
+            ]
+        ]
+    },
+    {
+        "id": "74e4c7d4744a515c",
+        "type": "mysql",
+        "z": "e7f7c24acc134af9",
+        "g": "807c7f127df3e5d0",
+        "mydb": "36dbdd52d4fc31f0",
+        "name": "",
+        "x": 400,
+        "y": 860,
+        "wires": [
+            [
+                "125e9f102a57eead"
+            ]
+        ]
+    },
+    {
+        "id": "e55dcd0dc546dac8",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "807c7f127df3e5d0",
+        "name": "Trasnformacao",
+        "func": " const resultado = {};\n  msg.payload.forEach(item => {\n    resultado[item.nome] = item.valor;\n  });\nmsg.payload = resultado;\n\n\nmsg.registros.resultado = resultado\nmsg.payload=resultado;\nmsg.sheet = resultado.url_google_mensagens.split(\":\")[0];\nmsg.cells = resultado.url_google_mensagens.split(\":\")[1];\n \nif (msg.payload && msg.payload.length !== 0) {\n\n   return msg;\n\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 860,
+        "wires": [
+            [
+                "187968243dbd8153"
+            ]
+        ]
+    },
+    {
+        "id": "187968243dbd8153",
+        "type": "GSheet",
+        "z": "e7f7c24acc134af9",
+        "g": "807c7f127df3e5d0",
+        "creds": "93afee9722a74757",
+        "method": "get",
+        "action": "",
+        "sheet": "",
+        "cells": "Mensagem",
+        "flatten": false,
+        "name": "",
+        "x": 870,
+        "y": 820,
+        "wires": [
+            [
+                "d939653c45ca1600"
+            ]
+        ]
+    },
+    {
+        "id": "d939653c45ca1600",
+        "type": "subflow:3ed13a0582858ba0",
+        "z": "e7f7c24acc134af9",
+        "g": "807c7f127df3e5d0",
+        "name": "",
+        "x": 990,
+        "y": 860,
+        "wires": [
+            [
+                "226c61ad26e0fd4e"
+            ]
+        ]
+    },
+    {
+        "id": "ce4243baaf14e0cc",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "807c7f127df3e5d0",
+        "name": "Verifica Data e hora",
+        "func": "var dataatual = new Date();\ndataatual.setMinutes(0, 0, 0);\nvar dataRecebida = new Date(msg.payload[0].split(\"/\")[1] + \"/\" + msg.payload[0].split(\"/\")[0] + \"/\" + msg.payload[0].split(\"/\")[2] + \" \" + msg.payload[1])\nmsg.registros.mensagem = msg.payload;\n\n\nmsg.sheet = msg.registros.resultado.url_google_contatos.split(\":\")[0];\nmsg.cells = msg.payload[2];\n\n\nif((dataatual.getTime() - dataRecebida.getTime())==0){\n  return msg; \n}   \n  \n \n   \n\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1310,
+        "y": 860,
+        "wires": [
+            [
+                "b98cc64c51868f63"
+            ]
+        ]
+    },
+    {
+        "id": "b98cc64c51868f63",
+        "type": "GSheet",
+        "z": "e7f7c24acc134af9",
+        "g": "807c7f127df3e5d0",
+        "creds": "93afee9722a74757",
+        "method": "get",
+        "action": "",
+        "sheet": "",
+        "cells": "",
+        "flatten": false,
+        "name": "",
+        "x": 1510,
+        "y": 820,
+        "wires": [
+            [
+                "5b681e66b95ab316"
+            ]
+        ]
+    },
+    {
+        "id": "5b681e66b95ab316",
+        "type": "subflow:3ed13a0582858ba0",
+        "z": "e7f7c24acc134af9",
+        "g": "807c7f127df3e5d0",
+        "name": "",
+        "x": 1650,
+        "y": 860,
+        "wires": [
+            [
+                "6eb51119c3396d84"
+            ]
+        ]
+    },
+    {
+        "id": "6eb51119c3396d84",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "807c7f127df3e5d0",
+        "name": "PreparaPessoas",
+        "func": "msg.headers = {\n  \"Client-Token\": msg.registros.resultado.WHATSHTOKEN\n}\n\nmsg.url = \"https://api.z-api.io/instances/\" + msg.registros.resultado.WHATSINSTACE + \"/token/\" + msg.registros.resultado.WHATSTOKEN+\"/send-text\";\n\nmsg.payload={\n // \"phone\":\"61992998663\",\n  \"phone\": msg.payload[2],\n    \"message\": msg.registros.mensagem[3].replace(/{pessoa}/gi,msg.payload[0]) \n  \n \n}\n\nreturn msg;\n \n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1810,
+        "y": 820,
+        "wires": [
+            [
+                "9e267a04767e77d5"
+            ]
+        ]
+    },
+    {
+        "id": "125e9f102a57eead",
+        "type": "switch",
+        "z": "e7f7c24acc134af9",
+        "g": "807c7f127df3e5d0",
+        "name": "vazio?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 550,
+        "y": 820,
+        "wires": [
+            [
+                "e55dcd0dc546dac8"
+            ]
+        ]
+    },
+    {
+        "id": "226c61ad26e0fd4e",
+        "type": "switch",
+        "z": "e7f7c24acc134af9",
+        "g": "807c7f127df3e5d0",
+        "name": "removeTitulo",
+        "property": "payload[0]",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "Data",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1150,
+        "y": 820,
+        "wires": [
+            [
+                "ce4243baaf14e0cc"
+            ]
+        ]
+    },
+    {
+        "id": "9e267a04767e77d5",
+        "type": "www-request",
+        "z": "e7f7c24acc134af9",
+        "g": "807c7f127df3e5d0",
+        "name": "Envia WA",
+        "method": "POST",
+        "ret": "obj",
+        "url": "",
+        "follow-redirects": true,
+        "persistent-http": true,
+        "tls": "",
+        "x": 1960,
+        "y": 860,
+        "wires": [
+            [
+                "83794e76069eafe7"
+            ]
+        ]
+    },
+    {
+        "id": "83794e76069eafe7",
+        "type": "debug",
+        "z": "e7f7c24acc134af9",
+        "g": "807c7f127df3e5d0",
+        "name": "debug 28",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2080,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "57862754534776a2",
+        "type": "link in",
+        "z": "e7f7c24acc134af9",
+        "g": "807c7f127df3e5d0",
+        "name": "Entrada  DEvocionais diarios",
+        "links": [
+            "cfcf04d6d23f64c4"
+        ],
+        "x": 75,
+        "y": 820,
+        "wires": [
+            [
+                "4a1246542845e1f1"
+            ]
+        ]
+    },
+    {
+        "id": "9c5ed1e74182534b",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "cd48d0c3ebd80200",
+        "name": "recuperar Servicos",
+        "func": "var agora = new Date();\nmsg.topic=`\nSELECT \n\tcc.valor, \n\tsc.nome\n    \nFROM fe_admin.clientes_campos cc\ninner join fe_admin.servicos_campos  sc on sc.id = cc.id_servicos_campos\ninner join fe_admin.servicos s on s.id = sc.id_servicos\ninner join fe_admin.cliente_servico cs on cs.id = cc.id_cliente_servico\ninner join fe_admin.clientes c on c.id = cs.id_cliente\nwhere s.id = 7 \nand s.status =1\nand cs.id=:id\nand c.id = `+msg.registros.cliente.id+`\n \n`\nif (agora.getHours() == 6) {\n\treturn msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 980,
+        "wires": [
+            [
+                "a49bdfcd167c069f"
+            ]
+        ]
+    },
+    {
+        "id": "a49bdfcd167c069f",
+        "type": "mysql",
+        "z": "e7f7c24acc134af9",
+        "g": "cd48d0c3ebd80200",
+        "mydb": "36dbdd52d4fc31f0",
+        "name": "",
+        "x": 400,
+        "y": 1020,
+        "wires": [
+            [
+                "a79058958c47e415"
+            ]
+        ]
+    },
+    {
+        "id": "fd638fed21a6254d",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "cd48d0c3ebd80200",
+        "name": "Trasnformacao",
+        "func": " const resultado = {};\n  msg.payload.forEach(item => {\n    resultado[item.nome] = item.valor;\n  });\nmsg.payload = resultado;\n\n\nmsg.registros.resultado= resultado\nmsg.payload=resultado;\nmsg.sheet = resultado.url_google_mensagens.split(\":\")[0];\nmsg.cells = resultado.url_google_mensagens.split(\":\")[1];\n \nif (msg.payload && msg.payload.length !== 0) {\n\n   return msg;\n\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 1020,
+        "wires": [
+            [
+                "7a1780cf828a692b"
+            ]
+        ]
+    },
+    {
+        "id": "7a1780cf828a692b",
+        "type": "GSheet",
+        "z": "e7f7c24acc134af9",
+        "g": "cd48d0c3ebd80200",
+        "creds": "93afee9722a74757",
+        "method": "get",
+        "action": "",
+        "sheet": "",
+        "cells": "Mensagem",
+        "flatten": false,
+        "name": "",
+        "x": 870,
+        "y": 980,
+        "wires": [
+            [
+                "b5a63e9b92d848b3"
+            ]
+        ]
+    },
+    {
+        "id": "b5a63e9b92d848b3",
+        "type": "subflow:3ed13a0582858ba0",
+        "z": "e7f7c24acc134af9",
+        "g": "cd48d0c3ebd80200",
+        "name": "",
+        "x": 990,
+        "y": 1020,
+        "wires": [
+            [
+                "060a86600ac02e9d"
+            ]
+        ]
+    },
+    {
+        "id": "a79058958c47e415",
+        "type": "switch",
+        "z": "e7f7c24acc134af9",
+        "g": "cd48d0c3ebd80200",
+        "name": "vazio?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 550,
+        "y": 980,
+        "wires": [
+            [
+                "fd638fed21a6254d"
+            ]
+        ]
+    },
+    {
+        "id": "060a86600ac02e9d",
+        "type": "switch",
+        "z": "e7f7c24acc134af9",
+        "g": "cd48d0c3ebd80200",
+        "name": "removeTitulo",
+        "property": "payload[0]",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "Data",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1130,
+        "y": 980,
+        "wires": [
+            [
+                "94220772492cb06b"
+            ]
+        ]
+    },
+    {
+        "id": "fdacac31e2576f4c",
+        "type": "link in",
+        "z": "e7f7c24acc134af9",
+        "g": "cd48d0c3ebd80200",
+        "name": "Entrada Notificações Personalidadas",
+        "links": [
+            "2878954757031c1c"
+        ],
+        "x": 75,
+        "y": 980,
+        "wires": [
+            [
+                "9c5ed1e74182534b"
+            ]
+        ]
+    },
+    {
+        "id": "5e1ef3f0d44bc35b",
+        "type": "www-request",
+        "z": "e7f7c24acc134af9",
+        "g": "258b7a9d543e1f84",
+        "name": "Envia WA",
+        "method": "GET",
+        "ret": "obj",
+        "url": "",
+        "follow-redirects": true,
+        "persistent-http": true,
+        "tls": "",
+        "x": 620,
+        "y": 1220,
+        "wires": [
+            [
+                "fb896aa9e8dc0367"
+            ]
+        ]
+    },
+    {
+        "id": "8517fb01601eea67",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "258b7a9d543e1f84",
+        "name": "PreparaPessoas",
+        "func": "msg.headers = {\n  \"Client-Token\": \"Faa0e9483d732404fb38ebe88909bd19cS\"\n}\n \nmsg.url= \"https://api.z-api.io/instances/3CC085CFD2EE505D7A4C8ABF5D20188A/token/CE0B50743BD6CEA17C77CCC8/chats?type=group?page=1&pageSize=1000\"\n\n \nreturn msg;\n \n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 1160,
+        "wires": [
+            [
+                "5e1ef3f0d44bc35b"
+            ]
+        ]
+    },
+    {
+        "id": "fb896aa9e8dc0367",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "258b7a9d543e1f84",
+        "name": "PreparaPessoas",
+        "func": "// Supondo que a entrada seja um array de objetos\nlet registros = msg.payload;\n\nmsg.nomeBuscado =msg.req.params.grupo;\n\n// Filtra os registros onde isGroup é true\nlet registrosFiltrados = registros.filter(registro => registro.isGroup === true);\nlet nomeBuscado = msg.nomeBuscado;\nlet regex = new RegExp(nomeBuscado, 'i');\nregistrosFiltrados = registrosFiltrados.filter(registro => regex.test(registro.name));\n\n\n\n\n// Define o novo array filtrado como a saída da mensagem\nmsg.payload = registrosFiltrados;\n\n\n \nreturn msg;\n \n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 1160,
+        "wires": [
+            [
+                "c529d35885b3c64e"
+            ]
+        ]
+    },
+    {
+        "id": "236e1aeb049617a6",
+        "type": "http in",
+        "z": "e7f7c24acc134af9",
+        "g": "258b7a9d543e1f84",
+        "name": "",
+        "url": "/buscagrupo/:grupo",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 1220,
+        "wires": [
+            [
+                "8517fb01601eea67"
+            ]
+        ]
+    },
+    {
+        "id": "c529d35885b3c64e",
+        "type": "http response",
+        "z": "e7f7c24acc134af9",
+        "g": "258b7a9d543e1f84",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 990,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "94220772492cb06b",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "cd48d0c3ebd80200",
+        "name": "Verifica Data e hora",
+        "func": "var dataatual = new Date();\ndataatual.setMinutes(0, 0, 0);\nvar dataRecebida = new Date(msg.payload[0].split(\"/\")[1] + \"/\" + msg.payload[0].split(\"/\")[0] + \"/\" + msg.payload[0].split(\"/\")[2] )\nmsg.registros.mensagem = msg.payload;\n\n\nvar dataatuali = dataatual.getDate() + \"/\" + dataatual.getMonth() ;\nvar datarecebidali = dataRecebida.getDate() + \"/\" + dataRecebida.getMonth() ;\n\n\nif (dataatuali == datarecebidali){\n    return msg;\n}   \n\n\n   \n\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1290,
+        "y": 1020,
+        "wires": [
+            [
+                "0bcdab4428f6b7a0"
+            ]
+        ]
+    },
+    {
+        "id": "0bcdab4428f6b7a0",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "cd48d0c3ebd80200",
+        "name": "PreparaPessoas",
+        "func": "msg.headers = {\n  \"Client-Token\": msg.registros.resultado.WHATSHTOKEN\n}\n\nmsg.url = \"https://api.z-api.io/instances/\" + msg.registros.resultado.WHATSINSTACE + \"/token/\" + msg.registros.resultado.WHATSTOKEN+\"/send-text\";\n\nmsg.payload={\n // \"phone\":\"61992998663\",\n  \"phone\": msg.registros.resultado.grupo_canal_wa,\n  \"message\": msg.payload[1] +`\n*_`+msg.registros.cliente.nome+`_*`\n  \n \n}\n\nreturn msg;\n \n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1450,
+        "y": 960,
+        "wires": [
+            [
+                "b2a3f97473cea794"
+            ]
+        ]
+    },
+    {
+        "id": "b2a3f97473cea794",
+        "type": "www-request",
+        "z": "e7f7c24acc134af9",
+        "g": "cd48d0c3ebd80200",
+        "name": "Envia WA",
+        "method": "POST",
+        "ret": "obj",
+        "url": "",
+        "follow-redirects": true,
+        "persistent-http": true,
+        "tls": "",
+        "x": 1560,
+        "y": 1020,
+        "wires": [
+            [
+                "da249b81427a2dee"
+            ]
+        ]
+    },
+    {
+        "id": "da249b81427a2dee",
+        "type": "debug",
+        "z": "e7f7c24acc134af9",
+        "g": "cd48d0c3ebd80200",
+        "name": "debug 29",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1680,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "0298a6d8adb497ba",
+        "type": "link in",
+        "z": "e7f7c24acc134af9",
+        "g": "d3573b12d22be78e",
+        "name": "Entrada Aniversariantes",
+        "links": [
+            "82633872ed93dd42"
+        ],
+        "x": 75,
+        "y": 640,
+        "wires": [
+            [
+                "ae16e7847e9a7467"
+            ]
+        ]
+    },
+    {
+        "id": "ae16e7847e9a7467",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "d3573b12d22be78e",
+        "name": "Somente as 6h da manha",
+        "func": "var agora = new Date();\nmsg.topic=`\nSELECT \n\tcc.valor, \n\tsc.nome\n    \nFROM fe_admin.clientes_campos cc\ninner join fe_admin.servicos_campos  sc on sc.id = cc.id_servicos_campos\ninner join fe_admin.servicos s on s.id = sc.id_servicos\ninner join fe_admin.cliente_servico cs on cs.id = cc.id_cliente_servico\ninner join fe_admin.clientes c on c.id = cs.id_cliente\nwhere s.id = 4\nand s.status =1\nand cs.id=:id\nand c.id = `+msg.registros.cliente.id+`\n`\n// verifica se está no horario. Esse serviço roda todos os dias as 6h da manhã somente\n\nif(agora.getHours()==6){\n\treturn msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 580,
+        "wires": [
+            [
+                "3c9ed41de1afa35b"
+            ]
+        ]
+    },
+    {
+        "id": "3c9ed41de1afa35b",
+        "type": "mysql",
+        "z": "e7f7c24acc134af9",
+        "g": "d3573b12d22be78e",
+        "mydb": "36dbdd52d4fc31f0",
+        "name": "",
+        "x": 380,
+        "y": 640,
+        "wires": [
+            [
+                "093a185b300d6337"
+            ]
+        ]
+    },
+    {
+        "id": "093a185b300d6337",
+        "type": "switch",
+        "z": "e7f7c24acc134af9",
+        "g": "d3573b12d22be78e",
+        "name": "vazio?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 480,
+        "y": 580,
+        "wires": [
+            [
+                "7054600e9aca379a"
+            ]
+        ]
+    },
+    {
+        "id": "7054600e9aca379a",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "d3573b12d22be78e",
+        "name": "Trasnformacao",
+        "func": " const resultado = {};\n  msg.payload.forEach(item => {\n    resultado[item.nome] = item.valor;\n  });\nmsg.payload = resultado;\nmsg.registros.resultado= resultado\n\ntry {\n  msg.payload=resultado;\nmsg.sheet = msg.registros.resultado.url_google_aniversariantes.split(\":\")[0];\nmsg.cells = msg.registros.resultado.url_google_aniversariantes.split(\":\")[1];\n \nif (msg.payload && msg.payload.length !== 0) {\n\n   return msg;\n\n}\n} catch (error) {\n  \n};\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 640,
+        "wires": [
+            [
+                "d99e835fa25e9332"
+            ]
+        ]
+    },
+    {
+        "id": "d99e835fa25e9332",
+        "type": "GSheet",
+        "z": "e7f7c24acc134af9",
+        "g": "d3573b12d22be78e",
+        "creds": "93afee9722a74757",
+        "method": "get",
+        "action": "",
+        "sheet": "",
+        "cells": "",
+        "flatten": false,
+        "name": "",
+        "x": 770,
+        "y": 580,
+        "wires": [
+            [
+                "9f18b852c9cdc1b9",
+                "94883a50c74925c8"
+            ]
+        ]
+    },
+    {
+        "id": "e6b31a325124d52d",
+        "type": "subflow:3ed13a0582858ba0",
+        "z": "e7f7c24acc134af9",
+        "g": "d3573b12d22be78e",
+        "name": "",
+        "x": 970,
+        "y": 680,
+        "wires": [
+            [
+                "e720e3a966fcbda9"
+            ]
+        ]
+    },
+    {
+        "id": "e720e3a966fcbda9",
+        "type": "switch",
+        "z": "e7f7c24acc134af9",
+        "g": "d3573b12d22be78e",
+        "name": "removeTitulo",
+        "property": "payload[0]",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "Nome",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1070,
+        "y": 620,
+        "wires": [
+            [
+                "bb4253d2f35c93a7"
+            ]
+        ]
+    },
+    {
+        "id": "bb4253d2f35c93a7",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "d3573b12d22be78e",
+        "name": "Verifica Data e hora",
+        "func": "var dataatual = new Date();\ndataatual.setMinutes(0, 0, 0);\n\ntry {\n    var dataRecebida = new Date(msg.payload[2].split(\"/\")[1] + \"/\" + msg.payload[2].split(\"/\")[0] + \"/\" + msg.payload[2].split(\"/\")[2] )\n\n} catch (error) {\n\n    var dataRecebida = new Date(\"0/0/0\")\n\n};\n\n\n\n\nvar dataatuali = dataatual.getDate() + \"/\" + dataatual.getMonth() ;\nvar datarecebidali = dataRecebida.getDate() + \"/\" + dataRecebida.getMonth() ;\n\n\nif (dataatuali == datarecebidali){\n    return msg;\n}   \n\n\n   \n\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1210,
+        "y": 680,
+        "wires": [
+            [
+                "6b9374a52cc8fbd8"
+            ]
+        ]
+    },
+    {
+        "id": "6b9374a52cc8fbd8",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "d3573b12d22be78e",
+        "name": "PreparaPessoas",
+        "func": "msg.headers = {\n  \"Client-Token\": msg.registros.resultado.WHATSHTOKEN\n}\n\nmsg.url = \"https://api.z-api.io/instances/\" + msg.registros.resultado.WHATSINSTACE + \"/token/\" + msg.registros.resultado.WHATSTOKEN + \"/send-text\";\n\nmsg.payload = {\n  // \"phone\":\"61992998663\",\n  \"phone\": msg.registros.resultado.grupo_canal_wa,\n  \"message\": `*`+ msg.payload[0] + `*\ntelefone: `+msg.payload[1]+`\nemail:`+msg.payload[3]+`\n\n*_`+ msg.registros.cliente.nome + `_*`\n\n\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1370,
+        "y": 620,
+        "wires": [
+            [
+                "482b8163d0a0130f"
+            ]
+        ]
+    },
+    {
+        "id": "482b8163d0a0130f",
+        "type": "www-request",
+        "z": "e7f7c24acc134af9",
+        "g": "d3573b12d22be78e",
+        "name": "Envia WA",
+        "method": "POST",
+        "ret": "obj",
+        "url": "",
+        "follow-redirects": true,
+        "persistent-http": true,
+        "tls": "",
+        "x": 1580,
+        "y": 600,
+        "wires": [
+            [
+                "5605f0d59ee7d6f7"
+            ]
+        ]
+    },
+    {
+        "id": "5605f0d59ee7d6f7",
+        "type": "debug",
+        "z": "e7f7c24acc134af9",
+        "g": "d3573b12d22be78e",
+        "name": "debug 31",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1740,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "db150f5ea512a519",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "d3573b12d22be78e",
+        "name": "delay",
+        "func": "msg.delay=0;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 700,
+        "wires": [
+            [
+                "e6b31a325124d52d"
+            ]
+        ]
+    },
+    {
+        "id": "9f18b852c9cdc1b9",
+        "type": "function",
+        "z": "e7f7c24acc134af9",
+        "g": "d3573b12d22be78e",
+        "name": "PreparaInicio",
+        "func": "function countBirthdaysToday(payload) {\n    const today = new Date();\n    const todayDay = today.getDate();\n    const todayMonth = today.getMonth() + 1; // Months are zero-based in JavaScript\ntry {\n  return payload.reduce((count, record) => {\n        const [name, cpf, birthday, email] = record;\n        const [day, month, year] = birthday.split('/').map(Number);\n        if (day === todayDay && month === todayMonth) {\n            count++;\n        }\n        return count;\n    }, 0);\n} catch (error) {\n  return 0;\n};\n\n}\n\nconst result = countBirthdaysToday(msg.payload);\n\n\nmsg.headers = {\n  \"Client-Token\": msg.registros.resultado.WHATSHTOKEN\n}\n\nmsg.url = \"https://api.z-api.io/instances/\" + msg.registros.resultado.WHATSINSTACE + \"/token/\" + msg.registros.resultado.WHATSTOKEN + \"/send-text\";\n\nif(result>0){\nmsg.payload = {\n  // \"phone\":\"61992998663\",\n  \"phone\": msg.registros.resultado.grupo_canal_wa,\n  \"message\": `Bom dia, vamos começar o dia dando os parabéns?\nHoje temos ${result} aniversariantes.\n  \n*_`+ msg.registros.cliente.nome + `_*`\n\n\n}\n}else{\n\nmsg.payload = {\n  // \"phone\":\"61992998663\",\n  \"phone\": msg.registros.resultado.grupo_canal_wa,\n  \"message\": `Bom dia, Hoje não temos aniversariantes!\n  \n*_`+ msg.registros.cliente.nome + `_*`\n\n\n}\n\n}\n\n\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1350,
+        "y": 580,
+        "wires": [
+            [
+                "482b8163d0a0130f"
+            ]
+        ]
+    },
+    {
+        "id": "94883a50c74925c8",
+        "type": "delay",
+        "z": "e7f7c24acc134af9",
+        "g": "d3573b12d22be78e",
+        "name": "1s",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 830,
+        "y": 640,
+        "wires": [
+            [
+                "db150f5ea512a519"
             ]
         ]
     },
@@ -2094,196 +3587,9 @@
         "wires": []
     },
     {
-        "id": "ada0b16cfcf8946d",
-        "type": "inject",
-        "z": "e7f7c24acc134af9",
-        "g": "7ba9954bb2613bfd",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 180,
-        "y": 460,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ff6eadb839a4c0f8",
-        "type": "GSheet",
-        "z": "e7f7c24acc134af9",
-        "g": "7ba9954bb2613bfd",
-        "creds": "93afee9722a74757",
-        "method": "get",
-        "action": "",
-        "sheet": "1ccfBaQuy3VNoYaUSDkzlQgQ3_-QusrGgofEwSVYESS8",
-        "cells": "Plan1",
-        "flatten": false,
-        "name": "",
-        "x": 350,
-        "y": 380,
-        "wires": [
-            [
-                "4263315fc498c4f2"
-            ]
-        ]
-    },
-    {
-        "id": "4263315fc498c4f2",
-        "type": "subflow:3ed13a0582858ba0",
-        "z": "e7f7c24acc134af9",
-        "g": "7ba9954bb2613bfd",
-        "name": "",
-        "x": 530,
-        "y": 400,
-        "wires": [
-            [
-                "27c79243dc95f0b7",
-                "6cdefd3f476c4311"
-            ]
-        ]
-    },
-    {
-        "id": "6cdefd3f476c4311",
-        "type": "function",
-        "z": "e7f7c24acc134af9",
-        "g": "7ba9954bb2613bfd",
-        "name": "PreparaPessoas",
-        "func": "msg.headers = {\n    \"Client-Token\": \"Faa0e9483d732404fb38ebe88909bd19cS\"\n}\nmsg.payload={\n  //\"phone\":\"61992998663\",\n  \"phone\": msg.payload[1],\n   \"message\": `🎉 *Festa das Regiões 2024* 🎉\n\nOlá, *`+ msg.payload[0].split(\" \")[0] +`*, nós da Igreja Batista do Lago ficamos muito felizes em te receber na nossa *Festa das Regiões* e aqui vai uma mensagem especial de agradecimento do nosso pastor:`\n}\n\n\n\nreturn msg;\n \n\n\n",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 730,
-        "y": 360,
-        "wires": [
-            [
-                "a0381c43221746df"
-            ]
-        ]
-    },
-    {
-        "id": "a0381c43221746df",
-        "type": "www-request",
-        "z": "e7f7c24acc134af9",
-        "g": "7ba9954bb2613bfd",
-        "name": "",
-        "method": "POST",
-        "ret": "obj",
-        "url": "https://api.z-api.io/instances/3CC085CFD2EE505D7A4C8ABF5D20188A/token/CE0B50743BD6CEA17C77CCC8/send-text",
-        "follow-redirects": true,
-        "persistent-http": true,
-        "tls": "",
-        "x": 870,
-        "y": 420,
-        "wires": [
-            [
-                "8fcc4dc6fbe2967e"
-            ]
-        ]
-    },
-    {
-        "id": "8fcc4dc6fbe2967e",
-        "type": "debug",
-        "z": "e7f7c24acc134af9",
-        "g": "7ba9954bb2613bfd",
-        "name": "debug 22",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 980,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "f71255e6b633f830",
-        "type": "function",
-        "z": "e7f7c24acc134af9",
-        "g": "7ba9954bb2613bfd",
-        "name": "PreparaPessoas",
-        "func": "msg.headers = {\n    \"Client-Token\": \"Faa0e9483d732404fb38ebe88909bd19cS\"\n}\nmsg.payload={\n \n  \"video\":\"https://relogio.fe.digital/video/agradecimentos.mp4\",\n\"phone\": msg.payload[1],\n  \"caption\": \"Agradecimento Pastor Hércio\",\n \n\n}\n\n\nreturn msg;\n \n\n\n",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 770,
-        "y": 500,
-        "wires": [
-            [
-                "ea4b916f5ea969a6"
-            ]
-        ]
-    },
-    {
-        "id": "ea4b916f5ea969a6",
-        "type": "www-request",
-        "z": "e7f7c24acc134af9",
-        "g": "7ba9954bb2613bfd",
-        "name": "",
-        "method": "POST",
-        "ret": "obj",
-        "url": "https://api.z-api.io/instances/3CC085CFD2EE505D7A4C8ABF5D20188A/token/CE0B50743BD6CEA17C77CCC8/send-text",
-        "follow-redirects": true,
-        "persistent-http": true,
-        "tls": "",
-        "x": 890,
-        "y": 560,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "27c79243dc95f0b7",
-        "type": "delay",
-        "z": "e7f7c24acc134af9",
-        "g": "7ba9954bb2613bfd",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "500",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 680,
-        "y": 440,
-        "wires": [
-            [
-                "f71255e6b633f830"
-            ]
-        ]
-    },
-    {
         "id": "6598ca5232de0946",
         "type": "inject",
-        "z": "e7f7c24acc134af9",
+        "z": "b1c0f3e5e3128179",
         "g": "679beb5b15e32c6d",
         "name": "",
         "props": [
@@ -2311,7 +3617,7 @@
     {
         "id": "26450c8e92ee13c7",
         "type": "GSheet",
-        "z": "e7f7c24acc134af9",
+        "z": "b1c0f3e5e3128179",
         "g": "679beb5b15e32c6d",
         "creds": "93afee9722a74757",
         "method": "get",
@@ -2331,7 +3637,7 @@
     {
         "id": "e7fbde499c85c6ee",
         "type": "subflow:3ed13a0582858ba0",
-        "z": "e7f7c24acc134af9",
+        "z": "b1c0f3e5e3128179",
         "g": "679beb5b15e32c6d",
         "name": "",
         "x": 550,
@@ -2346,7 +3652,7 @@
     {
         "id": "e7af54e39c93e04a",
         "type": "function",
-        "z": "e7f7c24acc134af9",
+        "z": "b1c0f3e5e3128179",
         "g": "679beb5b15e32c6d",
         "name": "PreparaPessoas",
         "func": "msg.headers = {\n    \"Client-Token\": \"Faa0e9483d732404fb38ebe88909bd19cS\"\n}\n\nmsg.payload={\n // \"phone\":\"61992998663\",\n  \"phone\": msg.payload[2].replace(/\\ /gi,\"\"),\n  \"message\": `\n*Boa tarde, `+ msg.payload[0].split(\" \")[0] +`!*\nEsperamos que esteja bem! \n\nCompartilham abaixo um link de uma pasta para que você coloque fotos da sua turma. Você deve procurar a pasta específica da sua turma e colocar as fotos e vídeos: \n\nhttps://drive.google.com/drive/folders/1flGbsR5TQKJDH7b2eDraCNXwbS2WYtkJ?usp=drive_link \n\nOrientações importantes:\n- Escolha as 15 melhores fotos de cada aula. Não exceda este número. \n- As fotos devem estar com uma boa resolução e iluminação. \n* Faça uma foto oficial dos equipantes e coloque neste mesma pasta.\n* Faça fotos de toda turma junto com o instrutor ao final de cada aula. \n- Coloque vídeos das aulas: se possível faça pequenos vídeos (até 10 segundos) de partes de cada aula, os vídeos, preferencialmente devem ser gravados com câmera e no formato horizontal. Caso não tenha esta equipamento, faça alguns vídeos com o celular no formato horizontal e vertical.\n\nMarisa Magalhães \nTime de Comunicação \n\nJuntos, \nPor uma década missionária! 🌏\n`\n}\n/*\nmsg.payload= {\n  \"phone\": msg.payload[2].replace(\"(\",\"\").replace(\")\",\"\").replace(\"-\",\"\").replace(/\\ /gi,\"\"),\n  \"image\": \"https://relogio.fe.digital/img/8fc16657-8e6e-4c7b-885a-0a4ae9b9ccd3\",\n  \"caption\": \"Imagem descritiva\"\n}\n*/\n/*\nmsg.payload = {\n // \"phone\": \"5561992998663\",\n  \"phone\": msg.payload[2].replace(\"(\", \"\").replace(\")\", \"\").replace(\"-\", \"\").replace(/\\ /gi, \"\"),\n  \"image\": \"https://relogio.fe.digital/img/oreconosco\",\n  \"caption\": `\n  *Por Um Movimento de Brasileiro Entre os Povos*\n\n*`+ msg.payload[0].split(\" \")[0] +`*, queremos te convocar para uma jornada de oração com um ousado alvo: Ver 30% dos alunos de Perspectivas indo aos campos sem acesso ao evangelho.\n\nNa próxima *segunda-feira dia 30/09* será o nosso *1° dia Jejum e Oração*. Iniciaremos 00:00 e iremos até 15h. \n\nQueremos te encorajar a dedicar um tempo de jejum e oração, para que o Espírito Santo desperte, mobilize e envie alunos de Perspectivas para povos não alcançados.\n\nEsta será apenas a primeira fase de oração, em breve iremos compartilhar os primeiros passos.\n\nVamos juntos!\nCom Ele, por Ele! \n*Para que todos os povos O adorem* 🌎\n  \n  \n  `\n}\n\n\n*/\nreturn msg;\n \n",
@@ -2367,7 +3673,7 @@
     {
         "id": "1596b145857284d1",
         "type": "www-request",
-        "z": "e7f7c24acc134af9",
+        "z": "b1c0f3e5e3128179",
         "g": "679beb5b15e32c6d",
         "name": "",
         "method": "POST",
@@ -2387,7 +3693,7 @@
     {
         "id": "25fca76f9d8ced9a",
         "type": "debug",
-        "z": "e7f7c24acc134af9",
+        "z": "b1c0f3e5e3128179",
         "g": "679beb5b15e32c6d",
         "name": "debug 20",
         "active": true,
@@ -2405,7 +3711,7 @@
     {
         "id": "8f0e73398b7ec74d",
         "type": "debug",
-        "z": "e7f7c24acc134af9",
+        "z": "b1c0f3e5e3128179",
         "g": "679beb5b15e32c6d",
         "name": "debug 23",
         "active": true,
@@ -2420,60 +3726,10 @@
         "wires": []
     },
     {
-        "id": "5090ed6b299a994f",
-        "type": "function",
-        "z": "e7f7c24acc134af9",
-        "g": "1bc08ef901d52d8f",
-        "name": "recuperar Clientes",
-        "func": "msg.topic=`\nSELECT * FROM fe_admin.clientes;\n`\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 310,
-        "y": 840,
-        "wires": [
-            [
-                "efc77ba7e9089259"
-            ]
-        ]
-    },
-    {
-        "id": "efc77ba7e9089259",
-        "type": "mysql",
-        "z": "e7f7c24acc134af9",
-        "g": "1bc08ef901d52d8f",
-        "mydb": "36dbdd52d4fc31f0",
-        "name": "",
-        "x": 500,
-        "y": 780,
-        "wires": [
-            [
-                "6e595ca51016f170"
-            ]
-        ]
-    },
-    {
-        "id": "6e595ca51016f170",
-        "type": "subflow:3ed13a0582858ba0",
-        "z": "e7f7c24acc134af9",
-        "g": "1bc08ef901d52d8f",
-        "name": "",
-        "x": 590,
-        "y": 840,
-        "wires": [
-            [
-                "edf8b9cfa82a7d8a"
-            ]
-        ]
-    },
-    {
-        "id": "5372e1b75cbee5ce",
+        "id": "ada0b16cfcf8946d",
         "type": "inject",
-        "z": "e7f7c24acc134af9",
-        "g": "1bc08ef901d52d8f",
+        "z": "b1c0f3e5e3128179",
+        "g": "7ba9954bb2613bfd",
         "name": "",
         "props": [
             {
@@ -2492,1401 +3748,153 @@
         "payload": "",
         "payloadType": "date",
         "x": 180,
-        "y": 780,
+        "y": 460,
         "wires": [
-            [
-                "5090ed6b299a994f"
-            ]
+            []
         ]
     },
     {
-        "id": "6d8a269c6872083d",
-        "type": "cron",
-        "z": "e7f7c24acc134af9",
-        "g": "1bc08ef901d52d8f",
-        "name": "",
-        "crontab": "0 * * * *",
-        "x": 110,
-        "y": 840,
-        "wires": [
-            [
-                "5090ed6b299a994f"
-            ]
-        ]
-    },
-    {
-        "id": "edf8b9cfa82a7d8a",
-        "type": "function",
-        "z": "e7f7c24acc134af9",
-        "g": "1bc08ef901d52d8f",
-        "name": "recuperar serviços do cliente",
-        "func": "msg.registros={\n    \"cliente\":msg.payload\n}\n\nmsg.topic=`\nselect cs.id,id_servico from  fe_admin.cliente_servico cs \ninner join fe_admin.clientes c on c.id = cs.id_cliente\nwhere  c.id = :id\nand cs.status =1\n`\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 760,
-        "y": 780,
-        "wires": [
-            [
-                "03bda5979bfb2cb4"
-            ]
-        ]
-    },
-    {
-        "id": "03bda5979bfb2cb4",
-        "type": "mysql",
-        "z": "e7f7c24acc134af9",
-        "g": "1bc08ef901d52d8f",
-        "mydb": "36dbdd52d4fc31f0",
-        "name": "",
-        "x": 920,
-        "y": 840,
-        "wires": [
-            [
-                "a7645a82344f2091"
-            ]
-        ]
-    },
-    {
-        "id": "192e0c02f118696c",
-        "type": "switch",
-        "z": "e7f7c24acc134af9",
-        "g": "1bc08ef901d52d8f",
-        "name": "Distribui Serviço",
-        "property": "payload.id_servico",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "2",
-                "vt": "num"
-            },
-            {
-                "t": "eq",
-                "v": "4",
-                "vt": "num"
-            },
-            {
-                "t": "eq",
-                "v": "6",
-                "vt": "num"
-            },
-            {
-                "t": "eq",
-                "v": "7",
-                "vt": "num"
-            },
-            {
-                "t": "eq",
-                "v": "9",
-                "vt": "num"
-            },
-            {
-                "t": "eq",
-                "v": "12",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 6,
-        "x": 1240,
-        "y": 800,
-        "wires": [
-            [
-                "1beea120f0be8047"
-            ],
-            [
-                "82633872ed93dd42"
-            ],
-            [
-                "fa74f2a8c990cc62"
-            ],
-            [
-                "2878954757031c1c"
-            ],
-            [
-                "cb4f8595e3642cc2"
-            ],
-            [
-                "cfcf04d6d23f64c4"
-            ]
-        ]
-    },
-    {
-        "id": "a7645a82344f2091",
-        "type": "subflow:3ed13a0582858ba0",
-        "z": "e7f7c24acc134af9",
-        "g": "1bc08ef901d52d8f",
-        "name": "",
-        "x": 1030,
-        "y": 780,
-        "wires": [
-            [
-                "192e0c02f118696c"
-            ]
-        ]
-    },
-    {
-        "id": "d05b69465135e287",
-        "type": "link in",
-        "z": "e7f7c24acc134af9",
-        "g": "ccdf4d4c7440eb32",
-        "name": "Entrada Aniversariantes",
-        "links": [
-            "cb4f8595e3642cc2"
-        ],
-        "x": 75,
-        "y": 1100,
-        "wires": [
-            [
-                "a6636dba9c6c1ddc"
-            ]
-        ]
-    },
-    {
-        "id": "a6636dba9c6c1ddc",
-        "type": "function",
-        "z": "e7f7c24acc134af9",
-        "g": "ccdf4d4c7440eb32",
-        "name": "Somente as 6h da manha",
-        "func": "var agora = new Date();\nmsg.topic=`\nSELECT \n\tcc.valor, \n\tsc.nome\n    \nFROM fe_admin.clientes_campos cc\ninner join fe_admin.servicos_campos  sc on sc.id = cc.id_servicos_campos\ninner join fe_admin.servicos s on s.id = sc.id_servicos\ninner join fe_admin.cliente_servico cs on cs.id = cc.id_cliente_servico\ninner join fe_admin.clientes c on c.id = cs.id_cliente\nwhere s.id = 9\nand s.status =1\nand cs.id=:id\nand c.id = `+msg.registros.cliente.id+`\n`\n// verifica se está no horario. Esse serviço roda todos os dias as 6h da manhã somente\n\nif(agora.getHours()==6){\n\treturn msg;\n}\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 210,
-        "y": 1040,
-        "wires": [
-            [
-                "5f37b0a6834626e6"
-            ]
-        ]
-    },
-    {
-        "id": "5f37b0a6834626e6",
-        "type": "mysql",
-        "z": "e7f7c24acc134af9",
-        "g": "ccdf4d4c7440eb32",
-        "mydb": "36dbdd52d4fc31f0",
-        "name": "",
-        "x": 380,
-        "y": 1100,
-        "wires": [
-            [
-                "fe8fea93e2301462"
-            ]
-        ]
-    },
-    {
-        "id": "fe8fea93e2301462",
-        "type": "switch",
-        "z": "e7f7c24acc134af9",
-        "g": "ccdf4d4c7440eb32",
-        "name": "vazio?",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "nempty"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 480,
-        "y": 1040,
-        "wires": [
-            [
-                "5313f66be081a008"
-            ]
-        ]
-    },
-    {
-        "id": "5313f66be081a008",
-        "type": "function",
-        "z": "e7f7c24acc134af9",
-        "g": "ccdf4d4c7440eb32",
-        "name": "Trasnformacao",
-        "func": " const resultado = {};\n  msg.payload.forEach(item => {\n    resultado[item.nome] = item.valor;\n  });\nmsg.payload = resultado;\nmsg.registros.resultado= resultado\n\n\nmsg.payload=resultado;\nmsg.sheet = resultado.url_google_mensagem.split(\":\")[0];\nmsg.cells = resultado.url_google_mensagem.split(\":\")[1];\n \nif (msg.payload && msg.payload.length !== 0) {\n\n   return msg;\n\n}",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 620,
-        "y": 1100,
-        "wires": [
-            [
-                "e27fa3eee0c36b9f"
-            ]
-        ]
-    },
-    {
-        "id": "e27fa3eee0c36b9f",
+        "id": "ff6eadb839a4c0f8",
         "type": "GSheet",
-        "z": "e7f7c24acc134af9",
-        "g": "ccdf4d4c7440eb32",
+        "z": "b1c0f3e5e3128179",
+        "g": "7ba9954bb2613bfd",
         "creds": "93afee9722a74757",
         "method": "get",
         "action": "",
-        "sheet": "",
-        "cells": "",
+        "sheet": "1ccfBaQuy3VNoYaUSDkzlQgQ3_-QusrGgofEwSVYESS8",
+        "cells": "Plan1",
         "flatten": false,
         "name": "",
-        "x": 770,
-        "y": 1040,
+        "x": 350,
+        "y": 380,
         "wires": [
             [
-                "7fbb421b60a6daca"
+                "4263315fc498c4f2"
             ]
         ]
     },
     {
-        "id": "7fbb421b60a6daca",
+        "id": "4263315fc498c4f2",
+        "type": "subflow:3ed13a0582858ba0",
+        "z": "b1c0f3e5e3128179",
+        "g": "7ba9954bb2613bfd",
+        "name": "",
+        "x": 530,
+        "y": 400,
+        "wires": [
+            [
+                "27c79243dc95f0b7",
+                "6cdefd3f476c4311"
+            ]
+        ]
+    },
+    {
+        "id": "6cdefd3f476c4311",
         "type": "function",
-        "z": "e7f7c24acc134af9",
-        "g": "ccdf4d4c7440eb32",
-        "name": "Trasnformacao",
-        "func": " \nmsg.registros.mensagem = msg.payload[0][0];\nmsg.sheet = msg.registros.resultado.url_google_aniversariantes.split(\":\")[0];\nmsg.cells = msg.registros.resultado.url_google_aniversariantes.split(\":\")[1];\n\nreturn msg;\n\n",
+        "z": "b1c0f3e5e3128179",
+        "g": "7ba9954bb2613bfd",
+        "name": "PreparaPessoas",
+        "func": "msg.headers = {\n    \"Client-Token\": \"Faa0e9483d732404fb38ebe88909bd19cS\"\n}\nmsg.payload={\n  //\"phone\":\"61992998663\",\n  \"phone\": msg.payload[1],\n   \"message\": `🎉 *Festa das Regiões 2024* 🎉\n\nOlá, *`+ msg.payload[0].split(\" \")[0] +`*, nós da Igreja Batista do Lago ficamos muito felizes em te receber na nossa *Festa das Regiões* e aqui vai uma mensagem especial de agradecimento do nosso pastor:`\n}\n\n\n\nreturn msg;\n \n\n\n",
         "outputs": 1,
-        "timeout": 0,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
+        "x": 730,
+        "y": 360,
+        "wires": [
+            [
+                "a0381c43221746df"
+            ]
+        ]
+    },
+    {
+        "id": "a0381c43221746df",
+        "type": "www-request",
+        "z": "b1c0f3e5e3128179",
+        "g": "7ba9954bb2613bfd",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "url": "https://api.z-api.io/instances/3CC085CFD2EE505D7A4C8ABF5D20188A/token/CE0B50743BD6CEA17C77CCC8/send-text",
+        "follow-redirects": true,
+        "persistent-http": true,
+        "tls": "",
+        "x": 870,
+        "y": 420,
+        "wires": [
+            [
+                "8fcc4dc6fbe2967e"
+            ]
+        ]
+    },
+    {
+        "id": "8fcc4dc6fbe2967e",
+        "type": "debug",
+        "z": "b1c0f3e5e3128179",
+        "g": "7ba9954bb2613bfd",
+        "name": "debug 22",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "f71255e6b633f830",
+        "type": "function",
+        "z": "b1c0f3e5e3128179",
+        "g": "7ba9954bb2613bfd",
+        "name": "PreparaPessoas",
+        "func": "msg.headers = {\n    \"Client-Token\": \"Faa0e9483d732404fb38ebe88909bd19cS\"\n}\nmsg.payload={\n \n  \"video\":\"https://relogio.fe.digital/video/agradecimentos.mp4\",\n\"phone\": msg.payload[1],\n  \"caption\": \"Agradecimento Pastor Hércio\",\n \n\n}\n\n\nreturn msg;\n \n\n\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 500,
+        "wires": [
+            [
+                "ea4b916f5ea969a6"
+            ]
+        ]
+    },
+    {
+        "id": "ea4b916f5ea969a6",
+        "type": "www-request",
+        "z": "b1c0f3e5e3128179",
+        "g": "7ba9954bb2613bfd",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "url": "https://api.z-api.io/instances/3CC085CFD2EE505D7A4C8ABF5D20188A/token/CE0B50743BD6CEA17C77CCC8/send-text",
+        "follow-redirects": true,
+        "persistent-http": true,
+        "tls": "",
         "x": 890,
-        "y": 1100,
+        "y": 560,
         "wires": [
-            [
-                "f159bd4fde5e33c3"
-            ]
+            []
         ]
     },
     {
-        "id": "f159bd4fde5e33c3",
-        "type": "GSheet",
-        "z": "e7f7c24acc134af9",
-        "g": "ccdf4d4c7440eb32",
-        "creds": "93afee9722a74757",
-        "method": "get",
-        "action": "",
-        "sheet": "",
-        "cells": "",
-        "flatten": false,
-        "name": "",
-        "x": 1040,
-        "y": 1040,
-        "wires": [
-            [
-                "1a37d8ee47b82649"
-            ]
-        ]
-    },
-    {
-        "id": "1a37d8ee47b82649",
-        "type": "subflow:3ed13a0582858ba0",
-        "z": "e7f7c24acc134af9",
-        "g": "ccdf4d4c7440eb32",
-        "name": "",
-        "x": 1150,
-        "y": 1100,
-        "wires": [
-            [
-                "cf335837822b4a50"
-            ]
-        ]
-    },
-    {
-        "id": "cf335837822b4a50",
-        "type": "switch",
-        "z": "e7f7c24acc134af9",
-        "g": "ccdf4d4c7440eb32",
-        "name": "removeTitulo",
-        "property": "payload[0]",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "neq",
-                "v": "Nome",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1270,
-        "y": 1040,
-        "wires": [
-            [
-                "f95905a8e4875d92"
-            ]
-        ]
-    },
-    {
-        "id": "f95905a8e4875d92",
-        "type": "function",
-        "z": "e7f7c24acc134af9",
-        "g": "ccdf4d4c7440eb32",
-        "name": "Verifica Data e hora",
-        "func": "var dataatual = new Date();\ndataatual.setMinutes(0, 0, 0);\nvar dataRecebida = new Date(msg.payload[2].split(\"/\")[1] + \"/\" + msg.payload[2].split(\"/\")[0] + \"/\" + msg.payload[2].split(\"/\")[2] )\n\n\n\nvar dataatuali = dataatual.getDate() + \"/\" + dataatual.getMonth() ;\nvar datarecebidali = dataRecebida.getDate() + \"/\" + dataRecebida.getMonth() ;\n\n\nif (dataatuali == datarecebidali){\n    return msg;\n}   \n\n\n   \n\n\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1430,
-        "y": 1100,
-        "wires": [
-            [
-                "6aeb4dd9764e4105"
-            ]
-        ]
-    },
-    {
-        "id": "6aeb4dd9764e4105",
-        "type": "function",
-        "z": "e7f7c24acc134af9",
-        "g": "ccdf4d4c7440eb32",
-        "name": "PreparaPessoas",
-        "func": "msg.headers = {\n  \"Client-Token\": msg.registros.resultado.WHATSHTOKEN\n}\n\nmsg.url = \"https://api.z-api.io/instances/\" + msg.registros.resultado.WHATSINSTACE + \"/token/\" + msg.registros.resultado.WHATSTOKEN+\"/send-text\";\n\nmsg.payload={\n  \"phone\":\"61992998663\",\n//  \"phone\": msg.payload[1],\n    \"message\": msg.registros.mensagem.replace(/{pessoa}/gi,msg.payload[0]) +`\n*_`+msg.registros.cliente.nome+`_*`\n  \n \n}\n\nreturn msg;\n \n",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1610,
-        "y": 1040,
-        "wires": [
-            [
-                "9187e01702cb8929"
-            ]
-        ]
-    },
-    {
-        "id": "9187e01702cb8929",
-        "type": "www-request",
-        "z": "e7f7c24acc134af9",
-        "g": "ccdf4d4c7440eb32",
-        "name": "Envia WA",
-        "method": "POST",
-        "ret": "obj",
-        "url": "",
-        "follow-redirects": true,
-        "persistent-http": true,
-        "tls": "",
-        "x": 1760,
-        "y": 1100,
-        "wires": [
-            [
-                "ddbe18a024c714bd"
-            ]
-        ]
-    },
-    {
-        "id": "ddbe18a024c714bd",
-        "type": "debug",
-        "z": "e7f7c24acc134af9",
-        "g": "ccdf4d4c7440eb32",
-        "name": "debug 26",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1880,
-        "y": 1040,
-        "wires": []
-    },
-    {
-        "id": "cb4f8595e3642cc2",
-        "type": "link out",
-        "z": "e7f7c24acc134af9",
-        "g": "1bc08ef901d52d8f",
-        "name": "Notificação Aniversariantes",
-        "mode": "link",
-        "links": [
-            "d05b69465135e287"
-        ],
-        "x": 1540,
-        "y": 840,
-        "wires": [],
-        "l": true
-    },
-    {
-        "id": "1beea120f0be8047",
-        "type": "link out",
-        "z": "e7f7c24acc134af9",
-        "g": "1bc08ef901d52d8f",
-        "name": "Oracao Fe digital",
-        "mode": "link",
-        "links": [],
-        "x": 1510,
-        "y": 680,
-        "wires": [],
-        "l": true
-    },
-    {
-        "id": "82633872ed93dd42",
-        "type": "link out",
-        "z": "e7f7c24acc134af9",
-        "g": "1bc08ef901d52d8f",
-        "name": "Notificação Grupo Aniversariantes",
-        "mode": "link",
-        "links": [
-            "0298a6d8adb497ba"
-        ],
-        "x": 1560,
-        "y": 720,
-        "wires": [],
-        "l": true
-    },
-    {
-        "id": "fa74f2a8c990cc62",
-        "type": "link out",
-        "z": "e7f7c24acc134af9",
-        "g": "1bc08ef901d52d8f",
-        "name": "Relogio Personalizado",
-        "mode": "link",
-        "links": [],
-        "x": 1520,
-        "y": 760,
-        "wires": [],
-        "l": true
-    },
-    {
-        "id": "2878954757031c1c",
-        "type": "link out",
-        "z": "e7f7c24acc134af9",
-        "g": "1bc08ef901d52d8f",
-        "name": "Devocionais Diarios",
-        "mode": "link",
-        "links": [
-            "fdacac31e2576f4c"
-        ],
-        "x": 1520,
-        "y": 800,
-        "wires": [],
-        "l": true
-    },
-    {
-        "id": "cfcf04d6d23f64c4",
-        "type": "link out",
-        "z": "e7f7c24acc134af9",
-        "g": "1bc08ef901d52d8f",
-        "name": "Notificações Personalizada",
-        "mode": "link",
-        "links": [
-            "57862754534776a2"
-        ],
-        "x": 1540,
-        "y": 880,
-        "wires": [],
-        "l": true
-    },
-    {
-        "id": "4a1246542845e1f1",
-        "type": "function",
-        "z": "e7f7c24acc134af9",
-        "g": "807c7f127df3e5d0",
-        "name": "recuperar Servicos",
-        "func": "msg.topic=`\nSELECT \n\tcc.valor, \n\tsc.nome\n    \nFROM fe_admin.clientes_campos cc\ninner join fe_admin.servicos_campos  sc on sc.id = cc.id_servicos_campos\ninner join fe_admin.servicos s on s.id = sc.id_servicos\ninner join fe_admin.cliente_servico cs on cs.id = cc.id_cliente_servico\ninner join fe_admin.clientes c on c.id = cs.id_cliente\nwhere s.id = 12 \nand s.status =1\nand cs.id=:id\nand c.id = `+msg.registros.cliente.id+`\n \n`\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 210,
-        "y": 1440,
-        "wires": [
-            [
-                "74e4c7d4744a515c"
-            ]
-        ]
-    },
-    {
-        "id": "74e4c7d4744a515c",
-        "type": "mysql",
-        "z": "e7f7c24acc134af9",
-        "g": "807c7f127df3e5d0",
-        "mydb": "36dbdd52d4fc31f0",
-        "name": "",
-        "x": 400,
-        "y": 1480,
-        "wires": [
-            [
-                "125e9f102a57eead"
-            ]
-        ]
-    },
-    {
-        "id": "e55dcd0dc546dac8",
-        "type": "function",
-        "z": "e7f7c24acc134af9",
-        "g": "807c7f127df3e5d0",
-        "name": "Trasnformacao",
-        "func": " const resultado = {};\n  msg.payload.forEach(item => {\n    resultado[item.nome] = item.valor;\n  });\nmsg.payload = resultado;\n\n\nmsg.registros.resultado = resultado\nmsg.payload=resultado;\nmsg.sheet = resultado.url_google_mensagens.split(\":\")[0];\nmsg.cells = resultado.url_google_mensagens.split(\":\")[1];\n \nif (msg.payload && msg.payload.length !== 0) {\n\n   return msg;\n\n}",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 700,
-        "y": 1480,
-        "wires": [
-            [
-                "187968243dbd8153"
-            ]
-        ]
-    },
-    {
-        "id": "187968243dbd8153",
-        "type": "GSheet",
-        "z": "e7f7c24acc134af9",
-        "g": "807c7f127df3e5d0",
-        "creds": "93afee9722a74757",
-        "method": "get",
-        "action": "",
-        "sheet": "",
-        "cells": "Mensagem",
-        "flatten": false,
-        "name": "",
-        "x": 870,
-        "y": 1440,
-        "wires": [
-            [
-                "d939653c45ca1600"
-            ]
-        ]
-    },
-    {
-        "id": "d939653c45ca1600",
-        "type": "subflow:3ed13a0582858ba0",
-        "z": "e7f7c24acc134af9",
-        "g": "807c7f127df3e5d0",
-        "name": "",
-        "x": 990,
-        "y": 1480,
-        "wires": [
-            [
-                "226c61ad26e0fd4e"
-            ]
-        ]
-    },
-    {
-        "id": "ce4243baaf14e0cc",
-        "type": "function",
-        "z": "e7f7c24acc134af9",
-        "g": "807c7f127df3e5d0",
-        "name": "Verifica Data e hora",
-        "func": "var dataatual = new Date();\ndataatual.setMinutes(0, 0, 0);\nvar dataRecebida = new Date(msg.payload[0].split(\"/\")[1] + \"/\" + msg.payload[0].split(\"/\")[0] + \"/\" + msg.payload[0].split(\"/\")[2] + \" \" + msg.payload[1])\nmsg.registros.mensagem = msg.payload;\n\n\nmsg.sheet = msg.registros.resultado.url_google_contatos.split(\":\")[0];\nmsg.cells = msg.payload[2];\n\n\nif((dataatual.getTime() - dataRecebida.getTime())==0){\n  return msg; \n}   \n  \n \n   \n\n\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1310,
-        "y": 1480,
-        "wires": [
-            [
-                "b98cc64c51868f63"
-            ]
-        ]
-    },
-    {
-        "id": "b98cc64c51868f63",
-        "type": "GSheet",
-        "z": "e7f7c24acc134af9",
-        "g": "807c7f127df3e5d0",
-        "creds": "93afee9722a74757",
-        "method": "get",
-        "action": "",
-        "sheet": "",
-        "cells": "",
-        "flatten": false,
-        "name": "",
-        "x": 1510,
-        "y": 1440,
-        "wires": [
-            [
-                "5b681e66b95ab316"
-            ]
-        ]
-    },
-    {
-        "id": "5b681e66b95ab316",
-        "type": "subflow:3ed13a0582858ba0",
-        "z": "e7f7c24acc134af9",
-        "g": "807c7f127df3e5d0",
-        "name": "",
-        "x": 1650,
-        "y": 1480,
-        "wires": [
-            [
-                "6eb51119c3396d84"
-            ]
-        ]
-    },
-    {
-        "id": "6eb51119c3396d84",
-        "type": "function",
-        "z": "e7f7c24acc134af9",
-        "g": "807c7f127df3e5d0",
-        "name": "PreparaPessoas",
-        "func": "msg.headers = {\n  \"Client-Token\": msg.registros.resultado.WHATSHTOKEN\n}\n\nmsg.url = \"https://api.z-api.io/instances/\" + msg.registros.resultado.WHATSINSTACE + \"/token/\" + msg.registros.resultado.WHATSTOKEN+\"/send-text\";\n\nmsg.payload={\n  \"phone\":\"61992998663\",\n//  \"phone\": msg.payload[2],\n    \"message\": msg.registros.mensagem[3].replace(/{pessoa}/gi,msg.payload[0]) \n  \n \n}\n\nreturn msg;\n \n",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1810,
-        "y": 1440,
-        "wires": [
-            [
-                "9e267a04767e77d5"
-            ]
-        ]
-    },
-    {
-        "id": "125e9f102a57eead",
-        "type": "switch",
-        "z": "e7f7c24acc134af9",
-        "g": "807c7f127df3e5d0",
-        "name": "vazio?",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "nempty"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 550,
-        "y": 1440,
-        "wires": [
-            [
-                "e55dcd0dc546dac8"
-            ]
-        ]
-    },
-    {
-        "id": "226c61ad26e0fd4e",
-        "type": "switch",
-        "z": "e7f7c24acc134af9",
-        "g": "807c7f127df3e5d0",
-        "name": "removeTitulo",
-        "property": "payload[0]",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "neq",
-                "v": "Data",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1150,
-        "y": 1440,
-        "wires": [
-            [
-                "ce4243baaf14e0cc"
-            ]
-        ]
-    },
-    {
-        "id": "9e267a04767e77d5",
-        "type": "www-request",
-        "z": "e7f7c24acc134af9",
-        "g": "807c7f127df3e5d0",
-        "name": "Envia WA",
-        "method": "POST",
-        "ret": "obj",
-        "url": "",
-        "follow-redirects": true,
-        "persistent-http": true,
-        "tls": "",
-        "x": 1960,
-        "y": 1480,
-        "wires": [
-            [
-                "83794e76069eafe7"
-            ]
-        ]
-    },
-    {
-        "id": "83794e76069eafe7",
-        "type": "debug",
-        "z": "e7f7c24acc134af9",
-        "g": "807c7f127df3e5d0",
-        "name": "debug 28",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2080,
-        "y": 1440,
-        "wires": []
-    },
-    {
-        "id": "57862754534776a2",
-        "type": "link in",
-        "z": "e7f7c24acc134af9",
-        "g": "807c7f127df3e5d0",
-        "name": "Entrada  DEvocionais diarios",
-        "links": [
-            "cfcf04d6d23f64c4"
-        ],
-        "x": 75,
-        "y": 1440,
-        "wires": [
-            [
-                "4a1246542845e1f1"
-            ]
-        ]
-    },
-    {
-        "id": "9c5ed1e74182534b",
-        "type": "function",
-        "z": "e7f7c24acc134af9",
-        "g": "cd48d0c3ebd80200",
-        "name": "recuperar Servicos",
-        "func": "var agora = new Date();\nmsg.topic=`\nSELECT \n\tcc.valor, \n\tsc.nome\n    \nFROM fe_admin.clientes_campos cc\ninner join fe_admin.servicos_campos  sc on sc.id = cc.id_servicos_campos\ninner join fe_admin.servicos s on s.id = sc.id_servicos\ninner join fe_admin.cliente_servico cs on cs.id = cc.id_cliente_servico\ninner join fe_admin.clientes c on c.id = cs.id_cliente\nwhere s.id = 7 \nand s.status =1\nand cs.id=:id\nand c.id = `+msg.registros.cliente.id+`\n \n`\nif (agora.getHours() == 6) {\n\treturn msg;\n}",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 210,
-        "y": 1600,
-        "wires": [
-            [
-                "a49bdfcd167c069f"
-            ]
-        ]
-    },
-    {
-        "id": "a49bdfcd167c069f",
-        "type": "mysql",
-        "z": "e7f7c24acc134af9",
-        "g": "cd48d0c3ebd80200",
-        "mydb": "36dbdd52d4fc31f0",
-        "name": "",
-        "x": 400,
-        "y": 1640,
-        "wires": [
-            [
-                "a79058958c47e415"
-            ]
-        ]
-    },
-    {
-        "id": "fd638fed21a6254d",
-        "type": "function",
-        "z": "e7f7c24acc134af9",
-        "g": "cd48d0c3ebd80200",
-        "name": "Trasnformacao",
-        "func": " const resultado = {};\n  msg.payload.forEach(item => {\n    resultado[item.nome] = item.valor;\n  });\nmsg.payload = resultado;\n\n\nmsg.registros.resultado= resultado\nmsg.payload=resultado;\nmsg.sheet = resultado.url_google_mensagens.split(\":\")[0];\nmsg.cells = resultado.url_google_mensagens.split(\":\")[1];\n \nif (msg.payload && msg.payload.length !== 0) {\n\n   return msg;\n\n}",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 700,
-        "y": 1640,
-        "wires": [
-            [
-                "7a1780cf828a692b"
-            ]
-        ]
-    },
-    {
-        "id": "7a1780cf828a692b",
-        "type": "GSheet",
-        "z": "e7f7c24acc134af9",
-        "g": "cd48d0c3ebd80200",
-        "creds": "93afee9722a74757",
-        "method": "get",
-        "action": "",
-        "sheet": "",
-        "cells": "Mensagem",
-        "flatten": false,
-        "name": "",
-        "x": 870,
-        "y": 1600,
-        "wires": [
-            [
-                "b5a63e9b92d848b3"
-            ]
-        ]
-    },
-    {
-        "id": "b5a63e9b92d848b3",
-        "type": "subflow:3ed13a0582858ba0",
-        "z": "e7f7c24acc134af9",
-        "g": "cd48d0c3ebd80200",
-        "name": "",
-        "x": 990,
-        "y": 1640,
-        "wires": [
-            [
-                "060a86600ac02e9d"
-            ]
-        ]
-    },
-    {
-        "id": "a79058958c47e415",
-        "type": "switch",
-        "z": "e7f7c24acc134af9",
-        "g": "cd48d0c3ebd80200",
-        "name": "vazio?",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "nempty"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 550,
-        "y": 1600,
-        "wires": [
-            [
-                "fd638fed21a6254d"
-            ]
-        ]
-    },
-    {
-        "id": "060a86600ac02e9d",
-        "type": "switch",
-        "z": "e7f7c24acc134af9",
-        "g": "cd48d0c3ebd80200",
-        "name": "removeTitulo",
-        "property": "payload[0]",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "neq",
-                "v": "Data",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1130,
-        "y": 1600,
-        "wires": [
-            [
-                "94220772492cb06b"
-            ]
-        ]
-    },
-    {
-        "id": "fdacac31e2576f4c",
-        "type": "link in",
-        "z": "e7f7c24acc134af9",
-        "g": "cd48d0c3ebd80200",
-        "name": "Entrada Notificações Personalidadas",
-        "links": [
-            "2878954757031c1c"
-        ],
-        "x": 75,
-        "y": 1600,
-        "wires": [
-            [
-                "9c5ed1e74182534b"
-            ]
-        ]
-    },
-    {
-        "id": "5e1ef3f0d44bc35b",
-        "type": "www-request",
-        "z": "e7f7c24acc134af9",
-        "g": "258b7a9d543e1f84",
-        "name": "Envia WA",
-        "method": "GET",
-        "ret": "obj",
-        "url": "",
-        "follow-redirects": true,
-        "persistent-http": true,
-        "tls": "",
-        "x": 620,
-        "y": 1840,
-        "wires": [
-            [
-                "fb896aa9e8dc0367"
-            ]
-        ]
-    },
-    {
-        "id": "8517fb01601eea67",
-        "type": "function",
-        "z": "e7f7c24acc134af9",
-        "g": "258b7a9d543e1f84",
-        "name": "PreparaPessoas",
-        "func": "msg.headers = {\n  \"Client-Token\": \"Faa0e9483d732404fb38ebe88909bd19cS\"\n}\n \nmsg.url= \"https://api.z-api.io/instances/3CC085CFD2EE505D7A4C8ABF5D20188A/token/CE0B50743BD6CEA17C77CCC8/chats?type=group?page=1&pageSize=1000\"\n\n \nreturn msg;\n \n",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 450,
-        "y": 1780,
-        "wires": [
-            [
-                "5e1ef3f0d44bc35b"
-            ]
-        ]
-    },
-    {
-        "id": "fb896aa9e8dc0367",
-        "type": "function",
-        "z": "e7f7c24acc134af9",
-        "g": "258b7a9d543e1f84",
-        "name": "PreparaPessoas",
-        "func": "// Supondo que a entrada seja um array de objetos\nlet registros = msg.payload;\n\nmsg.nomeBuscado =msg.req.params.grupo;\n\n// Filtra os registros onde isGroup é true\nlet registrosFiltrados = registros.filter(registro => registro.isGroup === true);\nlet nomeBuscado = msg.nomeBuscado;\nlet regex = new RegExp(nomeBuscado, 'i');\nregistrosFiltrados = registrosFiltrados.filter(registro => regex.test(registro.name));\n\n\n\n\n// Define o novo array filtrado como a saída da mensagem\nmsg.payload = registrosFiltrados;\n\n\n \nreturn msg;\n \n",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 790,
-        "y": 1780,
-        "wires": [
-            [
-                "c529d35885b3c64e"
-            ]
-        ]
-    },
-    {
-        "id": "236e1aeb049617a6",
-        "type": "http in",
-        "z": "e7f7c24acc134af9",
-        "g": "258b7a9d543e1f84",
-        "name": "",
-        "url": "/buscagrupo/:grupo",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 170,
-        "y": 1840,
-        "wires": [
-            [
-                "8517fb01601eea67"
-            ]
-        ]
-    },
-    {
-        "id": "c529d35885b3c64e",
-        "type": "http response",
-        "z": "e7f7c24acc134af9",
-        "g": "258b7a9d543e1f84",
-        "name": "",
-        "statusCode": "",
-        "headers": {},
-        "x": 990,
-        "y": 1840,
-        "wires": []
-    },
-    {
-        "id": "94220772492cb06b",
-        "type": "function",
-        "z": "e7f7c24acc134af9",
-        "g": "cd48d0c3ebd80200",
-        "name": "Verifica Data e hora",
-        "func": "var dataatual = new Date();\ndataatual.setMinutes(0, 0, 0);\nvar dataRecebida = new Date(msg.payload[0].split(\"/\")[1] + \"/\" + msg.payload[0].split(\"/\")[0] + \"/\" + msg.payload[0].split(\"/\")[2] )\nmsg.registros.mensagem = msg.payload;\n\n\nvar dataatuali = dataatual.getDate() + \"/\" + dataatual.getMonth() ;\nvar datarecebidali = dataRecebida.getDate() + \"/\" + dataRecebida.getMonth() ;\n\n\nif (dataatuali == datarecebidali){\n    return msg;\n}   \n\n\n   \n\n\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1290,
-        "y": 1640,
-        "wires": [
-            [
-                "0bcdab4428f6b7a0"
-            ]
-        ]
-    },
-    {
-        "id": "0bcdab4428f6b7a0",
-        "type": "function",
-        "z": "e7f7c24acc134af9",
-        "g": "cd48d0c3ebd80200",
-        "name": "PreparaPessoas",
-        "func": "msg.headers = {\n  \"Client-Token\": msg.registros.resultado.WHATSHTOKEN\n}\n\nmsg.url = \"https://api.z-api.io/instances/\" + msg.registros.resultado.WHATSINSTACE + \"/token/\" + msg.registros.resultado.WHATSTOKEN+\"/send-text\";\n\nmsg.payload={\n // \"phone\":\"61992998663\",\n  \"phone\": msg.registros.resultado.grupo_canal_wa,\n  \"message\": msg.payload[1] +`\n*_`+msg.registros.cliente.nome+`_*`\n  \n \n}\n\nreturn msg;\n \n",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1450,
-        "y": 1580,
-        "wires": [
-            [
-                "b2a3f97473cea794"
-            ]
-        ]
-    },
-    {
-        "id": "b2a3f97473cea794",
-        "type": "www-request",
-        "z": "e7f7c24acc134af9",
-        "g": "cd48d0c3ebd80200",
-        "name": "Envia WA",
-        "method": "POST",
-        "ret": "obj",
-        "url": "",
-        "follow-redirects": true,
-        "persistent-http": true,
-        "tls": "",
-        "x": 1560,
-        "y": 1640,
-        "wires": [
-            [
-                "da249b81427a2dee"
-            ]
-        ]
-    },
-    {
-        "id": "da249b81427a2dee",
-        "type": "debug",
-        "z": "e7f7c24acc134af9",
-        "g": "cd48d0c3ebd80200",
-        "name": "debug 29",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1680,
-        "y": 1580,
-        "wires": []
-    },
-    {
-        "id": "0298a6d8adb497ba",
-        "type": "link in",
-        "z": "e7f7c24acc134af9",
-        "g": "d3573b12d22be78e",
-        "name": "Entrada Aniversariantes",
-        "links": [
-            "82633872ed93dd42"
-        ],
-        "x": 75,
-        "y": 1260,
-        "wires": [
-            [
-                "ae16e7847e9a7467"
-            ]
-        ]
-    },
-    {
-        "id": "ae16e7847e9a7467",
-        "type": "function",
-        "z": "e7f7c24acc134af9",
-        "g": "d3573b12d22be78e",
-        "name": "Somente as 6h da manha",
-        "func": "var agora = new Date();\nmsg.topic=`\nSELECT \n\tcc.valor, \n\tsc.nome\n    \nFROM fe_admin.clientes_campos cc\ninner join fe_admin.servicos_campos  sc on sc.id = cc.id_servicos_campos\ninner join fe_admin.servicos s on s.id = sc.id_servicos\ninner join fe_admin.cliente_servico cs on cs.id = cc.id_cliente_servico\ninner join fe_admin.clientes c on c.id = cs.id_cliente\nwhere s.id = 4\nand s.status =1\nand cs.id=:id\nand c.id = `+msg.registros.cliente.id+`\n`\n// verifica se está no horario. Esse serviço roda todos os dias as 6h da manhã somente\n\nif(agora.getHours()==6){\n\treturn msg;\n}\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 210,
-        "y": 1200,
-        "wires": [
-            [
-                "3c9ed41de1afa35b"
-            ]
-        ]
-    },
-    {
-        "id": "3c9ed41de1afa35b",
-        "type": "mysql",
-        "z": "e7f7c24acc134af9",
-        "g": "d3573b12d22be78e",
-        "mydb": "36dbdd52d4fc31f0",
-        "name": "",
-        "x": 380,
-        "y": 1260,
-        "wires": [
-            [
-                "093a185b300d6337"
-            ]
-        ]
-    },
-    {
-        "id": "093a185b300d6337",
-        "type": "switch",
-        "z": "e7f7c24acc134af9",
-        "g": "d3573b12d22be78e",
-        "name": "vazio?",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "nempty"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 480,
-        "y": 1200,
-        "wires": [
-            [
-                "7054600e9aca379a"
-            ]
-        ]
-    },
-    {
-        "id": "7054600e9aca379a",
-        "type": "function",
-        "z": "e7f7c24acc134af9",
-        "g": "d3573b12d22be78e",
-        "name": "Trasnformacao",
-        "func": " const resultado = {};\n  msg.payload.forEach(item => {\n    resultado[item.nome] = item.valor;\n  });\nmsg.payload = resultado;\nmsg.registros.resultado= resultado\n\ntry {\n  msg.payload=resultado;\nmsg.sheet = msg.registros.resultado.url_google_aniversariantes.split(\":\")[0];\nmsg.cells = msg.registros.resultado.url_google_aniversariantes.split(\":\")[1];\n \nif (msg.payload && msg.payload.length !== 0) {\n\n   return msg;\n\n}\n} catch (error) {\n  \n};\n\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 620,
-        "y": 1260,
-        "wires": [
-            [
-                "d99e835fa25e9332"
-            ]
-        ]
-    },
-    {
-        "id": "d99e835fa25e9332",
-        "type": "GSheet",
-        "z": "e7f7c24acc134af9",
-        "g": "d3573b12d22be78e",
-        "creds": "93afee9722a74757",
-        "method": "get",
-        "action": "",
-        "sheet": "",
-        "cells": "",
-        "flatten": false,
-        "name": "",
-        "x": 770,
-        "y": 1200,
-        "wires": [
-            [
-                "9f18b852c9cdc1b9",
-                "94883a50c74925c8"
-            ]
-        ]
-    },
-    {
-        "id": "e6b31a325124d52d",
-        "type": "subflow:3ed13a0582858ba0",
-        "z": "e7f7c24acc134af9",
-        "g": "d3573b12d22be78e",
-        "name": "",
-        "x": 970,
-        "y": 1300,
-        "wires": [
-            [
-                "e720e3a966fcbda9"
-            ]
-        ]
-    },
-    {
-        "id": "e720e3a966fcbda9",
-        "type": "switch",
-        "z": "e7f7c24acc134af9",
-        "g": "d3573b12d22be78e",
-        "name": "removeTitulo",
-        "property": "payload[0]",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "neq",
-                "v": "Nome",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1070,
-        "y": 1240,
-        "wires": [
-            [
-                "bb4253d2f35c93a7"
-            ]
-        ]
-    },
-    {
-        "id": "bb4253d2f35c93a7",
-        "type": "function",
-        "z": "e7f7c24acc134af9",
-        "g": "d3573b12d22be78e",
-        "name": "Verifica Data e hora",
-        "func": "var dataatual = new Date();\ndataatual.setMinutes(0, 0, 0);\n\ntry {\n    var dataRecebida = new Date(msg.payload[2].split(\"/\")[1] + \"/\" + msg.payload[2].split(\"/\")[0] + \"/\" + msg.payload[2].split(\"/\")[2] )\n\n} catch (error) {\n\n    var dataRecebida = new Date(\"0/0/0\")\n\n};\n\n\n\n\nvar dataatuali = dataatual.getDate() + \"/\" + dataatual.getMonth() ;\nvar datarecebidali = dataRecebida.getDate() + \"/\" + dataRecebida.getMonth() ;\n\n\nif (dataatuali == datarecebidali){\n    return msg;\n}   \n\n\n   \n\n\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1210,
-        "y": 1300,
-        "wires": [
-            [
-                "6b9374a52cc8fbd8"
-            ]
-        ]
-    },
-    {
-        "id": "6b9374a52cc8fbd8",
-        "type": "function",
-        "z": "e7f7c24acc134af9",
-        "g": "d3573b12d22be78e",
-        "name": "PreparaPessoas",
-        "func": "msg.headers = {\n  \"Client-Token\": msg.registros.resultado.WHATSHTOKEN\n}\n\nmsg.url = \"https://api.z-api.io/instances/\" + msg.registros.resultado.WHATSINSTACE + \"/token/\" + msg.registros.resultado.WHATSTOKEN + \"/send-text\";\n\nmsg.payload = {\n  // \"phone\":\"61992998663\",\n  \"phone\": msg.registros.resultado.grupo_canal_wa,\n  \"message\": `*`+ msg.payload[0] + `*\ntelefone: `+msg.payload[1]+`\nemail:`+msg.payload[3]+`\n\n*_`+ msg.registros.cliente.nome + `_*`\n\n\n}\n\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1370,
-        "y": 1240,
-        "wires": [
-            [
-                "482b8163d0a0130f"
-            ]
-        ]
-    },
-    {
-        "id": "482b8163d0a0130f",
-        "type": "www-request",
-        "z": "e7f7c24acc134af9",
-        "g": "d3573b12d22be78e",
-        "name": "Envia WA",
-        "method": "POST",
-        "ret": "obj",
-        "url": "",
-        "follow-redirects": true,
-        "persistent-http": true,
-        "tls": "",
-        "x": 1580,
-        "y": 1220,
-        "wires": [
-            [
-                "5605f0d59ee7d6f7"
-            ]
-        ]
-    },
-    {
-        "id": "5605f0d59ee7d6f7",
-        "type": "debug",
-        "z": "e7f7c24acc134af9",
-        "g": "d3573b12d22be78e",
-        "name": "debug 31",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1740,
-        "y": 1220,
-        "wires": []
-    },
-    {
-        "id": "db150f5ea512a519",
-        "type": "function",
-        "z": "e7f7c24acc134af9",
-        "g": "d3573b12d22be78e",
-        "name": "delay",
-        "func": "msg.delay=0;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 830,
-        "y": 1320,
-        "wires": [
-            [
-                "e6b31a325124d52d"
-            ]
-        ]
-    },
-    {
-        "id": "9f18b852c9cdc1b9",
-        "type": "function",
-        "z": "e7f7c24acc134af9",
-        "g": "d3573b12d22be78e",
-        "name": "PreparaInicio",
-        "func": "function countBirthdaysToday(payload) {\n    const today = new Date();\n    const todayDay = today.getDate();\n    const todayMonth = today.getMonth() + 1; // Months are zero-based in JavaScript\ntry {\n  return payload.reduce((count, record) => {\n        const [name, cpf, birthday, email] = record;\n        const [day, month, year] = birthday.split('/').map(Number);\n        if (day === todayDay && month === todayMonth) {\n            count++;\n        }\n        return count;\n    }, 0);\n} catch (error) {\n  return 0;\n};\n\n}\n\nconst result = countBirthdaysToday(msg.payload);\n\n\nmsg.headers = {\n  \"Client-Token\": msg.registros.resultado.WHATSHTOKEN\n}\n\nmsg.url = \"https://api.z-api.io/instances/\" + msg.registros.resultado.WHATSINSTACE + \"/token/\" + msg.registros.resultado.WHATSTOKEN + \"/send-text\";\n\nif(result>0){\nmsg.payload = {\n  // \"phone\":\"61992998663\",\n  \"phone\": msg.registros.resultado.grupo_canal_wa,\n  \"message\": `Bom dia, vamos começar o dia dando os parabéns?\nHoje temos ${result} aniversariantes.\n  \n*_`+ msg.registros.cliente.nome + `_*`\n\n\n}\n}else{\n\nmsg.payload = {\n  // \"phone\":\"61992998663\",\n  \"phone\": msg.registros.resultado.grupo_canal_wa,\n  \"message\": `Bom dia, Hoje não temos aniversariantes!\n  \n*_`+ msg.registros.cliente.nome + `_*`\n\n\n}\n\n}\n\n\n\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1350,
-        "y": 1200,
-        "wires": [
-            [
-                "482b8163d0a0130f"
-            ]
-        ]
-    },
-    {
-        "id": "94883a50c74925c8",
+        "id": "27c79243dc95f0b7",
         "type": "delay",
-        "z": "e7f7c24acc134af9",
-        "g": "d3573b12d22be78e",
-        "name": "1s",
+        "z": "b1c0f3e5e3128179",
+        "g": "7ba9954bb2613bfd",
+        "name": "",
         "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "seconds",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
         "rate": "1",
         "nbRateUnits": "1",
         "rateUnits": "second",
@@ -3896,11 +3904,11 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 830,
-        "y": 1260,
+        "x": 680,
+        "y": 440,
         "wires": [
             [
-                "db150f5ea512a519"
+                "f71255e6b633f830"
             ]
         ]
     }
