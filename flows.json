@@ -840,9 +840,7 @@
         "x": 180,
         "y": 200,
         "wires": [
-            [
-                "5090ed6b299a994f"
-            ]
+            []
         ]
     },
     {
@@ -1798,7 +1796,7 @@
         "z": "e7f7c24acc134af9",
         "g": "258b7a9d543e1f84",
         "name": "PreparaPessoas",
-        "func": "msg.headers = {\n  \"Client-Token\": \"Faa0e9483d732404fb38ebe88909bd19cS\"\n}\n \nmsg.url= \"https://api.z-api.io/instances/3CC085CFD2EE505D7A4C8ABF5D20188A/token/CE0B50743BD6CEA17C77CCC8/chats?type=group?page=1&pageSize=1000\"\n\n \nreturn msg;\n \n",
+        "func": "msg.headers = {\n  \"Client-Token\": \"Faa0e9483d732404fb38ebe88909bd19cS\"\n}\n \nmsg.url= \"https://api.z-api.io/instances/3C12BCB7DE734032C8B47A066F793C1C/token/67C02D759DF9DEF2A2C7FAAD/chats?type=group?page=1&pageSize=1000\"\n\n \nreturn msg;\n \n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
