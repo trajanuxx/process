@@ -1493,7 +1493,7 @@
         "z": "e7f7c24acc134af9",
         "g": "807c7f127df3e5d0",
         "name": "PreparaPessoas",
-        "func": "msg.headers = {\n  \"Client-Token\": msg.registros.resultado.WHATSHTOKEN\n}\n\nmsg.url = \"https://api.z-api.io/instances/\" + msg.registros.resultado.WHATSINSTACE + \"/token/\" + msg.registros.resultado.WHATSTOKEN+\"/send-text\";\n\nmsg.payload={\n // \"phone\":\"61992998663\",\n  \"phone\": msg.payload[2],\n    \"message\": msg.registros.mensagem[3].replace(/{pessoa}/gi,msg.payload[0]) \n  \n \n}\n\nreturn msg;\n \n",
+        "func": "msg.headers = {\n  \"Client-Token\": msg.registros.resultado.WHATSHTOKEN\n}\n\nmsg.url = \"https://api.z-api.io/instances/\" + msg.registros.resultado.WHATSINSTACE + \"/token/\" + msg.registros.resultado.WHATSTOKEN+\"/send-text\";\n\nmsg.payload={\n // \"phone\":\"61992998663\",\n  \"phone\": msg.payload[1],\n    \"message\": msg.registros.mensagem[3].replace(/{pessoa}/gi,msg.payload[0]) \n  \n \n}\n\nreturn msg;\n \n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -1504,7 +1504,8 @@
         "y": 820,
         "wires": [
             [
-                "9e267a04767e77d5"
+                "9e267a04767e77d5",
+                "ff2e754e08f3a021"
             ]
         ]
     },
@@ -2249,6 +2250,22 @@
                 "db150f5ea512a519"
             ]
         ]
+    },
+    {
+        "id": "ff2e754e08f3a021",
+        "type": "debug",
+        "z": "e7f7c24acc134af9",
+        "name": "debug 32",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1980,
+        "y": 740,
+        "wires": []
     },
     {
         "id": "605a1aa848cb6044",
