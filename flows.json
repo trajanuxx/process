@@ -19,7 +19,7 @@
         "id": "b1c0f3e5e3128179",
         "type": "tab",
         "label": "legado",
-        "disabled": true,
+        "disabled": false,
         "info": "",
         "env": []
     },
@@ -243,11 +243,12 @@
             "ddfb99eb2ce7642a",
             "1cdd8bbf0474a000",
             "9fba03029854fc51",
-            "bb2a4bf339e17251"
+            "bb2a4bf339e17251",
+            "16250a8971b23f12"
         ],
-        "x": 14,
+        "x": -6,
         "y": -1,
-        "w": 1652,
+        "w": 1672,
         "h": 222
     },
     {
@@ -3602,6 +3603,36 @@
         "wires": []
     },
     {
+        "id": "16250a8971b23f12",
+        "type": "inject",
+        "z": "a2725fd03b335afd",
+        "g": "7725df2066a0d1ef",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 160,
+        "wires": [
+            [
+                "7acd237d61d2264b"
+            ]
+        ]
+    },
+    {
         "id": "6598ca5232de0946",
         "type": "inject",
         "z": "b1c0f3e5e3128179",
@@ -3638,7 +3669,7 @@
         "method": "get",
         "action": "",
         "sheet": "1grviqe_duhHNC3LV7bCTf0794zasCoiyo0aWihUevXw",
-        "cells": "Coordenadores",
+        "cells": "Equipantes",
         "flatten": false,
         "name": "",
         "x": 370,
@@ -3670,7 +3701,7 @@
         "z": "b1c0f3e5e3128179",
         "g": "679beb5b15e32c6d",
         "name": "PreparaPessoas",
-        "func": "msg.headers = {\n    \"Client-Token\": \"Faa0e9483d732404fb38ebe88909bd19cS\"\n}\n\nmsg.payload={\n // \"phone\":\"61992998663\",\n  \"phone\": msg.payload[2].replace(/\\ /gi,\"\"),\n  \"message\": `\n*Boa tarde, `+ msg.payload[0].split(\" \")[0] +`!*\nEsperamos que esteja bem! \n\nCompartilham abaixo um link de uma pasta para que você coloque fotos da sua turma. Você deve procurar a pasta específica da sua turma e colocar as fotos e vídeos: \n\nhttps://drive.google.com/drive/folders/1flGbsR5TQKJDH7b2eDraCNXwbS2WYtkJ?usp=drive_link \n\nOrientações importantes:\n- Escolha as 15 melhores fotos de cada aula. Não exceda este número. \n- As fotos devem estar com uma boa resolução e iluminação. \n* Faça uma foto oficial dos equipantes e coloque neste mesma pasta.\n* Faça fotos de toda turma junto com o instrutor ao final de cada aula. \n- Coloque vídeos das aulas: se possível faça pequenos vídeos (até 10 segundos) de partes de cada aula, os vídeos, preferencialmente devem ser gravados com câmera e no formato horizontal. Caso não tenha esta equipamento, faça alguns vídeos com o celular no formato horizontal e vertical.\n\nMarisa Magalhães \nTime de Comunicação \n\nJuntos, \nPor uma década missionária! 🌏\n`\n}\n/*\nmsg.payload= {\n  \"phone\": msg.payload[2].replace(\"(\",\"\").replace(\")\",\"\").replace(\"-\",\"\").replace(/\\ /gi,\"\"),\n  \"image\": \"https://relogio.fe.digital/img/8fc16657-8e6e-4c7b-885a-0a4ae9b9ccd3\",\n  \"caption\": \"Imagem descritiva\"\n}\n*/\n/*\nmsg.payload = {\n // \"phone\": \"5561992998663\",\n  \"phone\": msg.payload[2].replace(\"(\", \"\").replace(\")\", \"\").replace(\"-\", \"\").replace(/\\ /gi, \"\"),\n  \"image\": \"https://relogio.fe.digital/img/oreconosco\",\n  \"caption\": `\n  *Por Um Movimento de Brasileiro Entre os Povos*\n\n*`+ msg.payload[0].split(\" \")[0] +`*, queremos te convocar para uma jornada de oração com um ousado alvo: Ver 30% dos alunos de Perspectivas indo aos campos sem acesso ao evangelho.\n\nNa próxima *segunda-feira dia 30/09* será o nosso *1° dia Jejum e Oração*. Iniciaremos 00:00 e iremos até 15h. \n\nQueremos te encorajar a dedicar um tempo de jejum e oração, para que o Espírito Santo desperte, mobilize e envie alunos de Perspectivas para povos não alcançados.\n\nEsta será apenas a primeira fase de oração, em breve iremos compartilhar os primeiros passos.\n\nVamos juntos!\nCom Ele, por Ele! \n*Para que todos os povos O adorem* 🌎\n  \n  \n  `\n}\n\n\n*/\nreturn msg;\n \n",
+        "func": "msg.headers = {\n    \"Client-Token\": \"Faa0e9483d732404fb38ebe88909bd19cS\"\n}\n/*\nmsg.payload= {\n //\"phone\":\"61992998663\",\n  \"phone\": msg.payload[1].replace(/\\ /gi,\"\"),\n \"video\": \"http://54.172.162.234/video/convoc.mp4\",\n  \"caption\": `\nOlá, vocacionado! \nVocê já fez sua inscrição para a live do Convoc?\n\nSerá um tempo de muito aprendizado com o pastor Ronaldo Lidório, com o tema \"Vocação: Natureza e Propósito\".\n\nAnote na sua agenda 👇\nDia 18/11 - 20h - Via Zoom\n\n🚨Para participar, clique no link abaixo e preencha o formulário de inscrição:\nhttps://forms.gle/6yAct6yb8UKNtAqLA\n\n⚠️ *(Salve este contato e não compartilhe esta mensagem, pois é exclusiva para vocacionados.)*\n`\n}\n*/\nmsg.payload= {\n//  \"phone\":\"61992998663\",\n  \"phone\": msg.payload[1].replace(\"(\",\"\").replace(\")\",\"\").replace(\"-\",\"\").replace(/\\ /gi,\"\"),\n  \"image\": \"https://relogio.fe.digital/img/0db5b796-dd1e-4f4a-b7f5-5bdb676a8f53\",\n  \"caption\": `\n*ERRATA*\n\nA data correta do nosso culto de ações de graças é dia 29/11, sexta-feira. Pedimos perdão pelo erro.\n\nJuntos, \n*Por uma década missionária* 🎯\n*Para que todos os povos O adorem* 🌎\n  \n  `\n}\n\n/*\nmsg.payload = {\n // \"phone\": \"5561992998663\",\n  \"phone\": msg.payload[2].replace(\"(\", \"\").replace(\")\", \"\").replace(\"-\", \"\").replace(/\\ /gi, \"\"),\n  \"image\": \"https://relogio.fe.digital/img/oreconosco\",\n  \"caption\": `\n  *Por Um Movimento de Brasileiro Entre os Povos*\n\n*`+ msg.payload[0].split(\" \")[0] +`*, queremos te convocar para uma jornada de oração com um ousado alvo: Ver 30% dos alunos de Perspectivas indo aos campos sem acesso ao evangelho.\n\nNa próxima *segunda-feira dia 30/09* será o nosso *1° dia Jejum e Oração*. Iniciaremos 00:00 e iremos até 15h. \n\nQueremos te encorajar a dedicar um tempo de jejum e oração, para que o Espírito Santo desperte, mobilize e envie alunos de Perspectivas para povos não alcançados.\n\nEsta será apenas a primeira fase de oração, em breve iremos compartilhar os primeiros passos.\n\nVamos juntos!\nCom Ele, por Ele! \n*Para que todos os povos O adorem* 🌎\n  \n  \n  `\n}\n\n\n*/\nreturn msg;\n \n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
